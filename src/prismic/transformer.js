@@ -1,27 +1,27 @@
-export default function transform (prismicData) {
-  const data = prismicData.data
-  const result = {}
-  const entries = Object.entries(data)
+export default function transform(prismicData) {
+  const data = prismicData.data;
+  const result = {};
+  const entries = Object.entries(data);
 
   for (let i = 0; i < entries.length; i += 1) {
-    const name = entries[i][0]
-    const value = entries[i][1]
+    const name = entries[i][0];
+    const value = entries[i][1];
 
     switch (name) {
-      case 'title':
-      case 'body':
+      case "title":
+      case "body":
         // The data we want is always on the first child and in the text property
         // Note that in reality the response could be multiple paragraphs,
         // with embedded links, images etc
         // you would need to handle that here
-        result[name] = value[0].text
-        break
+        result[name] = value[0].text;
+        break;
 
       default:
-        result[name] = value
+        result[name] = value;
     }
   }
-  return result
+  return result;
 }
 
 /* SAMPLE RESPONSE FOR A 'POST'
