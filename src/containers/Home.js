@@ -1,8 +1,16 @@
-import React from "react";
-import { withSiteData } from "react-static";
+import React, { Component } from "react";
+import { withRouteData } from "react-static";
 
-export default withSiteData(() => (
-  <div>
-    <h1>Students on Stage</h1>
-  </div>
-));
+class Home extends Component {
+  render() {
+    const { homepage } = this.props;
+
+    return (
+      <div>
+        <h1>{homepage.homeTitle}</h1>
+      </div>
+    );
+  }
+}
+
+export default withRouteData(Home);
