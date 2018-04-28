@@ -1,7 +1,6 @@
 import { camelizeKeys } from "humps";
 import apiEndpoint from "./config";
-
-const Prismic = require("prismic-javascript");
+import Prismic from "prismic-javascript";
 
 export default async function getData() {
   const api = await Prismic.getApi(apiEndpoint);

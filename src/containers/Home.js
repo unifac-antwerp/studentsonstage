@@ -1,14 +1,15 @@
-import React, { Component } from "react";
+import React, { Component, Fragment } from "react";
 import { withRouteData } from "react-static";
+import Navbar from "../components/Navbar";
 
 class Home extends Component {
   render() {
-    const { homepage } = this.props;
-
+    const { homepage, navbar } = this.props;
     return (
-      <div>
-        <h1>{homepage.homeTitle}</h1>
-      </div>
+      <Fragment>
+        <Navbar title={navbar.title} contactButton={navbar.contactButton} />
+        <div style={{ height: "200vh" }} />
+      </Fragment>
     );
   }
 }
