@@ -1,15 +1,14 @@
 import React from "react";
 import styled from "styled-components";
 import CountUp from "react-countup";
+import IntroStat from "./IntroStat";
 
-const Stat = styled.span`
-  font-size: 4em;
-  display: block;
-`;
-
-const StyledCounter = styled(CountUp)`
-  font-size: 4em;
-  display: block;
+const Wrap = styled.div`
+  display: flex;
+  justify-content: space-between;
+  max-width: 52em;
+  width: ${props => props.theme.grid.container};
+  margin: 0 auto;
 `;
 
 const IntroStats = ({
@@ -23,32 +22,23 @@ const IntroStats = ({
   statThreeTitle,
   statThreeNumber
 }) => (
-  <div>
-    <StyledCounter
-      start={0}
-      end={statOneNumber}
-      duration={2}
-      useEasing={true}
-      separator="."
+  <Wrap>
+    <IntroStat
+      icon={statOneIco.url}
+      number={statOneNumber}
+      title={statOneTitle}
     />
-    <Stat>{statOneTitle}</Stat>
-    <StyledCounter
-      start={0}
-      end={statTwoNumber}
-      duration={2}
-      useEasing={true}
-      separator="."
+    <IntroStat
+      icon={statTwoIco.url}
+      number={statTwoNumber}
+      title={statTwoTitle}
     />
-    <Stat>{statTwoTitle}</Stat>
-    <StyledCounter
-      start={0}
-      end={statThreeNumber}
-      duration={2}
-      useEasing={true}
-      separator="."
+    <IntroStat
+      icon={statThreeIco.url}
+      number={statThreeNumber}
+      title={statThreeTitle}
     />
-    <Stat>{statThreeTitle}</Stat>
-  </div>
+  </Wrap>
 );
 
 export default IntroStats;

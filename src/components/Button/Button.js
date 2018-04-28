@@ -3,13 +3,13 @@ import { Link } from "react-static";
 import styled from "styled-components";
 
 const StyledLink = styled(Link)`
-  text-decoration: none;
   ${props => props.theme.textStyles.button};
   color: ${props => props.theme.palette.neutral01};
   padding: 8px 16px;
   border: 2px solid ${props => props.theme.palette.neutral01};
   border-radius: 24px;
-  transition: background-color 200ms, color 200ms;
+  transition: background-color 150ms, color 150ms;
+  user-select: none;
 
   &:hover {
     background-color: ${props => props.theme.palette.neutral01};

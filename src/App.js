@@ -1,7 +1,7 @@
 import React, { Fragment } from "react";
 import { Router } from "react-static";
 import { ThemeProvider, injectGlobal } from "styled-components";
-import branding from "./config/branding";
+import branding, { globalStyles } from "./config/branding";
 import Navbar from "./components/Navbar";
 import reset from "styled-reset";
 import { hot } from "react-hot-loader";
@@ -9,11 +9,7 @@ import Routes from "react-static-routes";
 
 injectGlobal`
   ${reset}
-
-  body {
-    font-size: 62.5%;
-  }
-
+  ${globalStyles}
 `;
 
 const App = () => (

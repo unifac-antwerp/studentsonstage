@@ -45,7 +45,7 @@ const Title = styled(Link)`
   font-size: 2em;
   font-weight: ${props => props.theme.fontWeights.bold};
   color: ${props => props.theme.palette.global01};
-  text-decoration: none;
+  user-select: none;
 `;
 
 const Navbar = ({ title, contactButton }) => (
