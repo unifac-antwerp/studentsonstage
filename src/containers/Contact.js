@@ -2,16 +2,17 @@ import React, { Component, Fragment } from "react";
 import { withRouteData } from "react-static";
 import Navbar from "../components/Navbar";
 
-class Home extends Component {
+class Contact extends Component {
   render() {
-    const { homepage, navbar } = this.props;
+    const { navbar } = this.props;
+
     return (
       <Fragment>
         <Navbar {...navbar} />
-        <div style={{ height: "200vh" }} />
+        <p>Contact page</p>
       </Fragment>
     );
   }
 }
 
-export default withRouteData(Home);
+export default withRouteData(Contact);
