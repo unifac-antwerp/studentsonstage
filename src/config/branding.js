@@ -2,12 +2,13 @@ import { css } from "styled-components";
 
 const palette = {
   neutral01: "#3C3C3C",
-  neutral10: "#ffffff",
-  global01: "#0099FF"
+  white: "#ffffff",
+  global01: "#0099FF",
+  background: "#EBF7FF"
 };
 
 const grid = {
-  maxWidth: "120em",
+  maxWidth: "112em",
   container: "90%"
 };
 
@@ -36,6 +37,11 @@ const textStyles = {
     font-weight: ${fontWeights.medium};
     color: ${palette.neutral01};
   `,
+  heading03: css`
+    font-family: ${fonts.montserrat};
+    font-size: 2.2em;
+    font-weight: ${fontWeights.bold};
+  `,
   paragraph: css`
     font-size: 1.6em;
     font-family: ${fonts.roboto};
@@ -52,6 +58,7 @@ const textStyles = {
 export const globalStyles = css`
   body {
     color: ${palette.neutral01};
+    background-color: ${palette.background};
     font-family: ${fonts.roboto};
     font-style: normal;
     font-weight: ${fontWeights.light};
@@ -66,17 +73,21 @@ export const globalStyles = css`
     ${textStyles.heading02};
   }
 
+  h3 {
+    ${textStyles.heading03};
+  }
+
   p {
     ${textStyles.paragraph};
   }
 
   ::selection {
-    color: ${palette.neutral10};
+    color: ${palette.white};
     background: ${palette.global01};
   }
 
   ::-moz-selection {
-    color: ${palette.neutral10};
+    color: ${palette.white};
     background: ${palette.global01};
   }
 
@@ -91,6 +102,15 @@ export const globalStyles = css`
 
   a {
     text-decoration: none;
+  }
+
+  img {
+    user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
   }
 `;
 

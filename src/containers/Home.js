@@ -1,5 +1,6 @@
 import React, { Component, Fragment } from "react";
 import { withRouteData } from "react-static";
+import Header from "../components/Header";
 import Navbar from "../components/Navbar";
 import IntroStats from "../components/IntroStats";
 
@@ -10,7 +11,11 @@ class Home extends Component {
     return (
       <Fragment>
         <Navbar {...navbar} />
-        <IntroStats
+        <Header
+          logo={homepage.headerLogo}
+          poweredBy={homepage.headerPoweredBy}
+          date={homepage.date}
+          location={homepage.location}
           statOneIco={homepage.headerStatisticOneIcon}
           statOneTitle={homepage.headerStatisticOneTitle}
           statOneNumber={homepage.headerStatisticOneNumber}

@@ -12,11 +12,12 @@ const StyledHeadroom = styled(Headroom)`
     z-index: 1;
   }
   .headroom--unfixed {
+    background-color: ${props => props.theme.palette.white};
     position: relative;
     transform: translateY(0);
   }
   .headroom--scrolled {
-    background-color: ${props => props.theme.palette.neutral10};
+    background-color: ${props => props.theme.palette.white};
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
     transition: transform 200ms ease-in-out;
   }

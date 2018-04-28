@@ -13,7 +13,7 @@ const StyledLink = styled(Link)`
 
   &:hover {
     background-color: ${props => props.theme.palette.neutral01};
-    color: ${props => props.theme.palette.neutral10};
+    color: ${props => props.theme.palette.white};
   }
 `;
 

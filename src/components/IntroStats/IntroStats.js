@@ -6,9 +6,7 @@ import IntroStat from "./IntroStat";
 const Wrap = styled.div`
   display: flex;
   justify-content: space-between;
-  max-width: 52em;
-  width: ${props => props.theme.grid.container};
-  margin: 0 auto;
+  width: 100%;
 `;
 
 const IntroStats = ({

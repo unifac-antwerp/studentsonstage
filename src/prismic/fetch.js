@@ -1,9 +1,9 @@
 import { camelizeKeys } from "humps";
 import apiEndpoint from "./config";
-import Prismic from "prismic-javascript";
+import { getApi } from "prismic-javascript";
 
 export default async function getData() {
-  const api = await Prismic.getApi(apiEndpoint);
+  const api = await getApi(apiEndpoint);
   const response = await api.query("", { pageSize: 10000 });
 
   const mapped = response.results.map(data => ({

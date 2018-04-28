@@ -49,7 +49,7 @@ export default {
         <meta name="keywords" content="" />
         <link
           async
-          href="https://fonts.googleapis.com/css?family=Montserrat:300,500,700|Roboto:300,400,500"
+          href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700|Roboto:300,400,500"
           rel="stylesheet"
         />
         {renderMeta.styleTags}
