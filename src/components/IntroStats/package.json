@@ -1,0 +1,6 @@
+{
+  "name": "intro-stats",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./IntroStats.js"
+}
