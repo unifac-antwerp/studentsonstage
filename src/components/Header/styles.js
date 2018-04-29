@@ -4,6 +4,7 @@ export const Wrap = styled.div`
   background-color: ${props => props.theme.palette.white};
   display: flex;
   justify-content: space-between;
+  padding-bottom: 8em;
 `;
 
 export const ContentWrapper = styled.div`
@@ -15,7 +16,7 @@ export const ContentWrapper = styled.div`
 `;
 
 export const Logo = styled.img`
-  margin-top: 8em;
+  margin-top: 6.4em;
 `;
 
 export const PoweredBy = styled.div`
@@ -44,5 +45,5 @@ export const Info = styled.h2`
 export const ImageLeft = styled.img``;
 
 export const ImageRight = styled.img`
-  margin-top: 8em;
+  margin-top: 6.4em;
 `;

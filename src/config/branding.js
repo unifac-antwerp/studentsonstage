@@ -9,6 +9,7 @@ const palette = {
 
 const grid = {
   maxWidth: "112em",
+  maxWidthSm: "88em",
   container: "90%"
 };
 
@@ -63,6 +64,11 @@ export const globalStyles = css`
     font-style: normal;
     font-weight: ${fontWeights.light};
     font-size: 62.5%;
+    line-height: 21px;
+  }
+
+  * {
+    box-sizing: border-box;
   }
 
   h1 {
@@ -79,6 +85,10 @@ export const globalStyles = css`
 
   p {
     ${textStyles.paragraph};
+
+    :not(:last-child) {
+      margin-bottom: 16px;
+    }
   }
 
   ::selection {

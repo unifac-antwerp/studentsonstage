@@ -1,8 +1,8 @@
 import React, { Component, Fragment } from "react";
 import { withRouteData } from "react-static";
-import Header from "../components/Header";
 import Navbar from "../components/Navbar";
-import IntroStats from "../components/IntroStats";
+import Header from "../components/Header";
+import Intro from "../components/Intro";
 
 class Home extends Component {
   render() {
@@ -26,6 +26,7 @@ class Home extends Component {
           statThreeTitle={homepage.headerStatisticThreeTitle}
           statThreeNumber={homepage.headerStatisticThreeNumber}
         />
+        <Intro logo={homepage.unifacLogo} intro={homepage.intro} />
         <div style={{ height: "200vh" }} />
       </Fragment>
     );
