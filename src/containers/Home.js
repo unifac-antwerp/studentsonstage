@@ -22,6 +22,24 @@ class Home extends Component {
       homepage.carouselImageTen
     ];
 
+    const stats = [
+      {
+        icon: homepage.headerStatisticOneIcon,
+        number: homepage.headerStatisticOneNumber,
+        title: homepage.headerStatisticOneTitle
+      },
+      {
+        icon: homepage.headerStatisticTwoIcon,
+        number: homepage.headerStatisticTwoNumber,
+        title: homepage.headerStatisticTwoTitle
+      },
+      {
+        icon: homepage.headerStatisticThreeIcon,
+        number: homepage.headerStatisticThreeNumber,
+        title: homepage.headerStatisticThreeTitle
+      }
+    ];
+
     return (
       <Fragment>
         <Navbar {...navbar} />
@@ -30,15 +48,7 @@ class Home extends Component {
           poweredBy={homepage.headerPoweredBy}
           date={homepage.date}
           location={homepage.location}
-          statOneIco={homepage.headerStatisticOneIcon}
-          statOneTitle={homepage.headerStatisticOneTitle}
-          statOneNumber={homepage.headerStatisticOneNumber}
-          statTwoIco={homepage.headerStatisticTwoIcon}
-          statTwoTitle={homepage.headerStatisticTwoTitle}
-          statTwoNumber={homepage.headerStatisticTwoNumber}
-          statThreeIco={homepage.headerStatisticThreeIcon}
-          statThreeTitle={homepage.headerStatisticThreeTitle}
-          statThreeNumber={homepage.headerStatisticThreeNumber}
+          stats={stats}
         />
         <Intro logo={homepage.unifacLogo} intro={homepage.intro} />
         <ImageCarousel carouselImages={carouselImages} />

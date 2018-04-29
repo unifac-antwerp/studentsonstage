@@ -9,33 +9,16 @@ const Wrap = styled.div`
   width: 100%;
 `;
 
-const IntroStats = ({
-  statOneIco,
-  statOneTitle,
-  statOneNumber,
-  statTwoIco,
-  statTwoTitle,
-  statTwoNumber,
-  statThreeIco,
-  statThreeTitle,
-  statThreeNumber
-}) => (
+const IntroStats = ({ stats }) => (
   <Wrap>
-    <IntroStat
-      icon={statOneIco.url}
-      number={statOneNumber}
-      title={statOneTitle}
-    />
-    <IntroStat
-      icon={statTwoIco.url}
-      number={statTwoNumber}
-      title={statTwoTitle}
-    />
-    <IntroStat
-      icon={statThreeIco.url}
-      number={statThreeNumber}
-      title={statThreeTitle}
-    />
+    {stats.map(s => (
+      <IntroStat
+        key={s.title}
+        icon={s.icon.url}
+        number={s.number}
+        title={s.title}
+      />
+    ))}
   </Wrap>
 );
 
