@@ -56,6 +56,12 @@ const textStyles = {
   `
 };
 
+const shadows = {
+  shadow01: css`
+    box-shadow: 0 6px 18px 8px rgba(0, 0, 0, 0.05);
+  `
+};
+
 export const globalStyles = css`
   body {
     color: ${palette.neutral01};
@@ -129,5 +135,6 @@ export default {
   textStyles,
   fontWeights,
   fonts,
+  shadows,
   grid
 };

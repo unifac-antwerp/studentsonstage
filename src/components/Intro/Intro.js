@@ -12,6 +12,7 @@ const Wrap = styled.section`
   padding: 3.2em;
   background-color: ${props => props.theme.palette.white};
   border: 0.6em solid ${props => props.theme.palette.global01};
+  ${props => props.theme.shadows.shadow01};
   border-radius: 0.8em;
   margin-top: -16em;
 `;

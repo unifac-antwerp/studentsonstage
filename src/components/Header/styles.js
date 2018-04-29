@@ -16,7 +16,7 @@ export const ContentWrapper = styled.div`
 `;
 
 export const Logo = styled.img`
-  margin-top: 6.4em;
+  margin-top: 7.2em;
 `;
 
 export const PoweredBy = styled.div`

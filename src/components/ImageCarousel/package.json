@@ -1,0 +1,6 @@
+{
+  "name": "image-carousel",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./ImageCarousel.js"
+}
