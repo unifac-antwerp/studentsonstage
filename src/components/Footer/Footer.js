@@ -7,7 +7,7 @@ import Emoji from "react-emoji-render";
 import Social from "./Social";
 
 const Wrap = styled.footer`
-  background-color: ${props => props.theme.palette.neutral01};
+  background-color: ${props => props.theme.palette.neutral02};
   margin-top: 8em;
   padding: 3.2em 0 2.4em;
 

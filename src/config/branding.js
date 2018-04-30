@@ -2,6 +2,7 @@ import { css } from "styled-components";
 
 const palette = {
   neutral01: "#3C3C3C",
+  neutral02: "#191919",
   white: "#ffffff",
   global01: "#0099FF",
   global02: "#33ADFF",
