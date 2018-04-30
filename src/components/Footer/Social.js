@@ -5,7 +5,11 @@ import facebookIco from "../../assets/svg/facebook.svg";
 import linkedinIco from "../../assets/svg/linkedin.svg";
 import instagramIco from "../../assets/svg/instagram.svg";
 
-const Wrap = styled.li``;
+const Wrap = styled.li`
+  :not(:last-child) {
+    margin-bottom: 4px;
+  }
+`;
 
 const Icon = styled.img`
   margin-right: 6px;
@@ -14,6 +18,10 @@ const Icon = styled.img`
 const StyledLink = styled(Link)`
   display: flex;
   align-items: center;
+
+  :hover {
+    text-decoration: underline;
+  }
 `;
 
 const Social = ({ platform, title, link }) => {

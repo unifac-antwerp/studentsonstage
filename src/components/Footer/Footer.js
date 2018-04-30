@@ -9,14 +9,14 @@ import Social from "./Social";
 const Wrap = styled.footer`
   background-color: ${props => props.theme.palette.neutral01};
   margin-top: 8em;
-  padding: 3.2em 0;
+  padding: 3.2em 0 2.4em;
 
   * {
     ${props => props.theme.textStyles.footer};
   }
 `;
 
-const ContentWrapper = styled.div`
+const ContentWrap = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
@@ -25,10 +25,18 @@ const ContentWrapper = styled.div`
   margin: 0 auto;
 `;
 
+const GeneralWrap = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+
 const FooterLink = styled(Link)`
+  :first-child {
+    margin-bottom: 16px;
+  }
+
   :hover {
     text-decoration: underline;
-    cursor: pointer;
   }
 `;
 
@@ -37,8 +45,6 @@ const Address = styled.address`
     margin-bottom: 0;
   }
 `;
-
-const Socials = styled.ul``;
 
 const Copyright = styled.div`
   span,
@@ -80,20 +86,21 @@ const Footer = ({ footer }) => {
 
   return (
     <Wrap>
-      <ContentWrapper>
-        <div>
-          <FooterLink href={`mailto:${email}`}>{email}</FooterLink>
-          <FooterLink href={addressLink.url} target="_blank">
+      <ContentWrap>
+        <GeneralWrap>
+          <FooterLink to={`mailto:${email}`}>{email}</FooterLink>
+          <FooterLink to={addressLink.url} target="_blank">
             <Address>{RichText.render(address)}</Address>
           </FooterLink>
-        </div>
+        </GeneralWrap>
         <Copyright>
           <span>© Unifac {getYear(new Date())} - </span>
-          <Link to="https://wouterlanduydt.be" target="_blank">
-            <Emoji text="Made with <3 by Wouter Landuydt" />
-          </Link>
+          <Emoji text="Made with 💙 by " />
+          <FooterLink to="https://wouterlanduydt.be" target="_blank">
+            Wouter Landuydt
+          </FooterLink>
         </Copyright>
-        <Socials>
+        <ul>
           {socials.map(s => (
             <Social
               key={s.key}
@@ -102,8 +109,8 @@ const Footer = ({ footer }) => {
               link={s.link}
             />
           ))}
-        </Socials>
-      </ContentWrapper>
+        </ul>
+      </ContentWrap>
     </Wrap>
   );
 };
