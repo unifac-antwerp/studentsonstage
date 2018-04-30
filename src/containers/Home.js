@@ -77,7 +77,10 @@ class Home extends Component {
           stats={stats}
         />
         <Intro logo={homepage.unifacLogo} intro={homepage.intro} />
-        <ImageCarousel carouselImages={carouselImages} />
+        <ImageCarousel
+          title={homepage.carouselTitle}
+          carouselImages={carouselImages}
+        />
         <Opportunities
           title={homepage.opportunitiesTitle}
           desc={homepage.opportunitiesDescription}

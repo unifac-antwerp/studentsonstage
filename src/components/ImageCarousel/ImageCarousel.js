@@ -10,7 +10,14 @@ const Wrap = styled.section`
   background-color: ${props => props.theme.palette.white};
   margin-top: 11.2em;
   margin-bottom: 14.4em;
+  height: 72em;
   position: relative;
+`;
+
+const ContentWrap = styled.div`
+  max-width: ${props => props.theme.grid.maxWidth};
+  width: ${props => props.theme.grid.container} !important;
+  margin: 0 auto;
 `;
 
 const Ornament = styled.img`
@@ -18,33 +25,32 @@ const Ornament = styled.img`
   top: -14.2em;
 `;
 
-const StyledCarousel = styled(Carousel)`
-  max-width: ${props => props.theme.grid.maxWidth};
-  width: ${props => props.theme.grid.container} !important;
-  margin: 0 auto;
-  position: relative;
-  top: 14.4em;
+const Title = styled.h1`
+  padding: 64px 0 24px;
 `;
 
-const ImageCarousel = ({ carouselImages }) => (
+const ImageCarousel = ({ title, carouselImages }) => (
   <Wrap>
     <Ornament src={OrnamentImg} alt="" width="141" height="283" />
-    <StyledCarousel
-      autoplay
-      wrapAround
-      dragging={false}
-      renderCenterLeftControls={({ previousSlide }) => (
-        <StyledArrow onClick={previousSlide} src={Arrow} alt="" />
-      )}
-      renderCenterRightControls={({ nextSlide }) => (
-        <StyledArrow next onClick={nextSlide} src={Arrow} alt="" />
-      )}
-      renderBottomCenterControls={({}) => null}
-    >
-      {carouselImages.map(image => (
-        <img key={image.url} src={image.url} alt="carousel image" />
-      ))}
-    </StyledCarousel>
+    <ContentWrap>
+      <Title>{title}</Title>
+      <Carousel
+        autoplay
+        wrapAround
+        dragging={false}
+        renderCenterLeftControls={({ previousSlide }) => (
+          <StyledArrow onClick={previousSlide} src={Arrow} alt="" />
+        )}
+        renderCenterRightControls={({ nextSlide }) => (
+          <StyledArrow next onClick={nextSlide} src={Arrow} alt="" />
+        )}
+        renderBottomCenterControls={({}) => null}
+      >
+        {carouselImages.map(image => (
+          <img key={image.url} src={image.url} alt="carousel image" />
+        ))}
+      </Carousel>
+    </ContentWrap>
   </Wrap>
 );
 
