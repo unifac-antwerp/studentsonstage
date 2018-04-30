@@ -27,7 +27,7 @@ export default {
       {
         is404: true,
         component: "src/containers/404",
-        getData: () => ({ navbar, footer })
+        getData: () => ({ navbar })
       }
     ];
   },

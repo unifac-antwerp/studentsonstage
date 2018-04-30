@@ -10,8 +10,8 @@ const palette = {
 };
 
 const grid = {
-  maxWidth: "112em",
-  maxWidthSm: "88em",
+  maxWidth: "1120px",
+  maxWidthSm: "880px",
   container: "90%"
 };
 

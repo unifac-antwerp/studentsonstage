@@ -53,19 +53,17 @@ const Copyright = styled.div`
   }
 `;
 
-const Footer = ({ footer }) => {
-  const {
-    email,
-    address,
-    addressLink,
-    linkedinTitle,
-    linkedinLink,
-    facebookTitle,
-    facebookLink,
-    instagramTitle,
-    instagramLink
-  } = footer;
-
+const Footer = ({
+  email,
+  address,
+  addressLink,
+  linkedinTitle,
+  linkedinLink,
+  facebookTitle,
+  facebookLink,
+  instagramTitle,
+  instagramLink
+}) => {
   const socials = [
     {
       key: "linkedin",

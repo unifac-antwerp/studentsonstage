@@ -97,7 +97,7 @@ class Home extends Component {
           desc={homepage.ctaDescription}
           button={homepage.ctaButton}
         />
-        <Footer footer={footer} />
+        <Footer {...footer} />
       </Fragment>
     );
   }
