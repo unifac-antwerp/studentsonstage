@@ -5,6 +5,7 @@ import Header from "../components/Header";
 import Intro from "../components/Intro";
 import ImageCarousel from "../components/ImageCarousel";
 import Opportunities from "../components/Opportunities";
+import Aftermovie from "../components/Aftermovie";
 
 class Home extends Component {
   render() {
@@ -81,6 +82,10 @@ class Home extends Component {
           title={homepage.opportunitiesTitle}
           desc={homepage.opportunitiesDescription}
           opportunities={opportunities}
+        />
+        <Aftermovie
+          title={homepage.aftermovieTitle}
+          aftermovie={homepage.aftermovie}
         />
         <div style={{ height: "200vh" }} />
       </Fragment>

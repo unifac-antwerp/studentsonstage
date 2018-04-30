@@ -103,12 +103,12 @@ export const globalStyles = css`
 
   ::selection {
     color: ${palette.white};
-    background: ${palette.global01};
+    background: ${palette.global02};
   }
 
   ::-moz-selection {
     color: ${palette.white};
-    background: ${palette.global01};
+    background: ${palette.global02};
   }
 
   b,
