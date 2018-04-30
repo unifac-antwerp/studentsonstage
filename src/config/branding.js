@@ -32,12 +32,14 @@ const textStyles = {
     font-size: 3.2em;
     font-weight: ${fontWeights.bold};
     color: ${palette.global01};
+    line-height: 32px;
   `,
   heading02: css`
     font-family: ${fonts.montserrat};
     font-size: 2.6em;
     font-weight: ${fontWeights.medium};
     color: ${palette.neutral01};
+    line-height: 28px;
   `,
   heading03: css`
     font-family: ${fonts.montserrat};
@@ -52,7 +54,7 @@ const textStyles = {
   `,
   button: css`
     font-family: ${fonts.montserrat};
-    font-weight: ${fontWeights.medium};
+    font-weight: ${fontWeights.regular};
     font-size: 1.6em;
   `
 };

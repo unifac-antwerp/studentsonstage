@@ -6,6 +6,7 @@ import Intro from "../components/Intro";
 import ImageCarousel from "../components/ImageCarousel";
 import Opportunities from "../components/Opportunities";
 import Aftermovie from "../components/Aftermovie";
+import CTA from "../components/CTA";
 
 class Home extends Component {
   render() {
@@ -89,6 +90,11 @@ class Home extends Component {
         <Aftermovie
           title={homepage.aftermovieTitle}
           aftermovie={homepage.aftermovie}
+        />
+        <CTA
+          title={homepage.ctaTitle}
+          desc={homepage.ctaDescription}
+          button={homepage.ctaButton}
         />
         <div style={{ height: "200vh" }} />
       </Fragment>
