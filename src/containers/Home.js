@@ -7,10 +7,11 @@ import ImageCarousel from "../components/ImageCarousel";
 import Opportunities from "../components/Opportunities";
 import Aftermovie from "../components/Aftermovie";
 import CTA from "../components/CTA";
+import Footer from "../components/Footer";
 
 class Home extends Component {
   render() {
-    const { homepage, navbar } = this.props;
+    const { navbar, homepage, footer } = this.props;
 
     const carouselImages = [
       homepage.carouselImageOne,
@@ -96,7 +97,7 @@ class Home extends Component {
           desc={homepage.ctaDescription}
           button={homepage.ctaButton}
         />
-        <div style={{ height: "200vh" }} />
+        <Footer footer={footer} />
       </Fragment>
     );
   }

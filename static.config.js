@@ -9,24 +9,25 @@ export default {
   }),
   getRoutes: async () => {
     const data = await fetchData();
-    const homepage = getSingleType(data, "homepage");
     const navbar = getSingleType(data, "navbar");
+    const homepage = getSingleType(data, "homepage");
+    const footer = getSingleType(data, "footer");
 
     return [
       {
         path: "/",
         component: "src/containers/Home",
-        getData: () => ({ homepage, navbar })
+        getData: () => ({ homepage, navbar, footer })
       },
       {
         path: "/contact",
         component: "src/containers/Contact",
-        getData: () => ({ navbar })
+        getData: () => ({ navbar, footer })
       },
       {
         is404: true,
         component: "src/containers/404",
-        getData: () => ({ navbar })
+        getData: () => ({ navbar, footer })
       }
     ];
   },

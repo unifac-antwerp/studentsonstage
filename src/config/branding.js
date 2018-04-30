@@ -52,6 +52,12 @@ const textStyles = {
     font-weight: ${fontWeights.light};
     color: ${palette.neutral01};
   `,
+  footer: css`
+    font-size: 16px;
+    font-family: ${fonts.roboto};
+    font-weight: ${fontWeights.light};
+    color: ${palette.white};
+  `,
   button: css`
     font-family: ${fonts.montserrat};
     font-weight: ${fontWeights.regular};

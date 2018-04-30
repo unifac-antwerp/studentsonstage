@@ -19,6 +19,7 @@
     "react": "^16.0.0",
     "react-countup": "^3.0.3",
     "react-dom": "^16.0.0",
+    "react-emoji-render": "^0.4.4",
     "react-headroom": "^2.2.2",
     "react-router": "^4.2.0",
     "react-static": "^5.8.5",
