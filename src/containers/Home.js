@@ -4,6 +4,7 @@ import Navbar from "../components/Navbar";
 import Header from "../components/Header";
 import Intro from "../components/Intro";
 import ImageCarousel from "../components/ImageCarousel";
+import Opportunities from "../components/Opportunities";
 
 class Home extends Component {
   render() {
@@ -40,6 +41,30 @@ class Home extends Component {
       }
     ];
 
+    const opportunities = [
+      {
+        icon: homepage.opportunityOneIcon,
+        title: homepage.opportunityOneTitle,
+        desc: homepage.opportunityOneDescription,
+        ctaTitle: homepage.opportunityOneCtaTitle,
+        ctaAction: homepage.opportunityOneCtaAction
+      },
+      {
+        icon: homepage.opportunityTwoIcon,
+        title: homepage.opportunityTwoTitle,
+        desc: homepage.opportunityTwoDescription,
+        ctaTitle: homepage.opportunityTwoCtaTitle,
+        ctaAction: homepage.opportunityTwoCtaAction
+      },
+      {
+        icon: homepage.opportunityThreeIcon,
+        title: homepage.opportunityThreeTitle,
+        desc: homepage.opportunityThreeDescription,
+        ctaTitle: homepage.opportunityThreeCtaTitle,
+        ctaAction: homepage.opportunityThreeCtaAction
+      }
+    ];
+
     return (
       <Fragment>
         <Navbar {...navbar} />
@@ -52,6 +77,11 @@ class Home extends Component {
         />
         <Intro logo={homepage.unifacLogo} intro={homepage.intro} />
         <ImageCarousel carouselImages={carouselImages} />
+        <Opportunities
+          title={homepage.opportunitiesTitle}
+          desc={homepage.opportunitiesDescription}
+          opportunities={opportunities}
+        />
         <div style={{ height: "200vh" }} />
       </Fragment>
     );

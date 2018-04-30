@@ -53,7 +53,7 @@ const Navbar = ({ title, contactButton }) => (
   <StyledHeadroom disableInlineStyles>
     <Wrap>
       <Title to="/">{title}</Title>
-      <Button link="/contact" text={contactButton} />
+      <Button link="/contact" text={contactButton} outlined="true" />
     </Wrap>
   </StyledHeadroom>
 );

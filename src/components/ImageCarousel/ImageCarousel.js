@@ -9,6 +9,7 @@ import OrnamentImg from "../../assets/img/ornament_1.png";
 const Wrap = styled.section`
   background-color: ${props => props.theme.palette.white};
   margin-top: 11.2em;
+  margin-bottom: 14.4em;
   position: relative;
 `;
 
@@ -31,6 +32,7 @@ const ImageCarousel = ({ carouselImages }) => (
     <StyledCarousel
       autoplay
       wrapAround
+      dragging={false}
       renderCenterLeftControls={({ previousSlide }) => (
         <StyledArrow onClick={previousSlide} src={Arrow} alt="" />
       )}

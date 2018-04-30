@@ -4,19 +4,39 @@ import styled from "styled-components";
 
 const StyledLink = styled(Link)`
   ${props => props.theme.textStyles.button};
-  color: ${props => props.theme.palette.neutral01};
   padding: 8px 16px;
-  border: 2px solid ${props => props.theme.palette.neutral01};
   border-radius: 24px;
-  transition: background-color 150ms, color 150ms;
+  transition: background-color 150ms, color 150ms, border 150ms;
   user-select: none;
 
+  color: ${props =>
+    props.outlined ? props.theme.palette.neutral01 : props.theme.palette.white};
+  background-color: ${props =>
+    props.outlined ? props.theme.palette.white : props.theme.palette.global01};
+  border: 2px solid
+    ${props =>
+      props.outlined
+        ? props.theme.palette.neutral01
+        : props.theme.palette.global01};
+
   &:hover {
-    background-color: ${props => props.theme.palette.neutral01};
     color: ${props => props.theme.palette.white};
+    background-color: ${props =>
+      props.outlined
+        ? props.theme.palette.neutral01
+        : props.theme.palette.global02};
+    border: 2px solid
+      ${props =>
+        props.outlined
+          ? props.theme.palette.neutral01
+          : props.theme.palette.global02};
   }
 `;
 
-const Button = ({ link, text }) => <StyledLink to={link}>{text}</StyledLink>;
+const Button = ({ link, text, outlined }) => (
+  <StyledLink to={link} outlined={outlined}>
+    {text}
+  </StyledLink>
+);
 
 export default Button;

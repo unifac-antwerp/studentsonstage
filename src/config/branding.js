@@ -4,6 +4,7 @@ const palette = {
   neutral01: "#3C3C3C",
   white: "#ffffff",
   global01: "#0099FF",
+  global02: "#33ADFF",
   background: "#EBF7FF"
 };
 
@@ -59,6 +60,9 @@ const textStyles = {
 const shadows = {
   shadow01: css`
     box-shadow: 0 6px 18px 8px rgba(0, 0, 0, 0.05);
+  `,
+  shadow02: css`
+    box-shadow: 0 4px 8px 4px rgba(0, 0, 0, 0.05);
   `
 };
 
