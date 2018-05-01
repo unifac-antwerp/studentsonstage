@@ -49,16 +49,18 @@ const Opportunities = ({ title, desc, opportunities }) => (
       <Desc>{RichText.render(desc)}</Desc>
     </ContentWrap>
     <OpportunitiesWrap>
-      {opportunities.map(o => (
-        <Opportunity
-          key={o.title}
-          icon={o.icon.url}
-          title={o.title}
-          desc={o.desc}
-          ctaTitle={o.ctaTitle}
-          ctaAction={o.ctaAction}
-        />
-      ))}
+      {opportunities
+        .slice(0, 3)
+        .map(o => (
+          <Opportunity
+            key={o.title}
+            icon={o.icon.url}
+            title={o.title}
+            desc={o.description}
+            button={o.button}
+            ctaAction={o.ctaAction}
+          />
+        ))}
     </OpportunitiesWrap>
   </Wrap>
 );

@@ -11,14 +11,16 @@ const Wrap = styled.div`
 
 const IntroStats = ({ stats }) => (
   <Wrap>
-    {stats.map(s => (
-      <IntroStat
-        key={s.title}
-        icon={s.icon.url}
-        number={s.number}
-        title={s.title}
-      />
-    ))}
+    {stats
+      .slice(0, 3)
+      .map(s => (
+        <IntroStat
+          key={s.title}
+          icon={s.icon.url}
+          number={s.number}
+          title={s.title}
+        />
+      ))}
   </Wrap>
 );
 

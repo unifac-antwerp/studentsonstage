@@ -29,7 +29,7 @@ const Title = styled.h1`
   padding: 64px 0 24px;
 `;
 
-const ImageCarousel = ({ title, carouselImages }) => (
+const ImageCarousel = ({ title, images }) => (
   <Wrap>
     <Ornament src={OrnamentImg} alt="" width="141" height="283" />
     <ContentWrap>
@@ -46,8 +46,8 @@ const ImageCarousel = ({ title, carouselImages }) => (
         )}
         renderBottomCenterControls={({}) => null}
       >
-        {carouselImages.map(image => (
-          <img key={image.url} src={image.url} alt="carousel image" />
+        {images.map(i => (
+          <img key={i.image.url} src={i.image.url} alt="carousel image" />
         ))}
       </Carousel>
     </ContentWrap>

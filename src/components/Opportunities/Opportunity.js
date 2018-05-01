@@ -45,7 +45,7 @@ const ButtonWrap = styled.div`
   margin-top: auto;
 `;
 
-const Opportunity = ({ title, icon, desc, ctaTitle, ctaAction }) => (
+const Opportunity = ({ title, icon, desc, button, ctaAction }) => (
   <Wrap>
     <IconWrap>
       <img src={icon} alt={`${title} icon`} />
@@ -53,7 +53,7 @@ const Opportunity = ({ title, icon, desc, ctaTitle, ctaAction }) => (
     <Title>{title}</Title>
     <Desc>{RichText.render(desc)}</Desc>
     <ButtonWrap>
-      <Button link={ctaAction} text={ctaTitle} />
+      <Button link={ctaAction} text={button} />
     </ButtonWrap>
   </Wrap>
 );

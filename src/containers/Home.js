@@ -13,61 +13,6 @@ class Home extends Component {
   render() {
     const { navbar, homepage, footer } = this.props;
 
-    const carouselImages = [
-      homepage.carouselImageOne,
-      homepage.carouselImageTwo,
-      homepage.carouselImageThree,
-      homepage.carouselImageFour,
-      homepage.carouselImageFive,
-      homepage.carouselImageSix,
-      homepage.carouselImageSeven,
-      homepage.carouselImageEight,
-      homepage.carouselImageNine,
-      homepage.carouselImageTen
-    ];
-
-    const stats = [
-      {
-        icon: homepage.headerStatisticOneIcon,
-        number: homepage.headerStatisticOneNumber,
-        title: homepage.headerStatisticOneTitle
-      },
-      {
-        icon: homepage.headerStatisticTwoIcon,
-        number: homepage.headerStatisticTwoNumber,
-        title: homepage.headerStatisticTwoTitle
-      },
-      {
-        icon: homepage.headerStatisticThreeIcon,
-        number: homepage.headerStatisticThreeNumber,
-        title: homepage.headerStatisticThreeTitle
-      }
-    ];
-
-    const opportunities = [
-      {
-        icon: homepage.opportunityOneIcon,
-        title: homepage.opportunityOneTitle,
-        desc: homepage.opportunityOneDescription,
-        ctaTitle: homepage.opportunityOneCtaTitle,
-        ctaAction: homepage.opportunityOneCtaAction
-      },
-      {
-        icon: homepage.opportunityTwoIcon,
-        title: homepage.opportunityTwoTitle,
-        desc: homepage.opportunityTwoDescription,
-        ctaTitle: homepage.opportunityTwoCtaTitle,
-        ctaAction: homepage.opportunityTwoCtaAction
-      },
-      {
-        icon: homepage.opportunityThreeIcon,
-        title: homepage.opportunityThreeTitle,
-        desc: homepage.opportunityThreeDescription,
-        ctaTitle: homepage.opportunityThreeCtaTitle,
-        ctaAction: homepage.opportunityThreeCtaAction
-      }
-    ];
-
     return (
       <Fragment>
         <Navbar {...navbar} />
@@ -76,17 +21,17 @@ class Home extends Component {
           poweredBy={homepage.headerPoweredBy}
           date={homepage.date}
           location={homepage.location}
-          stats={stats}
+          stats={homepage.statistics}
         />
         <Intro logo={homepage.unifacLogo} intro={homepage.intro} />
         <ImageCarousel
           title={homepage.carouselTitle}
-          carouselImages={carouselImages}
+          images={homepage.images}
         />
         <Opportunities
           title={homepage.opportunitiesTitle}
           desc={homepage.opportunitiesDescription}
-          opportunities={opportunities}
+          opportunities={homepage.opportunities}
         />
         <Aftermovie
           title={homepage.aftermovieTitle}
