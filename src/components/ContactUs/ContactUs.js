@@ -5,6 +5,7 @@ import PeopleList from "./PeopleList";
 
 const Wrap = styled.section`
   background-color: ${props => props.theme.palette.white};
+  height: 48em;
 `;
 
 const Title = styled.h1`
