@@ -11,6 +11,7 @@ export default {
     const data = await fetchData();
     const navbar = getSingleType(data, "navbar");
     const homepage = getSingleType(data, "homepage");
+    const contactpage = getSingleType(data, "contact_page");
     const footer = getSingleType(data, "footer");
 
     return [
@@ -22,7 +23,7 @@ export default {
       {
         path: "/contact",
         component: "src/containers/Contact",
-        getData: () => ({ navbar, footer })
+        getData: () => ({ contactpage, navbar, footer })
       },
       {
         is404: true,
