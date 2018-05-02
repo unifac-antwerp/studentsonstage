@@ -36,13 +36,42 @@ const Desc = styled.div`
   margin: 2.4em 0 3.2em;
 `;
 
-const CTA = ({ title, desc, button }) => (
+const ButtonWrapper = styled.div`
+  display: flex;
+
+  a:first-child {
+    margin-right: 16px;
+  }
+`;
+
+const CTA = ({
+  title,
+  desc,
+  button,
+  buttonLink,
+  secondaryButton,
+  secondaryButtonLink
+}) => (
   <Wrap>
     <Ornament src={OrnamentImg} alt="" width="141" height="283" />
     <ContentWrapper>
       <Title>{title}</Title>
       <Desc>{RichText.render(desc)}</Desc>
-      <Button link="/contact" text={button} big="true" />
+      <ButtonWrapper>
+        <Button
+          link={buttonLink ? buttonLink : "/contact"}
+          text={button}
+          big="true"
+        />
+        {secondaryButton && (
+          <Button
+            link={secondaryButtonLink}
+            text={secondaryButton}
+            outlined="true"
+            big="true"
+          />
+        )}
+      </ButtonWrapper>
     </ContentWrapper>
   </Wrap>
 );
