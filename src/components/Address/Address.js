@@ -1,11 +1,18 @@
 import React from "react";
 import { RichText } from "prismic-reactjs";
 import styled from "styled-components";
+import OrnamentImg from "../../assets/img/ornament_5.png";
 
 const Wrap = styled.section`
   background-color: ${props => props.theme.palette.white};
   margin-top: 16em;
   height: 32em;
+  position: relative;
+`;
+
+const Ornament = styled.img`
+  position: absolute;
+  top: -14.2em;
 `;
 
 const Title = styled.h1`
@@ -38,6 +45,7 @@ const StyledAddress = styled.address`
 
 const Address = ({ title, desc, address }) => (
   <Wrap>
+    <Ornament src={OrnamentImg} alt="" width="141" height="283" />
     <ContentWrap>
       <Title>{title}</Title>
       <Desc>{RichText.render(desc)}</Desc>
