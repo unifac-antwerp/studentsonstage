@@ -106,7 +106,7 @@ export const globalStyles = css`
     ${textStyles.paragraph};
 
     :not(:last-child) {
-      margin-bottom: 16px;
+      margin-bottom: 8px;
     }
   }
 
