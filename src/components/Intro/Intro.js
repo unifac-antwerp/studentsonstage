@@ -14,7 +14,8 @@ const Wrap = styled.section`
   border: 0.6em solid ${props => props.theme.palette.global01};
   ${props => props.theme.shadows.shadow01};
   border-radius: 0.8em;
-  margin-top: -16em;
+  margin-top: -8em;
+  position: relative;
 `;
 
 const StyledImage = styled.img`

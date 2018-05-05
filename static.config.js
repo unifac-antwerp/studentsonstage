@@ -4,9 +4,8 @@ import { getSingleType } from "./src/prismic/mapper";
 import { ServerStyleSheet } from "styled-components";
 
 export default {
-  getSiteData: () => ({
-    title: "Students on Stage"
-  }),
+  // siteRoot: 'https://studentsonstage.unifac.be/',
+
   getRoutes: async () => {
     const data = await fetchData();
     const navbar = getSingleType(data, "navbar");

@@ -15,6 +15,12 @@ const grid = {
   container: "90%"
 };
 
+const breakpoints = {
+  xxl: "1270px",
+  xl: "1100px",
+  md: "960px"
+};
+
 const fonts = {
   roboto: "'Roboto', sans-serif",
   montserrat: "'Montserrat', sans-serif"
@@ -145,9 +151,10 @@ export const globalStyles = css`
 
 export default {
   palette,
+  grid,
+  breakpoints,
   textStyles,
   fontWeights,
   fonts,
-  shadows,
-  grid
+  shadows
 };

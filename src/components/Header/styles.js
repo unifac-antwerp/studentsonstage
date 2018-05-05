@@ -2,9 +2,9 @@ import styled from "styled-components";
 
 export const Wrap = styled.div`
   background-color: ${props => props.theme.palette.white};
-  display: flex;
-  justify-content: space-between;
-  padding-bottom: 8em;
+  position: relative;
+  height: 80em;
+  overflow-x: hidden;
 `;
 
 export const ContentWrapper = styled.div`
@@ -13,6 +13,7 @@ export const ContentWrapper = styled.div`
   align-items: center;
   max-width: 52em;
   width: ${props => props.theme.grid.container};
+  margin: 0 auto;
 `;
 
 export const Logo = styled.img`
@@ -42,8 +43,29 @@ export const Info = styled.h2`
   margin: 40px auto 80px;
 `;
 
-export const ImageLeft = styled.img``;
+export const ImageLeft = styled.img`
+  position: absolute;
+  left: -10vw;
+
+  @media (min-width: ${props => props.theme.breakpoints.md}) {
+    left: -4vw;
+  }
+
+  @media (min-width: ${props => props.theme.breakpoints.xl}) {
+    left: 0;
+  }
+`;
 
 export const ImageRight = styled.img`
-  margin-top: 6.4em;
+  position: absolute;
+  right: -10vw;
+  top: 6.4em;
+
+  @media (min-width: ${props => props.theme.breakpoints.md}) {
+    right: -4vw;
+  }
+
+  @media (min-width: ${props => props.theme.breakpoints.xl}) {
+    right: 0;
+  }
 `;

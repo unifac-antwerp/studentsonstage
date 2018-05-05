@@ -24,7 +24,7 @@ const ContentWrap = styled.div`
 `;
 
 const Title = styled.h1`
-  padding: 64px 0 24px;
+  padding: 72px 0 24px;
 `;
 
 const Desc = styled.div`

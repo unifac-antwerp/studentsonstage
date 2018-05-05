@@ -16,7 +16,7 @@ const Ornament = styled.img`
 `;
 
 const Title = styled.h1`
-  padding: 64px 0 24px;
+  padding: 72px 0 24px;
 `;
 
 const ContentWrap = styled.div`
