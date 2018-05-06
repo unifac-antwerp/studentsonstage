@@ -4,7 +4,6 @@ export const Wrap = styled.div`
   background-color: ${props => props.theme.palette.white};
   position: relative;
   height: 80em;
-  overflow-x: hidden;
 `;
 
 export const ContentWrapper = styled.div`
@@ -18,6 +17,12 @@ export const ContentWrapper = styled.div`
 
 export const Logo = styled.img`
   margin-top: 7.2em;
+  height: auto;
+  width: 50vw;
+
+  @media (min-width: ${props => props.theme.breakpoints.sm}) {
+    width: auto;
+  }
 `;
 
 export const PoweredBy = styled.div`
@@ -38,34 +43,98 @@ export const PoweredBy = styled.div`
 `;
 
 export const Info = styled.h2`
-  font-size: 22px;
+  font-size: 16px;
   font-weight: ${props => props.theme.fontWeights.medium};
-  margin: 40px auto 80px;
+  margin: 40px auto 64px;
+  text-align: center;
+
+  @media (min-width: ${props => props.theme.breakpoints.xs}) {
+    font-size: 18px;
+    margin: 40px auto 80px;
+  }
+
+  @media (min-width: ${props => props.theme.breakpoints.sm}) {
+    font-size: 22px;
+  }
 `;
 
 export const ImageLeft = styled.img`
   position: absolute;
-  left: -10vw;
+  transform: scale(0.7);
+  transform-origin: 0% 0%;
+  display: none;
+
+  @media (min-width: 820px) {
+    display: block;
+  }
 
   @media (min-width: ${props => props.theme.breakpoints.md}) {
-    left: -4vw;
+    transform: scale(0.9);
   }
 
   @media (min-width: ${props => props.theme.breakpoints.xl}) {
-    left: 0;
+    transform: scale(1);
   }
 `;
 
 export const ImageRight = styled.img`
   position: absolute;
-  right: -10vw;
   top: 6.4em;
+  right: 0;
+  display: none;
+  transform: scale(0.7);
+  transform-origin: 100% 50%;
+
+  @media (min-width: 820px) {
+    display: block;
+  }
 
   @media (min-width: ${props => props.theme.breakpoints.md}) {
-    right: -4vw;
+    transform: scale(0.9);
   }
 
   @media (min-width: ${props => props.theme.breakpoints.xl}) {
-    right: 0;
+    transform: scale(1);
+  }
+`;
+
+export const ImageLeftSm = styled.img`
+  display: block;
+  position: absolute;
+  transform-origin: 0% 0%;
+  transform: scale(0.55);
+
+  @media (min-width: ${props => props.theme.breakpoints.xs}) {
+    transform: scale(0.8);
+  }
+
+  @media (min-width: ${props => props.theme.breakpoints.sm}) {
+    transform: scale(1);
+  }
+
+  @media (min-width: 820px) {
+    display: none;
+  }
+`;
+
+export const ImageRightSm = styled.img`
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 32.8vw;
+  transform-origin: 100% 50%;
+  transform: scale(0.55);
+
+  @media (min-width: ${props => props.theme.breakpoints.xs}) {
+    transform: scale(0.8);
+  }
+
+  @media (min-width: ${props => props.theme.breakpoints.sm}) {
+    top: 24em;
+    transform: scale(1);
+  }
+
+  @media (min-width: 820px) {
+    display: none;
   }
 `;

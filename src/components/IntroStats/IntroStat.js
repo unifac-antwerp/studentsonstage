@@ -5,10 +5,27 @@ import CountUp from "react-countup";
 const Wrap = styled.div`
   display: flex;
   align-items: center;
+  flex-direction: column;
+  width: 33%;
+
+  @media (min-width: ${props => props.theme.breakpoints.sm}) {
+    flex-direction: row;
+    width: auto;
+  }
 `;
 
 const ContentWrap = styled.div`
-  margin-left: 0.8em;
+  margin-left: 0;
+  margin-top: 0.8em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media (min-width: ${props => props.theme.breakpoints.sm}) {
+    display: block;
+    margin-left: 0.8em;
+    margin-top: 0;
+  }
 `;
 
 const Title = styled.span`

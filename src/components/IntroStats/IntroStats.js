@@ -6,7 +6,19 @@ import IntroStat from "./IntroStat";
 const Wrap = styled.div`
   display: flex;
   justify-content: space-between;
-  width: 100%;
+  width: 95%;
+
+  @media (min-width: 440px) {
+    width: 80%;
+  }
+
+  @media (min-width: ${props => props.theme.breakpoints.xs}) {
+    width: 70%;
+  }
+
+  @media (min-width: ${props => props.theme.breakpoints.sm}) {
+    width: 100%;
+  }
 `;
 
 const IntroStats = ({ stats }) => (

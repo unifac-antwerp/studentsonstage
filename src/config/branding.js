@@ -18,7 +18,9 @@ const grid = {
 const breakpoints = {
   xxl: "1270px",
   xl: "1100px",
-  md: "960px"
+  md: "960px",
+  sm: "680px",
+  xs: "520px"
 };
 
 const fonts = {
