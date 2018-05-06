@@ -8,10 +8,18 @@ import OrnamentImg from "../../assets/img/ornament_1.png";
 
 const Wrap = styled.section`
   background-color: ${props => props.theme.palette.white};
-  margin-top: 11.2em;
+  margin-top: 8em;
   margin-bottom: 14.4em;
-  height: 72em;
+  height: 56vw;
   position: relative;
+
+  @media (min-width: ${props => props.theme.breakpoints.sm}) {
+    margin-top: 11.2em;
+  }
+
+  @media (min-width: ${props => props.theme.breakpoints.xxl}) {
+    height: 72em;
+  }
 `;
 
 const ContentWrap = styled.div`
@@ -27,10 +35,25 @@ const ContentWrap = styled.div`
 const Ornament = styled.img`
   position: absolute;
   top: -14.2em;
+  transform-origin: 0% 50%;
+  transform: scale(0.6);
+  display: none;
+
+  @media (min-width: ${props => props.theme.breakpoints.sm}) {
+    display: block;
+  }
+
+  @media (min-width: ${props => props.theme.breakpoints.xxl}) {
+    transform: scale(1);
+  }
 `;
 
 const Title = styled.h1`
-  padding: 72px 0 24px;
+  padding: 32px 0 24px;
+
+  @media (min-width: ${props => props.theme.breakpoints.sm}) {
+    padding: 72px 0 24px;
+  }
 `;
 
 const ImageCarousel = ({ title, images }) => (

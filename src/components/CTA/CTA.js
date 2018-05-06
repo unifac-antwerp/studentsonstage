@@ -29,6 +29,17 @@ const Ornament = styled.img`
   position: absolute;
   top: -14.2em;
   right: 0;
+  transform-origin: 100% 50%;
+  transform: scale(0.6);
+  display: none;
+
+  @media (min-width: ${props => props.theme.breakpoints.sm}) {
+    display: block;
+  }
+
+  @media (min-width: ${props => props.theme.breakpoints.xxl}) {
+    transform: scale(1);
+  }
 `;
 
 const Title = styled.h1`

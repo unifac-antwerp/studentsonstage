@@ -15,6 +15,17 @@ const Ornament = styled.img`
   position: absolute;
   top: -14.2em;
   right: 0;
+  transform-origin: 100% 50%;
+  transform: scale(0.6);
+  display: none;
+
+  @media (min-width: ${props => props.theme.breakpoints.sm}) {
+    display: block;
+  }
+
+  @media (min-width: ${props => props.theme.breakpoints.xxl}) {
+    transform: scale(1);
+  }
 `;
 
 const ContentWrap = styled.div`
@@ -28,7 +39,11 @@ const ContentWrap = styled.div`
 `;
 
 const Title = styled.h1`
-  padding: 72px 0 24px;
+  padding: 32px 0 24px;
+
+  @media (min-width: ${props => props.theme.breakpoints.sm}) {
+    padding: 72px 0 24px;
+  }
 `;
 
 const Desc = styled.div`

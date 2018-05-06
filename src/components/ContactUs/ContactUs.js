@@ -17,7 +17,11 @@ const Ornament = styled.img`
 `;
 
 const Title = styled.h1`
-  padding: 72px 0 24px;
+  padding: 32px 0 24px;
+
+  @media (min-width: ${props => props.theme.breakpoints.sm}) {
+    padding: 72px 0 24px;
+  }
 `;
 
 const ContentWrap = styled.div`
