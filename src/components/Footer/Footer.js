@@ -9,17 +9,24 @@ import Social from "./Social";
 const Wrap = styled.footer`
   background-color: ${props => props.theme.palette.neutral02};
   margin-top: 8em;
-  padding: 3.2em 0 2.4em;
+  padding: 4em 0 2.4em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
   * {
     ${props => props.theme.textStyles.footer};
+  }
+
+  @media (min-width: ${props => props.theme.breakpoints.xs}) {
+    padding: 3.2em 0 2.4em;
   }
 `;
 
 const ContentWrap = styled.div`
   display: flex;
   justify-content: space-between;
-  align-items: flex-end;
+  align-items: flex-start;
   max-width: ${props => props.theme.grid.maxWidth};
   width: ${props => props.theme.grid.containerSm};
   margin: 0 auto;
@@ -51,6 +58,8 @@ const Address = styled.address`
 `;
 
 const Copyright = styled.div`
+  margin-top: 1.6em;
+
   span,
   a {
     font-size: 12px;
@@ -95,13 +104,6 @@ const Footer = ({
             <Address>{RichText.render(address)}</Address>
           </FooterLink>
         </GeneralWrap>
-        <Copyright>
-          <span>© Unifac {getYear(new Date())} - </span>
-          <Emoji text="Made with 💙 by " />
-          <FooterLink to="https://wouterlanduydt.be" target="_blank">
-            Wouter Landuydt
-          </FooterLink>
-        </Copyright>
         <ul>
           {socials.map(s => (
             <Social
@@ -113,6 +115,13 @@ const Footer = ({
           ))}
         </ul>
       </ContentWrap>
+      <Copyright>
+        <span>© Unifac {getYear(new Date())} - </span>
+        <Emoji text="Made with 💙 by " />
+        <FooterLink to="https://wouterlanduydt.be" target="_blank">
+          Wouter Landuydt
+        </FooterLink>
+      </Copyright>
     </Wrap>
   );
 };
