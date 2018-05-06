@@ -15,10 +15,14 @@ const ContentWrapper = styled.div`
   flex-direction: column;
   align-items: center;
   max-width: ${props => props.theme.grid.maxWidth};
-  width: ${props => props.theme.grid.container};
+  width: ${props => props.theme.grid.containerSm};
   margin: 0 auto;
   text-align: center;
   padding: 4em 0;
+
+  @media (min-width: ${props => props.theme.breakpoints.xs}) {
+    width: ${props => props.theme.grid.container};
+  }
 `;
 
 const Ornament = styled.img`

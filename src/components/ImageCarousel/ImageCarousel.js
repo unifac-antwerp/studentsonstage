@@ -16,8 +16,12 @@ const Wrap = styled.section`
 
 const ContentWrap = styled.div`
   max-width: ${props => props.theme.grid.maxWidth};
-  width: ${props => props.theme.grid.container} !important;
+  width: ${props => props.theme.grid.containerSm} !important;
   margin: 0 auto;
+
+  @media (min-width: ${props => props.theme.breakpoints.sm}) {
+    width: ${props => props.theme.grid.container} !important;
+  }
 `;
 
 const Ornament = styled.img`

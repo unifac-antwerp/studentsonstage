@@ -7,19 +7,34 @@ const Wrap = styled.section`
   flex-direction: column;
   align-items: center;
   max-width: ${props => props.theme.grid.maxWidthSm};
-  width: ${props => props.theme.grid.container};
+  width: ${props => props.theme.grid.containerSm};
   margin: 0 auto;
-  padding: 3.2em;
+  padding: 1.6em;
   background-color: ${props => props.theme.palette.white};
-  border: 0.6em solid ${props => props.theme.palette.global01};
+  border: 4px solid ${props => props.theme.palette.global01};
   ${props => props.theme.shadows.shadow01};
   border-radius: 0.8em;
   margin-top: -8em;
   position: relative;
+
+  @media (min-width: ${props => props.theme.breakpoints.xs}) {
+    width: ${props => props.theme.grid.container};
+  }
+
+  @media (min-width: ${props => props.theme.breakpoints.sm}) {
+    padding: 3.2em;
+    border: 6px solid ${props => props.theme.palette.global01};
+  }
 `;
 
 const StyledImage = styled.img`
   margin: 3.2em 0 6.4em;
+  width: 168px;
+  height: auto;
+
+  @media (min-width: ${props => props.theme.breakpoints.xs}) {
+    width: auto;
+  }
 `;
 
 const Text = styled.div`

@@ -38,7 +38,11 @@ const Wrap = styled.nav`
   margin: 0 auto;
   height: 6.4em;
   max-width: ${props => props.theme.grid.maxWidth};
-  width: ${props => props.theme.grid.container};
+  width: ${props => props.theme.grid.containerSm};
+
+  @media (min-width: ${props => props.theme.breakpoints.xs}) {
+    width: ${props => props.theme.grid.container};
+  }
 `;
 
 const Title = styled(Link)`

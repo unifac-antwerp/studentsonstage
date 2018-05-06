@@ -5,8 +5,12 @@ import styled from "styled-components";
 const Wrap = styled.div`
   display: flex;
   max-width: 750px;
-  width: ${props => props.theme.grid.container};
+  width: ${props => props.theme.grid.containerSm};
   margin: 6.4em auto 0;
+
+  @media (min-width: ${props => props.theme.breakpoints.xs}) {
+    width: ${props => props.theme.grid.container};
+  }
 `;
 
 const ThumbnailList = styled.ul`

@@ -12,7 +12,8 @@ const palette = {
 const grid = {
   maxWidth: "1120px",
   maxWidthSm: "880px",
-  container: "90%"
+  container: "90%",
+  containerSm: "94%"
 };
 
 const breakpoints = {

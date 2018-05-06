@@ -12,9 +12,13 @@ const ContentWrap = styled.section`
   flex-direction: column;
   align-items: center;
   max-width: ${props => props.theme.grid.maxWidthSm};
-  width: ${props => props.theme.grid.container};
+  width: ${props => props.theme.grid.containerSm};
   margin: 0 auto;
   margin-top: 80px;
+
+  @media (min-width: ${props => props.theme.breakpoints.xs}) {
+    width: ${props => props.theme.grid.container};
+  }
 `;
 
 const StyledEmoji = styled(Emoji)`

@@ -22,13 +22,21 @@ const Title = styled.h1`
 
 const ContentWrap = styled.div`
   max-width: ${props => props.theme.grid.maxWidth};
-  width: ${props => props.theme.grid.container};
+  width: ${props => props.theme.grid.containerSm};
   margin: 0 auto;
+
+  @media (min-width: ${props => props.theme.breakpoints.xs}) {
+    width: ${props => props.theme.grid.container};
+  }
 `;
 
 const Desc = styled.div`
   max-width: ${props => props.theme.grid.maxWidthSm};
-  width: ${props => props.theme.grid.container};
+  width: ${props => props.theme.grid.containerSm};
+
+  @media (min-width: ${props => props.theme.breakpoints.xs}) {
+    width: ${props => props.theme.grid.container};
+  }
 `;
 
 const ContactUs = ({ title, desc, people }) => (

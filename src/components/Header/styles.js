@@ -3,7 +3,15 @@ import styled from "styled-components";
 export const Wrap = styled.div`
   background-color: ${props => props.theme.palette.white};
   position: relative;
-  height: 80em;
+  height: 65.6em;
+
+  @media (min-width: 400px) {
+    height: 72em;
+  }
+
+  @media (min-width: ${props => props.theme.breakpoints.xs}) {
+    height: 80em;
+  }
 `;
 
 export const ContentWrapper = styled.div`
@@ -11,8 +19,12 @@ export const ContentWrapper = styled.div`
   flex-direction: column;
   align-items: center;
   max-width: 52em;
-  width: ${props => props.theme.grid.container};
+  width: ${props => props.theme.grid.containerSm};
   margin: 0 auto;
+
+  @media (min-width: ${props => props.theme.breakpoints.xs}) {
+    width: ${props => props.theme.grid.container};
+  }
 `;
 
 export const Logo = styled.img`

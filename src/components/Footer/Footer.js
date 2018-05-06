@@ -21,8 +21,12 @@ const ContentWrap = styled.div`
   justify-content: space-between;
   align-items: flex-end;
   max-width: ${props => props.theme.grid.maxWidth};
-  width: ${props => props.theme.grid.container};
+  width: ${props => props.theme.grid.containerSm};
   margin: 0 auto;
+
+  @media (min-width: ${props => props.theme.breakpoints.xs}) {
+    width: ${props => props.theme.grid.container};
+  }
 `;
 
 const GeneralWrap = styled.div`
