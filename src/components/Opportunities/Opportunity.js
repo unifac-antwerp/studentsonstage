@@ -11,7 +11,13 @@ const Wrap = styled.li`
   ${props => props.theme.shadows.shadow02};
   background-color: ${props => props.theme.palette.white};
   border-radius: 0.4em;
-  width: 32.5%;
+  width: 100%;
+  margin-bottom: 1.6em;
+
+  @media (min-width: ${props => props.theme.breakpoints.md}) {
+    width: 32.5%;
+    margin-bottom: 0;
+  }
 `;
 
 const IconWrap = styled.div`

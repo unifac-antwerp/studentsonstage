@@ -5,9 +5,17 @@ import OrnamentImg from "../../assets/img/ornament_3.png";
 
 const Wrap = styled.section`
   background-color: ${props => props.theme.palette.white};
-  margin-top: 32em;
-  height: 52em;
+  margin-top: 91.2em;
+  height: 40vw;
   position: relative;
+
+  @media (min-width: ${props => props.theme.breakpoints.md}) {
+    margin-top: 32em;
+  }
+
+  @media (min-width: ${props => props.theme.breakpoints.xxl}) {
+    height: 52em;
+  }
 `;
 
 const ContentWrap = styled.div`

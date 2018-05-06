@@ -39,22 +39,34 @@ const fontWeights = {
 const textStyles = {
   heading01: css`
     font-family: ${fonts.montserrat};
-    font-size: 3.2em;
+    font-size: 2.8em;
     font-weight: ${fontWeights.bold};
     color: ${palette.global01};
     line-height: 32px;
+
+    @media (min-width: ${breakpoints.sm}) {
+      font-size: 3.2em;
+    }
   `,
   heading02: css`
     font-family: ${fonts.montserrat};
-    font-size: 2.6em;
+    font-size: 2.4em;
     font-weight: ${fontWeights.medium};
     color: ${palette.neutral01};
     line-height: 28px;
+
+    @media (min-width: ${breakpoints.sm}) {
+      font-size: 2.6em;
+    }
   `,
   heading03: css`
     font-family: ${fonts.montserrat};
-    font-size: 2.2em;
+    font-size: 2em;
     font-weight: ${fontWeights.bold};
+
+    @media (min-width: ${breakpoints.sm}) {
+      font-size: 2.2em;
+    }
   `,
   paragraph: css`
     font-size: 1.6em;

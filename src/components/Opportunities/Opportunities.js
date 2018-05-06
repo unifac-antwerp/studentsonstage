@@ -6,9 +6,17 @@ import OrnamentImg from "../../assets/img/ornament_2.png";
 
 const Wrap = styled.section`
   background-color: ${props => props.theme.palette.white};
-  height: 44.8em;
+  height: 48.8em;
   position: relative;
-  margin-top: 32em;
+  margin-top: 18em;
+
+  @media (min-width: ${props => props.theme.breakpoints.xs}) {
+    height: 44.8em;
+  }
+
+  @media (min-width: ${props => props.theme.breakpoints.sm}) {
+    margin-top: 28em;
+  }
 `;
 
 const Ornament = styled.img`
@@ -58,13 +66,21 @@ const Desc = styled.div`
 
 const OpportunitiesWrap = styled.ul`
   display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: space-between;
   margin: 0 auto;
-  max-width: ${props => props.theme.grid.maxWidth};
+  max-width: 64em;
   width: ${props => props.theme.grid.containerSm};
 
   @media (min-width: ${props => props.theme.breakpoints.xs}) {
     width: ${props => props.theme.grid.container};
+  }
+
+  @media (min-width: ${props => props.theme.breakpoints.md}) {
+    max-width: ${props => props.theme.grid.maxWidth};
+    align-items: flex-start;
+    flex-direction: row;
   }
 `;
 
