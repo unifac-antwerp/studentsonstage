@@ -6,13 +6,8 @@ import OrnamentImg from "../../assets/img/ornament_2.png";
 
 const Wrap = styled.section`
   background-color: ${props => props.theme.palette.white};
-  height: 48.8em;
   position: relative;
   margin-top: 18em;
-
-  @media (min-width: ${props => props.theme.breakpoints.xs}) {
-    height: 44.8em;
-  }
 
   @media (min-width: ${props => props.theme.breakpoints.sm}) {
     margin-top: 28em;
@@ -57,7 +52,6 @@ const Title = styled.h1`
 const Desc = styled.div`
   max-width: ${props => props.theme.grid.maxWidthSm};
   width: ${props => props.theme.grid.containerSm};
-  margin-bottom: 5.6em;
 
   @media (min-width: ${props => props.theme.breakpoints.xs}) {
     width: ${props => props.theme.grid.container};
@@ -72,6 +66,8 @@ const OpportunitiesWrap = styled.ul`
   margin: 0 auto;
   max-width: 64em;
   width: ${props => props.theme.grid.containerSm};
+  position: relative;
+  top: 5.6em;
 
   @media (min-width: ${props => props.theme.breakpoints.xs}) {
     width: ${props => props.theme.grid.container};
