@@ -8,7 +8,7 @@ import Social from "./Social";
 
 const Wrap = styled.footer`
   background-color: ${props => props.theme.palette.neutral02};
-  margin-top: 8em;
+  margin-top: 4em;
   padding: 4em 0 2.4em;
   display: flex;
   flex-direction: column;
@@ -18,7 +18,8 @@ const Wrap = styled.footer`
     ${props => props.theme.textStyles.footer};
   }
 
-  @media (min-width: ${props => props.theme.breakpoints.xs}) {
+  @media (min-width: ${props => props.theme.breakpoints.sm}) {
+    margin-top: 8em;
     padding: 3.2em 0 2.4em;
   }
 `;

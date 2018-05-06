@@ -5,9 +5,13 @@ import Button from "../Button";
 import OrnamentImg from "../../assets/img/ornament_4.png";
 
 const Wrap = styled.section`
-  margin-top: 24em;
+  margin-top: 16em;
   background-color: ${props => props.theme.palette.white};
   position: relative;
+
+  @media (min-width: ${props => props.theme.breakpoints.sm}) {
+    margin-top: 24em;
+  }
 `;
 
 const ContentWrapper = styled.div`

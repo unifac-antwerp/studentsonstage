@@ -7,7 +7,7 @@ const Wrap = styled.section`
   background-color: ${props => props.theme.palette.white};
   height: 40vw;
   position: relative;
-  margin-top: 8em;
+  margin-top: 9.6em;
 
   @media (min-width: ${props => props.theme.breakpoints.sm}) {
     margin-top: 15.2em;
