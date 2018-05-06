@@ -4,17 +4,22 @@ import styled from "styled-components";
 
 const Wrap = styled.div`
   display: flex;
-  max-width: 750px;
-  width: ${props => props.theme.grid.containerSm};
-  margin: 6.4em auto 0;
+  flex-direction: column;
+  max-width: 696px;
 
-  @media (min-width: ${props => props.theme.breakpoints.xs}) {
-    width: ${props => props.theme.grid.container};
+  @media (min-width: ${props => props.theme.breakpoints.md}) {
+    flex-direction: row;
   }
 `;
 
 const ThumbnailList = styled.ul`
-  margin: 0.8em 0.8em 0 0;
+  display: flex;
+  margin: 0 0 0.8em 0.8em;
+
+  @media (min-width: ${props => props.theme.breakpoints.md}) {
+    display: block;
+    margin: 0.8em 0.8em 0 0;
+  }
 `;
 
 const Thumbnail = styled.li`
@@ -30,7 +35,13 @@ const Thumbnail = styled.li`
   }
 
   &:not(:last-child) {
-    margin-bottom: 0.6em;
+    margin-bottom: 0;
+    margin-right: 0.6em;
+
+    @media (min-width: ${props => props.theme.breakpoints.md}) {
+      margin-bottom: 0.6em;
+      margin-right: 0;
+    }
   }
 
   .image {
@@ -40,8 +51,19 @@ const Thumbnail = styled.li`
 `;
 
 const MainImage = styled.img`
-  border-radius: 0.8em 0 0 0.8em;
-  margin: 0.8em;
+  display: none;
+
+  @media (min-width: ${props => props.theme.breakpoints.sm}) {
+    display: block;
+    border-radius: 0.8em 0 0 0.8em;
+    margin: 0.8em;
+    width: auto;
+    height: 32vw;
+  }
+
+  @media (min-width: ${props => props.theme.breakpoints.md}) {
+    height: auto;
+  }
 `;
 
 const PersonWrap = styled.div`

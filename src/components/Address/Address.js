@@ -11,14 +11,14 @@ const Wrap = styled.section`
 `;
 
 const Ornament = styled.img`
-  position: absolute;
-  top: -14.2em;
-  transform-origin: 0% 50%;
-  transform: scale(0.6);
   display: none;
 
   @media (min-width: ${props => props.theme.breakpoints.sm}) {
     display: block;
+    position: absolute;
+    top: -14.2em;
+    transform-origin: 0% 50%;
+    transform: scale(0.6);
   }
 
   @media (min-width: ${props => props.theme.breakpoints.xxl}) {

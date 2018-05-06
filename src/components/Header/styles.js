@@ -71,13 +71,13 @@ export const Info = styled.h2`
 `;
 
 export const ImageLeft = styled.img`
-  position: absolute;
-  transform: scale(0.7);
-  transform-origin: 0% 0%;
   display: none;
 
   @media (min-width: 820px) {
     display: block;
+    position: absolute;
+    transform: scale(0.7);
+    transform-origin: 0% 0%;
   }
 
   @media (min-width: ${props => props.theme.breakpoints.md}) {
@@ -90,15 +90,15 @@ export const ImageLeft = styled.img`
 `;
 
 export const ImageRight = styled.img`
-  position: absolute;
-  top: 6.4em;
-  right: 0;
   display: none;
-  transform: scale(0.7);
-  transform-origin: 100% 50%;
 
   @media (min-width: 820px) {
     display: block;
+    position: absolute;
+    top: 6.4em;
+    right: 0;
+    transform: scale(0.7);
+    transform-origin: 100% 50%;
   }
 
   @media (min-width: ${props => props.theme.breakpoints.md}) {
