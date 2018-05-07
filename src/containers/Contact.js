@@ -1,5 +1,6 @@
 import React, { Component, Fragment } from "react";
 import { withRouteData } from "react-static";
+import Helmet from "react-helmet";
 import Navbar from "../components/Navbar";
 import ContactUs from "../components/ContactUs";
 import Address from "../components/Address";
@@ -12,6 +13,9 @@ class Contact extends Component {
 
     return (
       <Fragment>
+        <Helmet>
+          <title>Contact - Students on Stage</title>
+        </Helmet>
         <Navbar {...navbar} />
         <ContactUs
           title={contactpage.contactTitle}

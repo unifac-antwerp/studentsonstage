@@ -2,6 +2,7 @@ import React from "react";
 import { withRouteData } from "react-static";
 import styled from "styled-components";
 import Emoji from "react-emoji-render";
+import { Helmet } from "react-helmet";
 import Navbar from "../components/Navbar";
 import Button from "../components/Button";
 
@@ -34,6 +35,9 @@ const Title = styled.h1`
 
 const FourOFour = ({ navbar }) => (
   <Wrap>
+    <Helmet>
+      <title>404 - Students on Stage</title>
+    </Helmet>
     <Navbar {...navbar} />
     <ContentWrap>
       <StyledEmoji text="🙊" />

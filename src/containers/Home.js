@@ -1,5 +1,6 @@
 import React, { Component, Fragment } from "react";
 import { withRouteData } from "react-static";
+import Helmet from "react-helmet";
 import Navbar from "../components/Navbar";
 import Header from "../components/Header";
 import Intro from "../components/Intro";
@@ -15,6 +16,9 @@ class Home extends Component {
 
     return (
       <Fragment>
+        <Helmet>
+          <title>Home - Students on Stage</title>
+        </Helmet>
         <Navbar {...navbar} />
         <Header
           logo={homepage.headerLogo}
