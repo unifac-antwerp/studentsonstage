@@ -6,6 +6,7 @@ const Wrap = styled.div`
   display: flex;
   align-items: center;
   flex-direction: column;
+  justify-content: space-between;
   width: 33%;
 
   @media (min-width: ${props => props.theme.breakpoints.sm}) {

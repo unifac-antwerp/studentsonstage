@@ -82,7 +82,7 @@ const ContentWrap = styled.div`
 
 const Position = styled.h3`
   font-size: 18px;
-  font-weight: ${props => props.theme.fontWeights.regular};
+  font-weight: ${props => props.theme.fontWeights.medium};
 `;
 
 const ContactItem = styled.li`

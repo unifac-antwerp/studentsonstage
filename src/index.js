@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import App from "./App";
+import WebFont from "webfontloader";
 
 export default App;
 
@@ -14,3 +15,9 @@ if (typeof document !== "undefined") {
 
   render(App);
 }
+
+WebFont.load({
+  google: {
+    families: ["Montserrat:400,500,700", "Roboto:300,400,500"]
+  }
+});

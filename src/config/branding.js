@@ -51,7 +51,7 @@ const textStyles = {
   heading02: css`
     font-family: ${fonts.montserrat};
     font-size: 2.4em;
-    font-weight: ${fontWeights.medium};
+    font-weight: ${fontWeights.bold};
     color: ${palette.neutral01};
     line-height: 28px;
 
@@ -82,7 +82,7 @@ const textStyles = {
   `,
   button: css`
     font-family: ${fonts.montserrat};
-    font-weight: ${fontWeights.regular};
+    font-weight: ${fontWeights.medium};
     font-size: 1.6em;
   `
 };
@@ -109,6 +109,10 @@ export const globalStyles = css`
 
   * {
     box-sizing: border-box;
+  }
+
+  .wf-loading {
+    font-family: Arial, Helvetica, sans-serif;
   }
 
   h1 {
