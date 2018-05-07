@@ -5,7 +5,7 @@ import styled from "styled-components";
 const StyledLink = styled(Link)`
   ${props => props.theme.textStyles.button};
   padding: ${props => (props.big ? "10px 28px" : "6px 20px")};
-  ${props => props.big && "font-size: 1.8em"};
+  ${props => props.big && "font-size: 1.6em"};
   border-radius: 64px;
   transition: background-color 150ms, color 150ms, border 150ms;
   user-select: none;
@@ -35,6 +35,7 @@ const StyledLink = styled(Link)`
 
   @media (min-width: ${props => props.theme.breakpoints.sm}) {
     padding: ${props => (props.big ? "14px 32px" : "8px 24px")};
+    ${props => props.big && "font-size: 1.8em"};
   }
 `;
 

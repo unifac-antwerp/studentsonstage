@@ -57,9 +57,21 @@ const Desc = styled.div`
 
 const ButtonWrapper = styled.div`
   display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media (min-width: ${props => props.theme.breakpoints.xs}) {
+    flex-direction: row;
+  }
 
   a:first-child {
-    margin-right: 16px;
+    margin-right: 0;
+    margin-bottom: 16px;
+
+    @media (min-width: ${props => props.theme.breakpoints.xs}) {
+      margin-right: 16px;
+      margin-bottom: 0;
+    }
   }
 `;
 
