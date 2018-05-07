@@ -57,11 +57,32 @@ const Title = styled(Link)`
   }
 `;
 
+const ButtonMobile = styled.div`
+  display: block;
+
+  @media (min-width: ${props => props.theme.breakpoints.sm}) {
+    display: none;
+  }
+`;
+
+const ButtonDesktop = styled.div`
+  display: none;
+
+  @media (min-width: ${props => props.theme.breakpoints.sm}) {
+    display: block;
+  }
+`;
+
 const Navbar = ({ title, contactButton }) => (
   <StyledHeadroom disableInlineStyles>
     <Wrap>
       <Title to="/">{title}</Title>
-      <Button link="/contact" text={contactButton} outlined="true" />
+      <ButtonDesktop>
+        <Button link="/contact" text={contactButton} outlined="true" />
+      </ButtonDesktop>
+      <ButtonMobile>
+        <Button link="/contact" text="Contact" outlined="true" />
+      </ButtonMobile>
     </Wrap>
   </StyledHeadroom>
 );
