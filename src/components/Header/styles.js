@@ -54,9 +54,11 @@ export const PoweredBy = styled.div`
   }
 `;
 
-export const Info = styled.h2`
+export const Info = styled.span`
   font-size: 16px;
   font-weight: ${props => props.theme.fontWeights.bold};
+  color: ${props => props.theme.palette.neutral01};
+  font-family: ${props => props.theme.fonts.montserrat};
   margin: 40px auto 64px;
   text-align: center;
 

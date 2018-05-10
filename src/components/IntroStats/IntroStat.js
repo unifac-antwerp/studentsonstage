@@ -29,6 +29,16 @@ const ContentWrap = styled.div`
   }
 `;
 
+const StyledCountUp = styled(CountUp)`
+  font-family: ${props => props.theme.fonts.montserrat};
+  font-size: 2em;
+  font-weight: ${props => props.theme.fontWeights.bold};
+
+  @media (min-width: ${props => props.theme.breakpoints.sm}) {
+    font-size: 2.2em;
+  }
+`;
+
 const Title = styled.span`
   font-size: 2.2em;
   display: block;
@@ -39,15 +49,13 @@ const IntroStat = ({ icon, number, title }) => (
   <Wrap>
     <img src={icon} alt="" />
     <ContentWrap>
-      <h3>
-        <CountUp
-          start={0}
-          end={number}
-          duration={2}
-          useEasing={true}
-          separator="."
-        />
-      </h3>
+      <StyledCountUp
+        start={0}
+        end={number}
+        duration={2}
+        useEasing={true}
+        separator="."
+      />
       <Title>{title}</Title>
     </ContentWrap>
   </Wrap>

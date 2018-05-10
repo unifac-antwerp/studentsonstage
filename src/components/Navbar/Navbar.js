@@ -47,13 +47,13 @@ const Wrap = styled.nav`
 
 const Title = styled(Link)`
   font-family: ${props => props.theme.fonts.montserrat};
-  font-size: 1.8em;
+  font-size: 18px;
   font-weight: ${props => props.theme.fontWeights.bold};
   color: ${props => props.theme.palette.global01};
   user-select: none;
 
   @media (min-width: ${props => props.theme.breakpoints.sm}) {
-    font-size: 2em;
+    font-size: 20px;
   }
 `;
 
@@ -76,7 +76,9 @@ const ButtonDesktop = styled.div`
 const Navbar = ({ title, contactButton }) => (
   <StyledHeadroom disableInlineStyles>
     <Wrap>
-      <Title to="/">{title}</Title>
+      <h1>
+        <Title to="/">{title}</Title>
+      </h1>
       <ButtonDesktop>
         <Button link="/contact" text={contactButton} outlined="true" />
       </ButtonDesktop>

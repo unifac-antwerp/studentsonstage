@@ -126,7 +126,10 @@ export default {
         <meta name="theme-color" content="#ffffff" />
         {renderMeta.styleTags}
       </Head>
-      <Body>{children}</Body>
+      <Body>
+        <h1 style={{ display: "none" }}>Students On Stage</h1>
+        {children}
+      </Body>
     </Html>
   )
 };
