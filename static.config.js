@@ -45,9 +45,15 @@ export default {
         <meta charSet="utf-8" />
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="description" content="" />
-        <meta name="author" content="" />
-        <meta name="keywords" content="" />
+        <meta
+          name="description"
+          content="Students on Stage is het festival waarmee het academisch jaar feestelijk wordt afgetrapt door de studenten aan de stadscampus van de Universiteit Antwerpen en bij uitbreiding heel de stad Antwerpen. Onder begeleiding van pompende beats overtuigen verschillende verenigingen hun doelpubliek om lid te worden en er samen een fantastisch jaar van te maken op zowel studentikoos als educatief vlak. Er is geen betere manier dan samen met 10.000 studenten onder de zon de vakantie af te sluiten en het academiejaar op gang te trekken!"
+        />
+        <meta name="author" content="wouter.landuydt@gmail.com" />
+        <meta
+          name="keywords"
+          content="Festival, Studenten, UAntwerpen, Unifac, Drinken, Eten, Dansen, Netwerken, Muziek, DJ, Verenigingen, Bedrijven, Stadscampus, Academische opening, Bart De Wever"
+        />
         <link
           rel="apple-touch-icon"
           sizes="57x57"
