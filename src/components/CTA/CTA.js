@@ -88,7 +88,7 @@ const CTA = ({
     <Ornament src={OrnamentImg} alt="" width="141" height="283" />
     <ContentWrapper>
       <Title>{title}</Title>
-      <Desc>{RichText.render(desc)}</Desc>
+      <Desc>{desc && RichText.render(desc)}</Desc>
       <ButtonWrapper>
         <Button
           link={buttonLink ? buttonLink : "/contact"}

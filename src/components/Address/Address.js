@@ -84,8 +84,8 @@ const Address = ({ title, desc, address }) => (
     <Ornament src={OrnamentImg} alt="" width="141" height="283" />
     <ContentWrap>
       <Title>{title}</Title>
-      <Desc>{RichText.render(desc)}</Desc>
-      <StyledAddress>{RichText.render(address)}</StyledAddress>
+      <Desc>{desc && RichText.render(desc)}</Desc>
+      <StyledAddress>{address && RichText.render(address)}</StyledAddress>
     </ContentWrap>
     <MapWrap>
       <iframe

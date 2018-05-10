@@ -111,19 +111,20 @@ const Footer = ({
       <ContentWrap>
         <GeneralWrap>
           <FooterLink to={`mailto:${email}`}>{email}</FooterLink>
-          <FooterLink to={addressLink.url} target="_blank">
+          <FooterLink to={addressLink && addressLink.url} target="_blank">
             <Address>{RichText.render(address)}</Address>
           </FooterLink>
         </GeneralWrap>
         <ul>
-          {socials.map(s => (
-            <Social
-              key={s.key}
-              platform={s.key}
-              title={s.title}
-              link={s.link}
-            />
-          ))}
+          {socials &&
+            socials.map(s => (
+              <Social
+                key={s.key}
+                platform={s.key}
+                title={s.title}
+                link={s.link}
+              />
+            ))}
         </ul>
       </ContentWrap>
       <Copyright>

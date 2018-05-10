@@ -85,21 +85,22 @@ const Opportunities = ({ title, desc, opportunities }) => (
     <Ornament src={OrnamentImg} alt="" width="141" height="283" />
     <ContentWrap>
       <Title>{title}</Title>
-      <Desc>{RichText.render(desc)}</Desc>
+      <Desc>{desc && RichText.render(desc)}</Desc>
     </ContentWrap>
     <OpportunitiesWrap>
-      {opportunities
-        .slice(0, 3)
-        .map(o => (
-          <Opportunity
-            key={o.title}
-            icon={o.icon.url}
-            title={o.title}
-            desc={o.description}
-            button={o.button}
-            ctaAction={o.ctaAction}
-          />
-        ))}
+      {opportunities &&
+        opportunities
+          .slice(0, 3)
+          .map(o => (
+            <Opportunity
+              key={o.title}
+              icon={o.icon.url}
+              title={o.title}
+              desc={o.description}
+              button={o.button}
+              ctaAction={o.ctaAction}
+            />
+          ))}
     </OpportunitiesWrap>
   </Wrap>
 );

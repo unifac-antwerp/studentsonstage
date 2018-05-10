@@ -24,9 +24,9 @@ const Header = ({ logo, poweredBy, date, location, stats }) => (
     <ImageLeftSm src={imageLeftSm} alt="" width="141" height="283" />
     <ContentWrapper>
       <Logo src={logo.url} alt="students on stage logo" />
-      <PoweredBy>{RichText.render(poweredBy)}</PoweredBy>
+      <PoweredBy>{poweredBy && RichText.render(poweredBy)}</PoweredBy>
       <Info>
-        {format(date, "D MMMM YYYY", { locale: "nl" })} • {location}
+        {date && format(date, "D MMMM YYYY", { locale: "nl" })} • {location}
       </Info>
       <IntroStats stats={stats} />
     </ContentWrapper>

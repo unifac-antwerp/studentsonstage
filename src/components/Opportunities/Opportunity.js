@@ -57,7 +57,7 @@ const Opportunity = ({ title, icon, desc, button, ctaAction }) => (
       <img src={icon} alt={`${title} icon`} />
     </IconWrap>
     <Title>{title}</Title>
-    <Desc>{RichText.render(desc)}</Desc>
+    <Desc>{desc && RichText.render(desc)}</Desc>
     <ButtonWrap>
       <Button link={ctaAction} text={button} />
     </ButtonWrap>

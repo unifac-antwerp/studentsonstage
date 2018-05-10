@@ -52,7 +52,7 @@ const IntroStat = ({ icon, number, title }) => (
     <img src={icon} alt="" />
     <ContentWrap>
       <StyledCountUp
-        start={calculateStartNumber(number, 30)}
+        start={number && calculateStartNumber(number, 30)}
         end={number}
         duration={1.5}
         useEasing={false}

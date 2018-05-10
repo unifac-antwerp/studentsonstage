@@ -95,7 +95,7 @@ const ContactUs = ({ title, desc, people }) => (
     <OrnamentSm src={OrnamentImgSm} alt="" width="141" height="283" />
     <ContentWrap>
       <Title>{title}</Title>
-      <Desc>{RichText.render(desc)}</Desc>
+      <Desc>{desc && RichText.render(desc)}</Desc>
     </ContentWrap>
     <PeopleListWrap>
       <PeopleList people={people} />

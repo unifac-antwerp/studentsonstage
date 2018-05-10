@@ -23,16 +23,17 @@ const Wrap = styled.div`
 
 const IntroStats = ({ stats }) => (
   <Wrap>
-    {stats
-      .slice(0, 3)
-      .map(s => (
-        <IntroStat
-          key={s.title}
-          icon={s.icon.url}
-          number={s.number}
-          title={s.title}
-        />
-      ))}
+    {stats &&
+      stats
+        .slice(0, 3)
+        .map(s => (
+          <IntroStat
+            key={s.title}
+            icon={s.icon.url}
+            number={s.number}
+            title={s.title}
+          />
+        ))}
   </Wrap>
 );
 

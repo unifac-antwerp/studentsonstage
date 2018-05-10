@@ -80,7 +80,9 @@ const Aftermovie = ({ title, aftermovie }) => (
     <Ornament src={OrnamentImg} alt="" width="141" height="283" />
     <ContentWrap>
       <Title>{title}</Title>
-      <Movie dangerouslySetInnerHTML={{ __html: aftermovie.html }} />
+      <Movie
+        dangerouslySetInnerHTML={{ __html: aftermovie && aftermovie.html }}
+      />
     </ContentWrap>
   </Wrap>
 );

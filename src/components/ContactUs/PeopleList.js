@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { PureComponent } from "react";
 import { Link } from "react-static";
 import styled from "styled-components";
 import IcoEmail from "../../assets/svg/ico_email.svg";
@@ -126,11 +126,11 @@ const ContactItemIcon = styled.img`
   width: 16px;
 `;
 
-class PeopleList extends Component {
+class PeopleList extends PureComponent {
   constructor(props) {
     super(props);
     this.state = {
-      selectedPerson: this.props.people[0]
+      selectedPerson: this.props.people[0] || {}
     };
   }
 
@@ -145,48 +145,51 @@ class PeopleList extends Component {
     return (
       <Wrap>
         <ThumbnailList>
-          {people.slice(0, 4).map(p => (
-            <Thumbnail
-              key={`${p.firstname}${p.lastname}`}
-              onClick={() => this.handleThumbnailClick(p)}
-              active={p === selectedPerson}
-            >
-              <img src={p.thumbnailImage.url} alt="" className="image" />
-            </Thumbnail>
-          ))}
+          {people &&
+            people.slice(0, 4).map(p => (
+              <Thumbnail
+                key={`${p.firstname}${p.lastname}`}
+                onClick={() => this.handleThumbnailClick(p)}
+                active={p === selectedPerson}
+              >
+                <img src={p.thumbnailImage.url} alt="" className="image" />
+              </Thumbnail>
+            ))}
         </ThumbnailList>
-        <PersonWrap>
-          <MainImage
-            src={selectedPerson.mainImage.url}
-            alt={`image ${selectedPerson.firstname}`}
-          />
-          <ContentWrap>
-            <h2>
-              {selectedPerson.firstname} {selectedPerson.lastname}
-            </h2>
-            <Position>{selectedPerson.position}</Position>
-            <ul>
-              <ContactItem>
-                <ContactItemIcon src={IcoEmail} alt="" />
-                <Link to={`mailto:${selectedPerson.email}`}>
-                  {selectedPerson.email}
-                </Link>
-              </ContactItem>
-              <ContactItem>
-                <ContactItemIcon src={IcoPhone} alt="" />
-                <Link to={`tel:${selectedPerson.phone}`}>
-                  {selectedPerson.phone}
-                </Link>
-              </ContactItem>
-              <ContactItem>
-                <ContactItemIcon src={IcoLinkedin} alt="" />
-                <Link to={selectedPerson.linkedinLink.url} target="_blank">
-                  {selectedPerson.linkedinTitle}
-                </Link>
-              </ContactItem>
-            </ul>
-          </ContentWrap>
-        </PersonWrap>
+        {selectedperson && (
+          <PersonWrap>
+            <MainImage
+              src={selectedPerson.mainImage.url}
+              alt={`image ${selectedPerson.firstname}`}
+            />
+            <ContentWrap>
+              <h2>
+                {selectedPerson.firstname} {selectedPerson.lastname}
+              </h2>
+              <Position>{selectedPerson.position}</Position>
+              <ul>
+                <ContactItem>
+                  <ContactItemIcon src={IcoEmail} alt="" />
+                  <Link to={`mailto:${selectedPerson.email}`}>
+                    {selectedPerson.email}
+                  </Link>
+                </ContactItem>
+                <ContactItem>
+                  <ContactItemIcon src={IcoPhone} alt="" />
+                  <Link to={`tel:${selectedPerson.phone}`}>
+                    {selectedPerson.phone}
+                  </Link>
+                </ContactItem>
+                <ContactItem>
+                  <ContactItemIcon src={IcoLinkedin} alt="" />
+                  <Link to={selectedPerson.linkedinLink.url} target="_blank">
+                    {selectedPerson.linkedinTitle}
+                  </Link>
+                </ContactItem>
+              </ul>
+            </ContentWrap>
+          </PersonWrap>
+        )}
       </Wrap>
     );
   }

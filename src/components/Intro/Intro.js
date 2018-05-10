@@ -47,8 +47,8 @@ const Text = styled.div`
 const Intro = ({ intro, logo }) => (
   <Wrap>
     <h1 style={{ display: "none" }}>Intro</h1>
-    <StyledImage src={logo.url} alt="unifac logo" />
-    <Text>{RichText.render(intro)}</Text>
+    <StyledImage src={logo && logo.url} alt="unifac logo" />
+    <Text>{intro && RichText.render(intro)}</Text>
   </Wrap>
 );
 
