@@ -1,6 +1,9 @@
 import React, { Component } from "react";
 import { Link } from "react-static";
 import styled from "styled-components";
+import IcoEmail from "../../assets/svg/ico_email.svg";
+import IcoPhone from "../../assets/svg/ico_phone.svg";
+import IcoLinkedin from "../../assets/svg/ico_linkedin.svg";
 
 const Wrap = styled.div`
   display: flex;
@@ -77,11 +80,15 @@ const PersonWrap = styled.div`
 const ContentWrap = styled.div`
   display: flex;
   flex-direction: column;
-  margin: 1.6em 0.8em;
+  margin: 1.6em;
   min-height: 17.6em;
 
+  @media (min-width: ${props => props.theme.breakpoints.xs}) {
+    min-height: auto;
+  }
+
   @media (min-width: ${props => props.theme.breakpoints.sm}) {
-    height: auto;
+    margin: 1.6em 0.8em;
   }
 `;
 
@@ -93,6 +100,8 @@ const Position = styled.span`
 
 const ContactItem = styled.li`
   ${props => props.theme.textStyles.paragraph};
+  display: flex;
+  align-items: center;
 
   :first-child {
     margin-top: 24px;
@@ -109,6 +118,12 @@ const ContactItem = styled.li`
       text-decoration: underline;
     }
   }
+`;
+
+const ContactItemIcon = styled.img`
+  margin-right: 8px;
+  height: 16px;
+  width: 16px;
 `;
 
 class PeopleList extends Component {
@@ -152,16 +167,19 @@ class PeopleList extends Component {
             <Position>{selectedPerson.position}</Position>
             <ul>
               <ContactItem>
+                <ContactItemIcon src={IcoEmail} alt="" />
                 <Link to={`mailto:${selectedPerson.email}`}>
                   {selectedPerson.email}
                 </Link>
               </ContactItem>
               <ContactItem>
+                <ContactItemIcon src={IcoPhone} alt="" />
                 <Link to={`tel:${selectedPerson.phone}`}>
                   {selectedPerson.phone}
                 </Link>
               </ContactItem>
               <ContactItem>
+                <ContactItemIcon src={IcoLinkedin} alt="" />
                 <Link to={selectedPerson.linkedinLink.url} target="_blank">
                   {selectedPerson.linkedinTitle}
                 </Link>

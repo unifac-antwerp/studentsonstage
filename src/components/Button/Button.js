@@ -13,24 +13,24 @@ const StyledLink = styled(Link)`
   color: ${props =>
     props.outlined ? props.theme.palette.neutral01 : props.theme.palette.white};
   background-color: ${props =>
-    props.outlined ? props.theme.palette.white : props.theme.palette.global01};
+    props.outlined ? props.theme.palette.white : props.theme.palette.global02};
   border: 2px solid
     ${props =>
       props.outlined
         ? props.theme.palette.neutral01
-        : props.theme.palette.global01};
+        : props.theme.palette.global02};
 
   &:hover {
     color: ${props => props.theme.palette.white};
     background-color: ${props =>
       props.outlined
         ? props.theme.palette.neutral01
-        : props.theme.palette.global02};
+        : props.theme.palette.global01};
     border: 2px solid
       ${props =>
         props.outlined
           ? props.theme.palette.neutral01
-          : props.theme.palette.global02};
+          : props.theme.palette.global01};
   }
 
   @media (min-width: ${props => props.theme.breakpoints.sm}) {

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="7px" height="14px" viewBox="0 0 7 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
+    <title>phone</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="2.0" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="contact-desktop" transform="translate(-460.000000, -412.000000)" fill="#3C3C3C" fill-rule="nonzero">
+            <path d="M466.123448,412 L460.876552,412 C460.392436,412 460,412.396885 460,412.886489 L460,425.113511 C460,425.603115 460.392436,426 460.876552,426 L466.123448,426 C466.607564,426 467,425.603115 467,425.113511 L467,412.886489 C467,412.396885 466.607564,412 466.123448,412 Z M463.5,425.407274 C463.194634,425.407274 462.947079,425.156912 462.947079,424.848084 C462.947079,424.539257 463.194634,424.288895 463.5,424.288895 C463.805366,424.288895 464.052921,424.539257 464.052921,424.848084 C464.052921,425.157091 463.805366,425.407274 463.5,425.407274 Z" id="phone"></path>
+        </g>
+    </g>
+</svg>
