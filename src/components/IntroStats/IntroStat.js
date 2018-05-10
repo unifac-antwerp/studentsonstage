@@ -45,15 +45,17 @@ const Title = styled.span`
   margin-top: 4px;
 `;
 
+const calculateStartNumber = (number, x) => (x <= number ? number - x : 0);
+
 const IntroStat = ({ icon, number, title }) => (
   <Wrap>
     <img src={icon} alt="" />
     <ContentWrap>
       <StyledCountUp
-        start={0}
+        start={calculateStartNumber(number, 30)}
         end={number}
-        duration={2}
-        useEasing={true}
+        duration={1.5}
+        useEasing={false}
         separator="."
       />
       <Title>{title}</Title>
