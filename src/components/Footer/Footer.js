@@ -111,7 +111,11 @@ const Footer = ({
       <ContentWrap>
         <GeneralWrap>
           <FooterLink to={`mailto:${email}`}>{email}</FooterLink>
-          <FooterLink to={addressLink && addressLink.url} target="_blank">
+          <FooterLink
+            to={addressLink && addressLink.url}
+            target="_blank"
+            rel="noopener"
+          >
             <Address>{RichText.render(address)}</Address>
           </FooterLink>
         </GeneralWrap>
@@ -132,7 +136,11 @@ const Footer = ({
         <StyledTwemoji options={{ className: "twemoji" }}>
           Made with 💙 by{" "}
         </StyledTwemoji>
-        <FooterLink to="https://wouterlanduydt.be" target="_blank">
+        <FooterLink
+          to="https://wouterlanduydt.be"
+          target="_blank"
+          rel="noopener"
+        >
           Wouter Landuydt
         </FooterLink>
       </Copyright>

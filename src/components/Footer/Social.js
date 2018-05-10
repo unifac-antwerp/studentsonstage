@@ -43,7 +43,7 @@ const Social = ({ platform, title, link }) => {
 
   return (
     <Wrap>
-      <StyledLink to={link && link.url} target="_blank">
+      <StyledLink to={link && link.url} target="_blank" rel="noopener">
         <Icon src={icon} alt="" />
         <span>{title}</span>
       </StyledLink>

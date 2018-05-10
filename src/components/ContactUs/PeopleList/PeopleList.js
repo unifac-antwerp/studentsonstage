@@ -74,7 +74,11 @@ class PeopleList extends PureComponent {
           </ContactItem>
           <ContactItem>
             <ContactItemIcon src={IcoLinkedin} alt="" />
-            <Link to={selectedPerson.linkedinLink.url} target="_blank">
+            <Link
+              to={selectedPerson.linkedinLink.url}
+              target="_blank"
+              rel="noopener"
+            >
               {selectedPerson.linkedinTitle}
             </Link>
           </ContactItem>
