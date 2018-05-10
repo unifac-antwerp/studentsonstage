@@ -23,7 +23,7 @@ const Wrap = styled.section`
 
   @media (min-width: ${props => props.theme.breakpoints.sm}) {
     padding: 3.2em;
-    border: 6px solid ${props => props.theme.palette.global01};
+    border: 6px solid ${props => props.theme.palette.global02};
   }
 `;
 
