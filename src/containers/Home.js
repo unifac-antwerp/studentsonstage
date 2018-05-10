@@ -20,33 +20,35 @@ class Home extends Component {
           <title>Home - Students on Stage</title>
         </Helmet>
         <Navbar {...navbar} />
-        <Header
-          logo={homepage.headerLogo}
-          poweredBy={homepage.headerPoweredBy}
-          date={homepage.date}
-          location={homepage.location}
-          stats={homepage.statistics}
-        />
-        <Intro logo={homepage.unifacLogo} intro={homepage.intro} />
-        <ImageCarousel
-          title={homepage.carouselTitle}
-          images={homepage.images}
-        />
-        <Opportunities
-          title={homepage.opportunitiesTitle}
-          desc={homepage.opportunitiesDescription}
-          opportunities={homepage.opportunities}
-        />
-        <Aftermovie
-          title={homepage.aftermovieTitle}
-          aftermovie={homepage.aftermovie}
-        />
-        <CTA
-          title={homepage.ctaTitle}
-          desc={homepage.ctaDescription}
-          button={homepage.ctaButton}
-        />
-        <Footer {...footer} />
+        <main>
+          <Header
+            logo={homepage.headerLogo}
+            poweredBy={homepage.headerPoweredBy}
+            date={homepage.date}
+            location={homepage.location}
+            stats={homepage.statistics}
+          />
+          <Intro logo={homepage.unifacLogo} intro={homepage.intro} />
+          <ImageCarousel
+            title={homepage.carouselTitle}
+            images={homepage.images}
+          />
+          <Opportunities
+            title={homepage.opportunitiesTitle}
+            desc={homepage.opportunitiesDescription}
+            opportunities={homepage.opportunities}
+          />
+          <Aftermovie
+            title={homepage.aftermovieTitle}
+            aftermovie={homepage.aftermovie}
+          />
+          <CTA
+            title={homepage.ctaTitle}
+            desc={homepage.ctaDescription}
+            button={homepage.ctaButton}
+          />
+          <Footer {...footer} />
+        </main>
       </Fragment>
     );
   }

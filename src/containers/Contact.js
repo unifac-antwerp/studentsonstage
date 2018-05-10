@@ -17,25 +17,27 @@ class Contact extends Component {
           <title>Contact - Students on Stage</title>
         </Helmet>
         <Navbar {...navbar} />
-        <ContactUs
-          title={contactpage.contactTitle}
-          desc={contactpage.contactDescription}
-          people={contactpage.people}
-        />
-        <Address
-          title={contactpage.addressTitle}
-          desc={contactpage.addressDescription}
-          address={contactpage.address}
-        />
-        <CTA
-          title={contactpage.ctaTitle}
-          desc={contactpage.ctaDescription}
-          button={contactpage.ctaMailButton}
-          buttonLink={contactpage.ctaMailAction}
-          secondaryButton={contactpage.ctaWebsiteButton}
-          secondaryButtonLink={contactpage.ctaWebsiteLink.url}
-        />
-        <Footer {...footer} />
+        <main>
+          <ContactUs
+            title={contactpage.contactTitle}
+            desc={contactpage.contactDescription}
+            people={contactpage.people}
+          />
+          <Address
+            title={contactpage.addressTitle}
+            desc={contactpage.addressDescription}
+            address={contactpage.address}
+          />
+          <CTA
+            title={contactpage.ctaTitle}
+            desc={contactpage.ctaDescription}
+            button={contactpage.ctaMailButton}
+            buttonLink={contactpage.ctaMailAction}
+            secondaryButton={contactpage.ctaWebsiteButton}
+            secondaryButtonLink={contactpage.ctaWebsiteLink.url}
+          />
+          <Footer {...footer} />
+        </main>
       </Fragment>
     );
   }

@@ -39,11 +39,13 @@ const FourOFour = ({ navbar }) => (
       <title>404 - Students on Stage</title>
     </Helmet>
     <Navbar {...navbar} />
-    <ContentWrap>
-      <StyledEmoji text="🙊" />
-      <Title>Pagina niet gevonden</Title>
-      <Button link="/" text="Naar de Homepage" />
-    </ContentWrap>
+    <main>
+      <ContentWrap>
+        <StyledEmoji text="🙊" />
+        <Title>Pagina niet gevonden</Title>
+        <Button link="/" text="Naar de Homepage" />
+      </ContentWrap>
+    </main>
   </Wrap>
 );
 
