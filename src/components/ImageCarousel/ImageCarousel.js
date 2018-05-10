@@ -74,7 +74,14 @@ const ImageCarousel = ({ title, images }) => (
         renderBottomCenterControls={({}) => null}
       >
         {images.map(i => (
-          <img key={i.image.url} src={i.image.url} alt="carousel image" />
+          <img
+            key={i.image.url}
+            src={i.image.url}
+            alt="carousel image"
+            onLoad={() => {
+              window.dispatchEvent(new Event("resize"));
+            }}
+          />
         ))}
       </Carousel>
     </ContentWrap>
