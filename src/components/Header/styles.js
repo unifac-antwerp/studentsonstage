@@ -56,7 +56,7 @@ export const PoweredBy = styled.div`
 
 export const Info = styled.h2`
   font-size: 16px;
-  font-weight: ${props => props.theme.fontWeights.medium};
+  font-weight: ${props => props.theme.fontWeights.bold};
   margin: 40px auto 64px;
   text-align: center;
 
@@ -66,6 +66,7 @@ export const Info = styled.h2`
   }
 
   @media (min-width: ${props => props.theme.breakpoints.sm}) {
+    font-weight: ${props => props.theme.fontWeights.medium};
     font-size: 22px;
   }
 `;
