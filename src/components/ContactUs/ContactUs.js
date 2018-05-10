@@ -1,7 +1,7 @@
 import React from "react";
 import { RichText } from "prismic-reactjs";
 import styled from "styled-components";
-import PeopleList from "./PeopleList";
+import PeopleList from "./PeopleList/PeopleList";
 import OrnamentImg from "../../assets/img/ornament_6.png";
 import OrnamentImgSm from "../../assets/img/ornament_6_sm.png";
 

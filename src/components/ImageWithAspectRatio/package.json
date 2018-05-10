@@ -1,0 +1,6 @@
+{
+  "name": "image-with-aspect-ratio",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./ImageWithAspectRatio.js"
+}

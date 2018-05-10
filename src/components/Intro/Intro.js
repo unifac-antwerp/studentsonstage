@@ -1,6 +1,7 @@
 import React from "react";
 import { RichText } from "prismic-reactjs";
 import styled from "styled-components";
+import ImageWithAspectRatio from "../ImageWithAspectRatio";
 
 const Wrap = styled.section`
   display: flex;
@@ -27,13 +28,14 @@ const Wrap = styled.section`
   }
 `;
 
-const StyledImage = styled.img`
+const LogoWrap = styled.div`
+  position: relative;
   margin: 3.2em 0 6.4em;
   width: 168px;
   height: auto;
 
   @media (min-width: ${props => props.theme.breakpoints.xs}) {
-    width: auto;
+    width: 212px;
   }
 `;
 
@@ -47,7 +49,14 @@ const Text = styled.div`
 const Intro = ({ intro, logo }) => (
   <Wrap>
     <h1 style={{ display: "none" }}>Intro</h1>
-    <StyledImage src={logo && logo.url} alt="unifac logo" />
+    <LogoWrap>
+      <ImageWithAspectRatio
+        src={logo && logo.url}
+        alt="unifac logo"
+        width={212}
+        height={211}
+      />
+    </LogoWrap>
     <Text>{intro && RichText.render(intro)}</Text>
   </Wrap>
 );

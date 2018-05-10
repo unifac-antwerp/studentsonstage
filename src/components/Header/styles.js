@@ -27,13 +27,14 @@ export const ContentWrapper = styled.div`
   }
 `;
 
-export const Logo = styled.img`
+export const LogoWrap = styled.div`
+  position: relative;
   margin-top: 7.2em;
   height: auto;
   width: 50vw;
 
   @media (min-width: ${props => props.theme.breakpoints.sm}) {
-    width: auto;
+    width: 276px;
   }
 `;
 

@@ -4,7 +4,7 @@ import format from "date-fns/format";
 import {
   Wrap,
   ContentWrapper,
-  Logo,
+  LogoWrap,
   PoweredBy,
   Info,
   ImageLeft,
@@ -17,13 +17,21 @@ import imageLeft from "../../assets/img/img_left.png";
 import imageLeftSm from "../../assets/img/img_left_sm.png";
 import imageRight from "../../assets/img/img_right.png";
 import imageRightSm from "../../assets/img/img_right_sm.png";
+import ImageWithAspectRatio from "../ImageWithAspectRatio";
 
 const Header = ({ logo, poweredBy, date, location, stats }) => (
   <Wrap>
     <ImageLeft src={imageLeft} alt="" width="251" height="503" />
     <ImageLeftSm src={imageLeftSm} alt="" width="141" height="283" />
     <ContentWrapper>
-      <Logo src={logo.url} alt="students on stage logo" />
+      <LogoWrap>
+        <ImageWithAspectRatio
+          src={logo.url}
+          alt="students on stage logo"
+          width={276}
+          height={252}
+        />
+      </LogoWrap>
       <PoweredBy>{poweredBy && RichText.render(poweredBy)}</PoweredBy>
       <Info>
         {date && format(date, "D MMMM YYYY", { locale: "nl" })} • {location}
