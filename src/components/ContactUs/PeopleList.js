@@ -85,7 +85,8 @@ const ContentWrap = styled.div`
   }
 `;
 
-const Position = styled.h3`
+const Position = styled.span`
+  font-family: ${props => props.theme.fonts.montserrat};
   font-size: 18px;
   font-weight: ${props => props.theme.fontWeights.medium};
 `;

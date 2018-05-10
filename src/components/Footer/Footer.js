@@ -3,7 +3,7 @@ import { Link } from "react-static";
 import { RichText } from "prismic-reactjs";
 import styled from "styled-components";
 import getYear from "date-fns/get_year";
-import Emoji from "react-emoji-render";
+import Twemoji from "react-twemoji";
 import Social from "./Social";
 
 const Wrap = styled.footer`
@@ -67,6 +67,16 @@ const Copyright = styled.div`
   }
 `;
 
+const StyledTwemoji = styled(Twemoji)`
+  display: inline;
+  font-size: 12px;
+
+  .twemoji {
+    width: 10px;
+    margin: 0 2px;
+  }
+`;
+
 const Footer = ({
   email,
   address,
@@ -118,7 +128,9 @@ const Footer = ({
       </ContentWrap>
       <Copyright>
         <span>© Unifac {getYear(new Date())} - </span>
-        <Emoji text="Made with 💙 by " />
+        <StyledTwemoji options={{ className: "twemoji" }}>
+          Made with 💙 by{" "}
+        </StyledTwemoji>
         <FooterLink to="https://wouterlanduydt.be" target="_blank">
           Wouter Landuydt
         </FooterLink>
