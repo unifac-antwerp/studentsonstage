@@ -49,7 +49,7 @@ const Title = styled(Link)`
   font-family: ${props => props.theme.fonts.montserrat};
   font-size: 18px;
   font-weight: ${props => props.theme.fontWeights.bold};
-  color: ${props => props.theme.palette.global02};
+  color: ${props => props.theme.palette.global01};
   user-select: none;
 
   @media (min-width: ${props => props.theme.breakpoints.sm}) {
