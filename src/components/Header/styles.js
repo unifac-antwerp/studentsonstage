@@ -115,9 +115,9 @@ export const ImageLeftSm = styled.img`
   display: block;
   position: absolute;
   transform-origin: 0% 0%;
-  transform: scale(0.55);
+  transform: scale(0.5);
 
-  @media (min-width: ${props => props.theme.breakpoints.xs}) {
+  @media (min-width: 500px) {
     transform: scale(0.8);
   }
 
@@ -134,11 +134,11 @@ export const ImageRightSm = styled.img`
   display: block;
   position: absolute;
   right: 0;
-  top: 32.8vw;
+  top: 26.4vw;
   transform-origin: 100% 50%;
-  transform: scale(0.55);
+  transform: scale(0.5);
 
-  @media (min-width: ${props => props.theme.breakpoints.xs}) {
+  @media (min-width: 500px) {
     transform: scale(0.8);
   }
 
