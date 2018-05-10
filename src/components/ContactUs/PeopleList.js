@@ -78,6 +78,11 @@ const ContentWrap = styled.div`
   display: flex;
   flex-direction: column;
   margin: 1.6em 0.8em;
+  min-height: 17.6em;
+
+  @media (min-width: ${props => props.theme.breakpoints.sm}) {
+    height: auto;
+  }
 `;
 
 const Position = styled.h3`
