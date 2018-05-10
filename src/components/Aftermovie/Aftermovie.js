@@ -58,6 +58,7 @@ const Title = styled.h1`
 
 const Movie = styled.div`
   width: 100%;
+  background-color: ${props => props.theme.palette.loading};
 
   position: relative;
   padding-bottom: 44.82%;

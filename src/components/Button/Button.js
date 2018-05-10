@@ -39,8 +39,8 @@ const StyledLink = styled(Link)`
   }
 `;
 
-const Button = ({ link, text, outlined, big }) => (
-  <StyledLink to={link} outlined={outlined} big={big}>
+const Button = ({ link, text, outlined, big, target }) => (
+  <StyledLink to={link} outlined={outlined} big={big} target={target}>
     {text}
   </StyledLink>
 );

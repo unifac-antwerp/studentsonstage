@@ -35,6 +35,7 @@ class Contact extends Component {
             buttonLink={contactpage.ctaMailAction}
             secondaryButton={contactpage.ctaWebsiteButton}
             secondaryButtonLink={contactpage.ctaWebsiteLink.url}
+            page="contact"
           />
           <Footer {...footer} />
         </main>

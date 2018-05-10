@@ -5,12 +5,12 @@ import Button from "../Button";
 import OrnamentImg from "../../assets/img/ornament_4.png";
 
 const Wrap = styled.section`
-  margin-top: 16em;
+  margin-top: ${props => (props.page === "contact" ? "12.8em" : "16em")};
   background-color: ${props => props.theme.palette.white};
   position: relative;
 
   @media (min-width: ${props => props.theme.breakpoints.sm}) {
-    margin-top: 24em;
+    margin-top: ${props => (props.page === "contact" ? "20em" : "24em")};
   }
 `;
 
@@ -81,9 +81,10 @@ const CTA = ({
   button,
   buttonLink,
   secondaryButton,
-  secondaryButtonLink
+  secondaryButtonLink,
+  page
 }) => (
-  <Wrap>
+  <Wrap page={page}>
     <Ornament src={OrnamentImg} alt="" width="141" height="283" />
     <ContentWrapper>
       <Title>{title}</Title>
@@ -98,6 +99,7 @@ const CTA = ({
           <Button
             link={secondaryButtonLink}
             text={secondaryButton}
+            target="_blank"
             outlined="true"
             big="true"
           />

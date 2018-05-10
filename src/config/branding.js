@@ -6,7 +6,8 @@ const palette = {
   white: "#ffffff",
   global01: "#005C99",
   global02: "#2289CE",
-  background: "#EBF7FF"
+  background: "#EBF7FF",
+  loading: "rgb(229,227,223)"
 };
 
 const grid = {
