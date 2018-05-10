@@ -1,7 +1,7 @@
 import React from "react";
 import { withRouteData } from "react-static";
 import styled from "styled-components";
-import Emoji from "react-emoji-render";
+import Twemoji from "react-twemoji";
 import { Helmet } from "react-helmet";
 import Navbar from "../components/Navbar";
 import Button from "../components/Button";
@@ -22,10 +22,6 @@ const ContentWrap = styled.section`
   }
 `;
 
-const StyledEmoji = styled(Emoji)`
-  font-size: 64px;
-`;
-
 const Title = styled.h1`
   text-align: center;
   color: ${props => props.theme.palette.neutral01};
@@ -41,7 +37,7 @@ const FourOFour = ({ navbar }) => (
     <Navbar {...navbar} />
     <main>
       <ContentWrap>
-        <StyledEmoji text="🙊" />
+        <Twemoji>🔍</Twemoji>
         <Title>Pagina niet gevonden</Title>
         <Button link="/" text="Naar de Homepage" />
       </ContentWrap>
