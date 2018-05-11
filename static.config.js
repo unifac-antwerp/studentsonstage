@@ -45,6 +45,7 @@ export default {
         <meta charSet="utf-8" />
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Students on Stage</title>
         <meta
           name="description"
           content="Students on Stage is het festival waarmee het academisch jaar feestelijk wordt afgetrapt door de studenten aan de stadscampus van de Universiteit Antwerpen en bij uitbreiding heel de stad Antwerpen. Onder begeleiding van pompende beats overtuigen verschillende verenigingen hun doelpubliek om lid te worden en er samen een fantastisch jaar van te maken op zowel studentikoos als educatief vlak. Er is geen betere manier dan samen met 10.000 studenten onder de zon de vakantie af te sluiten en het academiejaar op gang te trekken!"
@@ -54,6 +55,48 @@ export default {
           name="keywords"
           content="Festival, Studenten, UAntwerpen, Unifac, Drinken, Eten, Dansen, Netwerken, Muziek, DJ, Verenigingen, Bedrijven, Stadscampus, Academische opening, Bart De Wever"
         />
+        {/* <!-- Search Engine --> */}
+        <meta
+          name="image"
+          content="https://studentsonstage.netlify.com/share_image.jpg"
+        />
+        {/* <!-- Schema.org for Google --> */}
+        <meta itemprop="name" content="Students on Stage" />
+        <meta
+          itemprop="description"
+          content="Students on Stage is het festival waarmee het academisch jaar feestelijk wordt afgetrapt door de studenten aan de stadscampus van de Universiteit Antwerpen en bij uitbreiding heel de stad Antwerpen. Onder begeleiding van pompende beats overtuigen verschillende verenigingen hun doelpubliek om lid te worden en er samen een fantastisch jaar van te maken op zowel studentikoos als educatief vlak. Er is geen betere manier dan samen met 10.000 studenten onder de zon de vakantie af te sluiten en het academiejaar op gang te trekken!"
+        />
+        <meta
+          itemprop="image"
+          content="https://studentsonstage.netlify.com/share_image.jpg"
+        />
+        {/* <!-- Twitter --> */}
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:title" content="Students on Stage" />
+        <meta
+          name="twitter:description"
+          content="Students on Stage is het festival waarmee het academisch jaar feestelijk wordt afgetrapt door de studenten aan de stadscampus van de Universiteit Antwerpen en bij uitbreiding heel de stad Antwerpen. Onder begeleiding van pompende beats overtuigen verschillende verenigingen hun doelpubliek om lid te worden en er samen een fantastisch jaar van te maken op zowel studentikoos als educatief vlak. Er is geen betere manier dan samen met 10.000 studenten onder de zon de vakantie af te sluiten en het academiejaar op gang te trekken!"
+        />
+        <meta
+          name="twitter:image:src"
+          content="https://studentsonstage.netlify.com/share_image_twitter.jpg"
+        />
+        {/* <!-- Open Graph general (Facebook, Pinterest & Google+) --> */}
+        <meta name="og:title" content="Students on Stage" />
+        <meta
+          name="og:description"
+          content="Students on Stage is het festival waarmee het academisch jaar feestelijk wordt afgetrapt door de studenten aan de stadscampus van de Universiteit Antwerpen en bij uitbreiding heel de stad Antwerpen. Onder begeleiding van pompende beats overtuigen verschillende verenigingen hun doelpubliek om lid te worden en er samen een fantastisch jaar van te maken op zowel studentikoos als educatief vlak. Er is geen betere manier dan samen met 10.000 studenten onder de zon de vakantie af te sluiten en het academiejaar op gang te trekken!"
+        />
+        <meta
+          name="og:image"
+          content="https://studentsonstage.netlify.com/share_image.jpg"
+        />
+        <meta name="og:url" content="https://studentsonstage.unifac.be" />
+        <meta name="og:site_name" content="Students on Stage" />
+        <meta name="og:locale" content="nl-be" />
+        <meta name="fb:admins" content="348659001868647" />
+        <meta name="fb:app_id" content="205970553524010" />
+        <meta name="og:type" content="website" />
         <link
           rel="apple-touch-icon"
           sizes="57x57"
