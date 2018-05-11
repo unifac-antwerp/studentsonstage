@@ -24,7 +24,7 @@ export const Thumbnail = styled.li`
   padding: 0.4em;
   background-color: ${props => props.theme.palette.white};
   ${props => props.theme.shadows.shadow02};
-  border-radius: 0.4em;
+  border-radius: 0.2em;
   transition: transform 150ms ease-out;
   transform: ${props => (props.active ? "scale(1.05)" : "scale(0.95)")};
 
@@ -44,7 +44,7 @@ export const Thumbnail = styled.li`
 
   .image {
     display: block;
-    border-radius: 0.4em;
+    border-radius: 0.2em;
     height: 56px;
     width: 56px;
     background-color: ${props => props.theme.palette.loading};
@@ -58,7 +58,7 @@ export const MainImageWrap = styled.div`
     position: relative;
     overflow: hidden;
     display: block;
-    border-radius: 0.8em 0 0 0.8em;
+    border-radius: 0.4em 0 0 0.4em;
     margin: 0.8em;
     width: 21vw;
     height: auto;
@@ -72,7 +72,7 @@ export const MainImageWrap = styled.div`
 
 export const PersonWrap = styled.div`
   display: flex;
-  border-radius: 0.8em;
+  border-radius: 0.4em;
   background-color: ${props => props.theme.palette.white};
   ${props => props.theme.shadows.shadow02};
   width: 100%;

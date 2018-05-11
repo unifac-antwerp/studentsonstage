@@ -12,9 +12,9 @@ const Wrap = styled.section`
   margin: 0 auto;
   padding: 1.6em;
   background-color: ${props => props.theme.palette.white};
-  border: 4px solid ${props => props.theme.palette.global01};
+  border: 4px solid ${props => props.theme.palette.global02};
   ${props => props.theme.shadows.shadow01};
-  border-radius: 0.8em;
+  border-radius: 0.4em;
   margin-top: -8em;
   position: relative;
 
