@@ -1,5 +1,4 @@
 import React from "react";
-import { withRouteData } from "react-static";
 import styled from "styled-components";
 import Twemoji from "react-twemoji";
 import { Helmet } from "react-helmet";
@@ -29,20 +28,19 @@ const Title = styled.h1`
   margin: 32px 0 40px;
 `;
 
-const FourOFour = ({ navbar }) => (
+const FourOFour = () => (
   <Wrap>
     <Helmet>
       <title>404 - Students on Stage</title>
     </Helmet>
-    <Navbar {...navbar} />
     <main>
       <ContentWrap>
         <Twemoji>🔍</Twemoji>
         <Title>Pagina niet gevonden</Title>
-        <Button link="/" text="Naar de Homepage" />
+        <Button link="/" text="Naar Students on Stage" />
       </ContentWrap>
     </main>
   </Wrap>
 );
 
-export default withRouteData(FourOFour);
+export default FourOFour;

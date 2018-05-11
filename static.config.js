@@ -26,8 +26,7 @@ export default {
       },
       {
         is404: true,
-        component: "src/containers/404",
-        getData: () => ({ navbar })
+        component: "src/containers/404"
       }
     ];
   },
@@ -61,13 +60,13 @@ export default {
           content="https://studentsonstage.netlify.com/share_image.jpg"
         />
         {/* <!-- Schema.org for Google --> */}
-        <meta itemprop="name" content="Students on Stage" />
+        <meta itemProp="name" content="Students on Stage" />
         <meta
-          itemprop="description"
+          itemProp="description"
           content="Students on Stage is het festival waarmee het academisch jaar feestelijk wordt afgetrapt door de studenten aan de stadscampus van de Universiteit Antwerpen en bij uitbreiding heel de stad Antwerpen. Onder begeleiding van pompende beats overtuigen verschillende verenigingen hun doelpubliek om lid te worden en er samen een fantastisch jaar van te maken op zowel studentikoos als educatief vlak. Er is geen betere manier dan samen met 10.000 studenten onder de zon de vakantie af te sluiten en het academiejaar op gang te trekken!"
         />
         <meta
-          itemprop="image"
+          itemProp="image"
           content="https://studentsonstage.netlify.com/share_image.jpg"
         />
         {/* <!-- Twitter --> */}
