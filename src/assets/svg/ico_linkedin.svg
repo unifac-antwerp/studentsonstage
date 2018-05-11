@@ -1,12 +1,1 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="9px" height="11px" viewBox="0 0 9 11" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
-    <title>linkedin</title>
-    <desc>Created with Sketch.</desc>
-    <defs></defs>
-    <g id="2.0" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="contact-desktop" transform="translate(-459.000000, -441.000000)" fill="#3C3C3C" fill-rule="nonzero">
-            <path d="M463.49991,445.579194 C462.176762,445.579194 461.104139,444.554107 461.104139,443.289597 C461.104139,442.025088 462.176762,441 463.49991,441 C464.823058,441 465.895682,442.025088 465.895682,443.289597 C465.895682,444.554107 464.823058,445.579194 463.49991,445.579194 Z M463.49991,445.918177 C465.985166,445.918177 468,447.843548 468,450.218663 C468,452.593779 459,452.593779 459,450.218663 C459,447.843548 461.014655,445.918177 463.49991,445.918177 Z" id="linkedin"></path>
-        </g>
-    </g>
-</svg>
+<svg width="9" height="11" viewBox="0 0 9 11" xmlns="http://www.w3.org/2000/svg"><title>linkedin</title><path d="M4.5 4.58c-1.323 0-2.396-1.026-2.396-2.29C2.104 1.025 3.177 0 4.5 0s2.396 1.025 2.396 2.29c0 1.264-1.073 2.29-2.396 2.29zm0 .338c2.485 0 4.5 1.926 4.5 4.3 0 2.376-9 2.376-9 0 0-2.374 2.015-4.3 4.5-4.3z" fill="#3C3C3C"/></svg>

@@ -1,15 +1,1 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="34px" height="34px" viewBox="0 0 34 34" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
-    <title>arrow</title>
-    <desc>Created with Sketch.</desc>
-    <defs></defs>
-    <g id="2.0" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="home-desktop" transform="translate(-90.000000, -1800.000000)">
-            <g id="arrow" transform="translate(90.000000, 1800.000000)">
-                <rect id="Rectangle-9" fill="#FFFFFF" transform="translate(17.000000, 17.000000) rotate(-315.000000) translate(-17.000000, -17.000000) " x="5" y="5" width="24" height="24"></rect>
-                <polyline id="Shape" stroke="#3C3C3C" stroke-width="3" points="19 23 13 17 19 11 19 11"></polyline>
-            </g>
-        </g>
-    </g>
-</svg>
+<svg width="34" height="34" viewBox="0 0 34 34" xmlns="http://www.w3.org/2000/svg"><title>arrow</title><g fill="none" fill-rule="evenodd"><path fill="#FFF" d="M17 .03L33.97 17 17 33.97.03 17z"/><path stroke="#3C3C3C" stroke-width="3" d="M19 23l-6-6 6-6"/></g></svg>

@@ -1,12 +1,1 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="14px" height="8px" viewBox="0 0 14 8" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
-    <title>email</title>
-    <desc>Created with Sketch.</desc>
-    <defs></defs>
-    <g id="2.0" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="contact-desktop" transform="translate(-457.000000, -389.000000)" fill="#3C3C3C" fill-rule="nonzero">
-            <path d="M469.883277,389 L464,393.80464 L458.116723,389 L469.883277,389 Z M471,396.354023 L466.618927,392.987486 L471,389.409582 L471,396.354023 Z M464.31225,394.871343 L465.803815,393.653194 L470.159177,397 L457.840823,397 L462.196185,393.653194 L463.68775,394.871343 C463.779244,394.946062 463.889711,394.98333 464,394.98333 C464.110289,394.98333 464.220756,394.946062 464.31225,394.871343 Z M457,389.409582 L461.381073,392.987486 L457,396.354023 L457,389.409582 Z" id="email"></path>
-        </g>
-    </g>
-</svg>
+<svg width="14" height="8" viewBox="0 0 14 8" xmlns="http://www.w3.org/2000/svg"><title>email</title><path d="M12.883 0L7 4.805 1.117 0h11.766zM14 7.354L9.619 3.987 14 .41v6.944zM7.312 5.871l1.492-1.218L13.159 8H.841l4.355-3.347 1.492 1.218a.493.493 0 0 0 .624 0zM0 .41l4.381 3.577L0 7.354V.41z" fill="#3C3C3C"/></svg>

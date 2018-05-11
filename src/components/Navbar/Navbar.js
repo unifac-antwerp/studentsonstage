@@ -1,8 +1,14 @@
 import React from "react";
 import { Link } from "react-static";
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import Headroom from "react-headroom";
 import Button from "../Button";
+
+const breathe = keyframes`
+  0% {transform: scale(1);}
+  50% {transform: scale(1.04);}
+  100% {transform: scale(1);}
+`;
 
 const StyledHeadroom = styled(Headroom)`
   .headroom {
@@ -57,32 +63,36 @@ const Title = styled(Link)`
   }
 `;
 
-const ButtonMobile = styled.div`
-  display: block;
+const ButtonWrap = styled.div`
+  animation: ${breathe} 2s linear infinite;
+`;
+
+const ButtonMobile = ButtonWrap.extend`
+  display: ${props => (props.hideContactButton ? "none" : "block")};
 
   @media (min-width: ${props => props.theme.breakpoints.sm}) {
     display: none;
   }
 `;
 
-const ButtonDesktop = styled.div`
+const ButtonDesktop = ButtonWrap.extend`
   display: none;
 
   @media (min-width: ${props => props.theme.breakpoints.sm}) {
-    display: block;
+    display: ${props => (props.hideContactButton ? "none" : "block")};
   }
 `;
 
-const Navbar = ({ title, contactButton }) => (
+const Navbar = ({ title, contactButton, hideContactButton }) => (
   <StyledHeadroom disableInlineStyles>
     <Wrap>
       <h1>
         <Title to="/">{title}</Title>
       </h1>
-      <ButtonDesktop>
+      <ButtonDesktop hideContactButton={hideContactButton}>
         <Button link="/contact" text={contactButton} outlined="true" />
       </ButtonDesktop>
-      <ButtonMobile>
+      <ButtonMobile hideContactButton={hideContactButton}>
         <Button link="/contact" text="Contact" outlined="true" />
       </ButtonMobile>
     </Wrap>
