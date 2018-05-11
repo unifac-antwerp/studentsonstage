@@ -34,7 +34,7 @@ export const LogoWrap = styled.div`
   width: 50vw;
 
   @media (min-width: ${props => props.theme.breakpoints.sm}) {
-    width: 276px;
+    width: 320px;
   }
 `;
 
@@ -63,14 +63,14 @@ export const Info = styled.span`
   margin: 40px auto 64px;
   text-align: center;
 
-  @media (min-width: ${props => props.theme.breakpoints.xs}) {
-    font-size: 18px;
+  @media (min-width: 410px) {
+    font-size: 20px;
     margin: 40px auto 80px;
   }
 
   @media (min-width: ${props => props.theme.breakpoints.sm}) {
     font-weight: ${props => props.theme.fontWeights.medium};
-    font-size: 22px;
+    font-size: 24px;
   }
 `;
 

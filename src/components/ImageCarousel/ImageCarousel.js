@@ -62,7 +62,7 @@ const ImageCarousel = ({ title, images }) => (
     <Ornament src={OrnamentImg} alt="" width="141" height="283" />
     <ContentWrap>
       <Title>{title}</Title>
-      <LazyLoad height={400} offset={100}>
+      <LazyLoad height={400} offset={150}>
         <Carousel
           autoplay
           wrapAround
