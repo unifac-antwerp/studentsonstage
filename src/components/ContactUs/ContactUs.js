@@ -2,8 +2,8 @@ import React from "react";
 import { RichText } from "prismic-reactjs";
 import styled from "styled-components";
 import PeopleList from "./PeopleList/PeopleList";
-import OrnamentImg from "../../assets/img/ornament_6.png";
-import OrnamentImgSm from "../../assets/img/ornament_6_sm.png";
+import OrnamentImg from "../../assets/img/ornament_6.jpg";
+import OrnamentImgSm from "../../assets/img/ornament_6_sm.jpg";
 
 const Wrap = styled.section`
   background-color: ${props => props.theme.palette.white};

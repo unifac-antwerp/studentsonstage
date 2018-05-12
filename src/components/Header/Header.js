@@ -13,10 +13,10 @@ import {
   ImageRightSm
 } from "./styles";
 import IntroStats from "../IntroStats";
-import imageLeft from "../../assets/img/img_left.png";
-import imageLeftSm from "../../assets/img/img_left_sm.png";
-import imageRight from "../../assets/img/img_right.png";
-import imageRightSm from "../../assets/img/img_right_sm.png";
+import imageLeft from "../../assets/img/img_left.jpg";
+import imageLeftSm from "../../assets/img/img_left_sm.jpg";
+import imageRight from "../../assets/img/img_right.jpg";
+import imageRightSm from "../../assets/img/img_right_sm.jpg";
 import ImageWithAspectRatio from "../ImageWithAspectRatio";
 
 const Header = ({ logo, poweredBy, date, location, stats }) => (
