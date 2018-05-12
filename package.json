@@ -16,6 +16,7 @@
     "nuka-carousel": "^4.1.0",
     "prismic-javascript": "^1.5.0-beta.1",
     "prismic-reactjs": "^0.3.1",
+    "promise-polyfill": "^7.1.2",
     "react": "^16.0.0",
     "react-countup": "^3.0.3",
     "react-dom": "^16.0.0",
