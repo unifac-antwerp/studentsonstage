@@ -58,6 +58,10 @@ const Title = styled(Link)`
   color: ${props => props.theme.palette.global01};
   user-select: none;
 
+  &:hover {
+    color: ${props => props.theme.palette.global02};
+  }
+
   @media (min-width: ${props => props.theme.breakpoints.sm}) {
     font-size: 20px;
   }
