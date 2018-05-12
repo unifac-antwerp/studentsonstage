@@ -4,7 +4,7 @@ import { getSingleType } from "./src/prismic/mapper";
 import { ServerStyleSheet } from "styled-components";
 
 export default {
-  siteRoot: "https://studentsonstage.unifac.be",
+  siteRoot: "https://studentsonstage.netlify.com",
 
   getRoutes: async () => {
     const data = await fetchData();
