@@ -82,7 +82,7 @@ export const ContentWrap = styled.div`
   display: flex;
   flex-direction: column;
   margin: 1.6em;
-  min-height: 17.6em;
+  min-height: 20em;
 
   @media (min-width: ${props => props.theme.breakpoints.xs}) {
     min-height: auto;
@@ -109,7 +109,7 @@ export const ContactItem = styled.li`
   }
 
   &:not(:last-child) {
-    margin-bottom: 8px;
+    margin-bottom: 16px;
   }
 
   a {
