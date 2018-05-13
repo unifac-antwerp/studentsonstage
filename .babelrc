@@ -1,4 +1,3 @@
 {
-  "extends": "react-static/.babelrc",
-  "plugins": ["transform-object-assign"]
+  "extends": "react-static/.babelrc"
 }
