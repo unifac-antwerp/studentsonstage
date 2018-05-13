@@ -1,4 +1,4 @@
 {
   "extends": "react-static/.babelrc",
-  "plugins": ["transform-runtime"]
+  "plugins": ["babel-polyfill"]
 }
