@@ -1,6 +1,5 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import Promise from "promise-polyfill";
 import App from "./App";
 
 export default App;
@@ -24,8 +23,4 @@ if (typeof window !== "undefined") {
       families: ["Montserrat:400,500,700", "Roboto:300,400,500"]
     }
   });
-}
-
-if (typeof window !== "undefined" && !window.Promise) {
-  window.Promise = Promise;
 }

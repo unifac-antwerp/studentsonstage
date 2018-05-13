@@ -16,7 +16,6 @@
     "nuka-carousel": "^4.1.0",
     "prismic-javascript": "^1.5.0-beta.1",
     "prismic-reactjs": "^0.3.1",
-    "promise-polyfill": "^7.1.2",
     "react": "^16.0.0",
     "react-countup": "^3.0.3",
     "react-dom": "^16.0.0",
@@ -31,6 +30,7 @@
     "webfontloader": "^1.6.28"
   },
   "devDependencies": {
+    "babel-plugin-transform-object-assign": "^6.22.0",
     "eslint-config-react-tools": "1.x.x",
     "serve": "^6.1.0"
   }
