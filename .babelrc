@@ -1,4 +1,3 @@
 {
-  "extends": "react-static/.babelrc",
-  "plugins": ["babel-polyfill"]
+  "extends": "react-static/.babelrc"
 }
