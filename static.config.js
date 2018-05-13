@@ -179,10 +179,10 @@ export default {
           src="https://www.googletagmanager.com/gtag/js?id=UA-99594519-3"
         />
         <script
-          dangerouslySetInnerHTML={{
-            __html:
-              "window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'UA-99594519-3');"
-          }}
+        // dangerouslySetInnerHTML={{
+        //   __html:
+        //     "window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'UA-99594519-3');"
+        // }}
         />
       </Head>
       <Body>
