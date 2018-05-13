@@ -38,7 +38,7 @@ Add new images first, select them in the `content editor` and then remove unused
 
 #### Images
 
-The statistic-icons & logo should not be changed without permission.
+The icons & logo should not be changed without permission.
 
 It's not possible to change the header images and ornaments (_triangles on the sides_).
 
