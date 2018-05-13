@@ -39,7 +39,7 @@ export default {
   },
 
   Document: ({ Html, Head, Body, children, renderMeta }) => (
-    <Html>
+    <Html lang="nl">
       <Head>
         <meta charSet="utf-8" />
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
