@@ -1,14 +1,8 @@
 import React from "react";
 import { Link } from "react-static";
-import styled, { keyframes } from "styled-components";
+import styled from "styled-components";
 import Headroom from "react-headroom";
 import Button from "../Button";
-
-const breathe = keyframes`
-  0% {transform: scale(1);}
-  50% {transform: scale(1.04);}
-  100% {transform: scale(1);}
-`;
 
 const StyledHeadroom = styled(Headroom)`
   .headroom {
@@ -67,11 +61,7 @@ const Title = styled(Link)`
   }
 `;
 
-const ButtonWrap = styled.div`
-  animation: ${breathe} 2s linear infinite;
-`;
-
-const ButtonMobile = ButtonWrap.extend`
+const ButtonMobile = styled.div`
   display: ${props => (props.hideContactButton ? "none" : "block")};
 
   @media (min-width: ${props => props.theme.breakpoints.sm}) {
@@ -79,7 +69,7 @@ const ButtonMobile = ButtonWrap.extend`
   }
 `;
 
-const ButtonDesktop = ButtonWrap.extend`
+const ButtonDesktop = styled.div`
   display: none;
 
   @media (min-width: ${props => props.theme.breakpoints.sm}) {
