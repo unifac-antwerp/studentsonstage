@@ -1,3 +1,14 @@
 {
-  "extends": "react-static/.babelrc"
+  "extends": "react-static/.babelrc",
+  "presets": [
+    [
+      "env",
+      {
+        "targets": {
+          "browsers": ["last 2 versions", "IE >= 11"]
+        },
+        "useBuiltIns": true
+      }
+    ]
+  ]
 }
