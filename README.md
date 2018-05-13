@@ -92,7 +92,6 @@ Please shoot!
 If anything is unclear I'll be happy to help you.
 
 * Facebook: [Wouter Landuydt](https://www.facebook.com/wouter.landuydt)
-
 * Email: [wouter.landuydt@gmail.com](mailto:wouter.landuydt@gmail.com)
 
 ## Found a bug?
