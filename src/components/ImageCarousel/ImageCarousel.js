@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-static";
 import styled from "styled-components";
-import LazyLoad from "react-lazyload";
 import Carousel from "nuka-carousel";
 import StyledArrow from "./controls/Arrow";
 import Arrow from "../../assets/svg/arrow.svg";
@@ -62,33 +61,31 @@ const ImageCarousel = ({ title, images }) => (
     <Ornament src={OrnamentImg} alt="" width="141" height="283" />
     <ContentWrap>
       <Title>{title}</Title>
-      <LazyLoad height={400} offset={150}>
-        <Carousel
-          autoplay
-          wrapAround
-          dragging={false}
-          renderCenterLeftControls={({ previousSlide }) => (
-            <StyledArrow onClick={previousSlide} src={Arrow} alt="" />
-          )}
-          renderCenterRightControls={({ nextSlide }) => (
-            <StyledArrow next onClick={nextSlide} src={Arrow} alt="" />
-          )}
-          renderBottomCenterControls={({}) => null}
-        >
-          {images &&
-            images.map(i => (
-              <img
-                key={i.image.url}
-                src={i.image.url}
-                alt="carousel image"
-                // manually trigger resize onLoad to make sure carousel shows at correct height
-                onLoad={() => {
-                  window.dispatchEvent(new Event("resize"));
-                }}
-              />
-            ))}
-        </Carousel>
-      </LazyLoad>
+      <Carousel
+        autoplay
+        wrapAround
+        dragging={false}
+        renderCenterLeftControls={({ previousSlide }) => (
+          <StyledArrow onClick={previousSlide} src={Arrow} alt="" />
+        )}
+        renderCenterRightControls={({ nextSlide }) => (
+          <StyledArrow next onClick={nextSlide} src={Arrow} alt="" />
+        )}
+        renderBottomCenterControls={({}) => null}
+      >
+        {images &&
+          images.map(i => (
+            <img
+              key={i.image.url}
+              src={i.image.url}
+              alt="carousel image"
+              // manually trigger resize onLoad to make sure carousel shows at correct height
+              onLoad={() => {
+                window.dispatchEvent(new Event("resize"));
+              }}
+            />
+          ))}
+      </Carousel>
     </ContentWrap>
   </Wrap>
 );

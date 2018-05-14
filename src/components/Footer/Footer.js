@@ -73,6 +73,7 @@ const StyledTwemoji = styled(Twemoji)`
 
   .twemoji {
     width: 10px;
+    height: 10px;
     margin: 0 2px;
   }
 `;
