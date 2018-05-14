@@ -43,6 +43,7 @@ const Title = styled.h2`
 `;
 
 const Desc = styled.div`
+  width: 100%;
   text-align: center;
   margin: 1.6em 0 3.2em 0;
 `;

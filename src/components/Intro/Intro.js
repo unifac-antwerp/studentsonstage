@@ -40,6 +40,8 @@ const LogoWrap = styled.div`
 `;
 
 const Text = styled.div`
+  width: 100%;
+
   p:first-child {
     font-weight: ${props => props.theme.fontWeights.medium};
     font-size: 1.8em;
