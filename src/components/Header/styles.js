@@ -46,7 +46,7 @@ export const PoweredBy = styled.div`
   }
 
   a {
-    color: ${props => props.theme.palette.global02};
+    color: ${props => props.theme.palette.global01};
     font-weight: ${props => props.theme.fontWeights.medium};
 
     &:hover {
