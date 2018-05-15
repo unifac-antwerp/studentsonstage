@@ -1,2 +1,2 @@
 # Redirect default Netlify subdomain to primary domain
-http://studentsonstage.netlify.com/* http://studentsonstage.unifac.be/:splat 301!
+https://studentsonstage.netlify.com/* https://studentsonstage.unifac.be/:splat 301!
