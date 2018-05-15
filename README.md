@@ -26,7 +26,11 @@ Content is managed in [Prismic](https://prismic.io).
 
 To edit the text, images and other content you'll want to go to `dashboard` > `Students on Stage` > `content` (on the left).
 
+You'll see 3 content-types: **home_page**, **contact_page**, **footer** & **navbar**. Click the one you want to edit.
+
 Please make sure to **NOT** edit `custom types` without asking the developer.
+
+_After editing content don't forget to save and publish in the upper right corner._
 
 ### Media Library
 
