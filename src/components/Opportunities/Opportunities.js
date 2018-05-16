@@ -75,7 +75,7 @@ const OpportunitiesWrap = styled.ul`
 
   @media (min-width: ${props => props.theme.breakpoints.md}) {
     max-width: ${props => props.theme.grid.maxWidth};
-    align-items: flex-start;
+    align-items: stretch;
     flex-direction: row;
   }
 `;
