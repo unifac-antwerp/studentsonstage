@@ -1,8 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-static";
 import styled from "styled-components";
-import LazyLoad from "react-lazyload";
-import Carousel from "nuka-carousel";
 import ImageGallery from "react-image-gallery";
 import "react-image-gallery/styles/css/image-gallery.css";
 import StyledArrow from "./controls/Arrow";
