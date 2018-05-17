@@ -48,9 +48,26 @@ export const PoweredBy = styled.div`
   a {
     color: ${props => props.theme.palette.global01};
     font-weight: ${props => props.theme.fontWeights.medium};
+    position: relative;
 
-    &:hover {
-      text-decoration: underline;
+    &:before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      bottom: -2px;
+      left: 0;
+      background-color: ${props => props.theme.palette.global01};
+      pointer-events: none;
+      border-radius: 1px;
+      visibility: hidden;
+      transform: scaleX(0);
+      transition: transform 200ms ease-in-out;
+    }
+
+    &:hover:before {
+      visibility: visible;
+      transform: scaleX(1);
     }
   }
 `;

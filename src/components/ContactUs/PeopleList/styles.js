@@ -114,9 +114,26 @@ export const ContactItem = styled.li`
 
   a {
     color: ${props => props.theme.palette.neutral01};
+    position: relative;
 
-    &:hover {
-      text-decoration: underline;
+    &:before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 1px;
+      bottom: -2px;
+      left: 0;
+      background-color: ${props => props.theme.palette.neutral01};
+      pointer-events: none;
+      border-radius: 1px;
+      visibility: hidden;
+      transform: scaleX(0);
+      transition: transform 200ms ease-in-out;
+    }
+
+    &:hover:before {
+      visibility: visible;
+      transform: scaleX(1);
     }
   }
 `;

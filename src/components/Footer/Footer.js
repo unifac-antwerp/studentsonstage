@@ -43,12 +43,13 @@ const GeneralWrap = styled.div`
 `;
 
 const FooterLink = styled(Link)`
-  :first-child {
+  &:first-child {
     margin-bottom: 16px;
   }
 
-  :hover {
-    text-decoration: underline;
+  :hover,
+  address div:hover > p {
+    color: ${props => props.theme.palette.neutral03};
   }
 `;
 
@@ -64,6 +65,30 @@ const Copyright = styled.div`
   span,
   a {
     font-size: 12px;
+  }
+`;
+
+const CopyrightName = styled(Link)`
+  position: relative;
+
+  &:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    bottom: -2px;
+    left: 0;
+    background-color: ${props => props.theme.palette.white};
+    pointer-events: none;
+    border-radius: 1px;
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: transform 200ms ease-in-out;
+  }
+
+  &:hover:before {
+    visibility: visible;
+    transform: scaleX(1);
   }
 `;
 
@@ -137,13 +162,13 @@ const Footer = ({
         <StyledTwemoji options={{ className: "twemoji" }}>
           Made with 💙 by{" "}
         </StyledTwemoji>
-        <FooterLink
+        <CopyrightName
           to="https://wouterlanduydt.be"
           target="_blank"
           rel="noopener"
         >
           Wouter Landuydt
-        </FooterLink>
+        </CopyrightName>
       </Copyright>
     </Wrap>
   );

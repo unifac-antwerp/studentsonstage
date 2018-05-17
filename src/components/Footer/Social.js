@@ -19,8 +19,8 @@ const StyledLink = styled(Link)`
   display: flex;
   align-items: center;
 
-  :hover {
-    text-decoration: underline;
+  :hover span {
+    color: ${props => props.theme.palette.neutral03};
   }
 `;
 
