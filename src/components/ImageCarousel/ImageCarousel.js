@@ -1,8 +1,10 @@
-import React from "react";
+import React, { Component } from "react";
 import { Link } from "react-static";
 import styled from "styled-components";
 import LazyLoad from "react-lazyload";
 import Carousel from "nuka-carousel";
+import ImageGallery from "react-image-gallery";
+import "react-image-gallery/styles/css/image-gallery.css";
 import StyledArrow from "./controls/Arrow";
 import Arrow from "../../assets/svg/arrow.svg";
 import OrnamentImg from "../../assets/img/ornament_1.png";
@@ -13,6 +15,10 @@ const Wrap = styled.section`
   margin-bottom: 14.4em;
   height: 56vw;
   position: relative;
+
+  .image-gallery-thumbnail.active {
+    border: 4px solid ${props => props.theme.palette.global02};
+  }
 
   @media (min-width: ${props => props.theme.breakpoints.sm}) {
     margin-top: 11.2em;
@@ -57,40 +63,38 @@ const Title = styled.h1`
   }
 `;
 
-const ImageCarousel = ({ title, images }) => (
-  <Wrap>
-    <Ornament src={OrnamentImg} alt="" width="141" height="283" />
-    <ContentWrap>
-      <Title>{title}</Title>
-      <LazyLoad height={400} offset={250}>
-        <Carousel
-          autoplay
-          wrapAround
-          dragging={false}
-          renderCenterLeftControls={({ previousSlide }) => (
-            <StyledArrow onClick={previousSlide} src={Arrow} alt="" />
-          )}
-          renderCenterRightControls={({ nextSlide }) => (
-            <StyledArrow next onClick={nextSlide} src={Arrow} alt="" />
-          )}
-          renderBottomCenterControls={({}) => null}
-        >
-          {images &&
-            images.map(i => (
-              <img
-                key={i.image.url}
-                src={i.image.url}
-                alt="carousel image"
-                // manually trigger resize onLoad to make sure carousel shows at correct height
-                onLoad={() => {
-                  window.dispatchEvent(new Event("resize"));
-                }}
-              />
-            ))}
-        </Carousel>
-      </LazyLoad>
-    </ContentWrap>
-  </Wrap>
-);
+class ImageCarousel extends Component {
+  navRenderer = (direction, onClick) => {
+    return <StyledArrow direction={direction} src={Arrow} onClick={onClick} />;
+  };
+
+  render() {
+    const { title, images } = this.props;
+
+    return (
+      <Wrap>
+        <Ornament src={OrnamentImg} alt="" width="141" height="283" />
+        <ContentWrap>
+          <Title>{title}</Title>
+          <ImageGallery
+            items={
+              images &&
+              images.map(i => ({
+                original: i.image.url,
+                thumbnail: i.image.url
+              }))
+            }
+            lazyLoad={true}
+            showFullscreenButton={false}
+            showPlayButton={false}
+            autoPlay={true}
+            renderLeftNav={onClick => this.navRenderer("prev", onClick)}
+            renderRightNav={onClick => this.navRenderer("next", onClick)}
+          />
+        </ContentWrap>
+      </Wrap>
+    );
+  }
+}
 
 export default ImageCarousel;

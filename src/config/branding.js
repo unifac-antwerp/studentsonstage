@@ -6,7 +6,7 @@ const palette = {
   neutral03: "#d8d8d8",
   white: "#ffffff",
   global01: "#005C99",
-  global02: "#2289CE",
+  global02: "#2e78c1",
   background: "#f3f7f9",
   loading: "rgb(229,227,223)"
 };
