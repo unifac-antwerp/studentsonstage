@@ -9,7 +9,7 @@ const StyledHeadroom = styled(Headroom)`
     top: 0;
     left: 0;
     right: 0;
-    z-index: 1;
+    z-index: 99999;
   }
   .headroom--unfixed {
     background-color: ${props => props.theme.palette.white};
