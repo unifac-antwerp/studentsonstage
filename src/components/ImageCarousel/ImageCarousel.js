@@ -18,6 +18,10 @@ const Wrap = styled.section`
     border: 4px solid ${props => props.theme.palette.global02};
   }
 
+  .image-gallery-thumbnails {
+    padding: 5px 0;
+  }
+
   @media (min-width: ${props => props.theme.breakpoints.sm}) {
     margin-top: 11.2em;
   }
@@ -77,9 +81,11 @@ class ImageCarousel extends Component {
           <ImageGallery
             items={
               images &&
-              images.map(i => ({
+              images.map((i, index) => ({
                 original: i.image.url,
-                thumbnail: i.image.url
+                originalAlt: `Carousel image ${index}`,
+                thumbnail: i.image.url,
+                thumbnailAlt: ""
               }))
             }
             lazyLoad={true}

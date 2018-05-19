@@ -12,11 +12,11 @@ export const Wrap = styled.div`
 
 export const ThumbnailList = styled.ul`
   display: flex;
-  margin: 0 0 0.8em 0.8em;
+  margin: 0 0 1.6em 0.8em;
 
   @media (min-width: ${props => props.theme.breakpoints.md}) {
     display: block;
-    margin: 0.8em 0.8em 0 0;
+    margin: 0.8em 1.6em 0 0;
   }
 `;
 
@@ -34,10 +34,10 @@ export const Thumbnail = styled.li`
 
   &:not(:last-child) {
     margin-bottom: 0;
-    margin-right: 0.6em;
+    margin-right: 0.8em;
 
     @media (min-width: ${props => props.theme.breakpoints.md}) {
-      margin-bottom: 0.6em;
+      margin-bottom: 0.8em;
       margin-right: 0;
     }
   }
@@ -49,6 +49,16 @@ export const Thumbnail = styled.li`
     width: 56px;
     background-color: ${props => props.theme.palette.loading};
   }
+`;
+
+export const PersonWrap = styled.div`
+  display: flex;
+  border-radius: 0.4em;
+  background-color: ${props => props.theme.palette.white};
+  ${props => props.theme.shadows.shadow02};
+  position: relative;
+  z-index: 1;
+  width: 100%;
 `;
 
 export const MainImageWrap = styled.div`
@@ -68,14 +78,6 @@ export const MainImageWrap = styled.div`
     height: auto;
     width: 200px;
   }
-`;
-
-export const PersonWrap = styled.div`
-  display: flex;
-  border-radius: 0.4em;
-  background-color: ${props => props.theme.palette.white};
-  ${props => props.theme.shadows.shadow02};
-  width: 100%;
 `;
 
 export const ContentWrap = styled.div`
