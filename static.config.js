@@ -173,17 +173,6 @@ export default {
         />
         <meta name="theme-color" content="#ffffff" />
         {renderMeta.styleTags}
-        {/* <!-- Global site tag (gtag.js) - Google Analytics --> */}
-        <script
-          async
-          src="https://www.googletagmanager.com/gtag/js?id=UA-99594519-3"
-        />
-        <script
-        // dangerouslySetInnerHTML={{
-        //   __html:
-        //     "window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'UA-99594519-3');"
-        // }}
-        />
       </Head>
       <Body>
         <h1 style={{ display: "none" }}>Students On Stage</h1>
