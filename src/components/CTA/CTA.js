@@ -86,7 +86,7 @@ const CTA = ({
   page
 }) => (
   <Wrap page={page}>
-    <LazyLoad once offset={150} height={"auto"}>
+    <LazyLoad once offset={250} height={"auto"}>
       <Ornament src={OrnamentImg} alt="" width="141" height="283" />
     </LazyLoad>
     <ContentWrapper>
