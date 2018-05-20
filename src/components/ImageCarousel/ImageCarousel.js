@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Link } from "react-static";
 import styled from "styled-components";
 import ImageGallery from "react-image-gallery";
+import LazyLoad from "react-lazyload";
 import "react-image-gallery/styles/css/image-gallery.css";
 import StyledArrow from "./controls/Arrow";
 import Arrow from "../../assets/svg/arrow.svg";
@@ -75,26 +76,30 @@ class ImageCarousel extends Component {
 
     return (
       <Wrap>
-        <Ornament src={OrnamentImg} alt="" width="141" height="283" />
+        <LazyLoad once offset={150} height={"auto"}>
+          <Ornament src={OrnamentImg} alt="" width="141" height="283" />
+        </LazyLoad>
         <ContentWrap>
           <Title>{title}</Title>
-          <ImageGallery
-            items={
-              images &&
-              images.map((i, index) => ({
-                original: i.image.url,
-                originalAlt: `Carousel image ${index}`,
-                thumbnail: i.image.url,
-                thumbnailAlt: ""
-              }))
-            }
-            lazyLoad={true}
-            showFullscreenButton={false}
-            showPlayButton={false}
-            autoPlay={true}
-            renderLeftNav={onClick => this.navRenderer("prev", onClick)}
-            renderRightNav={onClick => this.navRenderer("next", onClick)}
-          />
+          <LazyLoad once offset={150} height={"auto"}>
+            <ImageGallery
+              items={
+                images &&
+                images.map((i, index) => ({
+                  original: i.image.url,
+                  originalAlt: `Carousel image ${index}`,
+                  thumbnail: i.image.url,
+                  thumbnailAlt: ""
+                }))
+              }
+              lazyLoad={true}
+              showFullscreenButton={false}
+              showPlayButton={false}
+              autoPlay={true}
+              renderLeftNav={onClick => this.navRenderer("prev", onClick)}
+              renderRightNav={onClick => this.navRenderer("next", onClick)}
+            />
+          </LazyLoad>
         </ContentWrap>
       </Wrap>
     );

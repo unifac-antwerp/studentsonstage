@@ -1,4 +1,5 @@
 import React from "react";
+import LazyLoad from "react-lazyload";
 import { RichText } from "prismic-reactjs";
 import styled from "styled-components";
 import OrnamentImg from "../../assets/img/ornament_5.png";
@@ -81,7 +82,9 @@ const MapWrap = styled.div`
 
 const Address = ({ title, desc, address }) => (
   <Wrap>
-    <Ornament src={OrnamentImg} alt="" width="141" height="283" />
+    <LazyLoad once offset={150} height={"auto"}>
+      <Ornament src={OrnamentImg} alt="" width="141" height="283" />
+    </LazyLoad>
     <ContentWrap>
       <Title>{title}</Title>
       <Desc>{desc && RichText.render(desc)}</Desc>

@@ -1,4 +1,5 @@
 import React from "react";
+import LazyLoad from "react-lazyload";
 import { RichText } from "prismic-reactjs";
 import styled from "styled-components";
 import Button from "../Button";
@@ -85,7 +86,9 @@ const CTA = ({
   page
 }) => (
   <Wrap page={page}>
-    <Ornament src={OrnamentImg} alt="" width="141" height="283" />
+    <LazyLoad once offset={150} height={"auto"}>
+      <Ornament src={OrnamentImg} alt="" width="141" height="283" />
+    </LazyLoad>
     <ContentWrapper>
       <Title>{title}</Title>
       <Desc>{desc && RichText.render(desc)}</Desc>
