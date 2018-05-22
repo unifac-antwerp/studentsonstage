@@ -64,13 +64,13 @@ export const PersonWrap = styled.div`
 export const MainImageWrap = styled.div`
   display: none;
 
-  @media (min-width: ${props => props.theme.breakpoints.sm}) {
+  @media (min-width: ${props => props.theme.breakpoints.xs}) {
     position: relative;
     overflow: hidden;
     display: block;
     border-radius: 0.4em 0 0 0.4em;
     margin: 0.8em;
-    width: 21vw;
+    width: 24vw;
     height: auto;
   }
 
