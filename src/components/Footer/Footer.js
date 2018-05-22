@@ -43,7 +43,7 @@ const GeneralWrap = styled.div`
 `;
 
 const FooterLink = styled(Link)`
-  &:first-child {
+  &:not(last-child) {
     margin-bottom: 16px;
   }
 
@@ -106,6 +106,7 @@ const StyledTwemoji = styled(Twemoji)`
 const Footer = ({
   email,
   address,
+  phoneNumber,
   addressLink,
   linkedinTitle,
   linkedinLink,
@@ -137,6 +138,7 @@ const Footer = ({
       <ContentWrap>
         <GeneralWrap>
           <FooterLink to={`mailto:${email}`}>{email}</FooterLink>
+          <FooterLink to={`tel:${phoneNumber}`}>{phoneNumber}</FooterLink>
           <FooterLink
             to={addressLink && addressLink.url}
             target="_blank"
