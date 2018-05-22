@@ -60,28 +60,34 @@ class PeopleList extends PureComponent {
         </h2>
         <Position>{selectedPerson.position}</Position>
         <ul>
-          <ContactItem>
-            <ContactItemIcon src={IcoEmail} alt="" />
-            <Link to={`mailto:${selectedPerson.email}`}>
-              {selectedPerson.email}
-            </Link>
-          </ContactItem>
-          <ContactItem>
-            <ContactItemIcon src={IcoPhone} alt="" />
-            <Link to={`tel:${selectedPerson.phone}`}>
-              {selectedPerson.phone}
-            </Link>
-          </ContactItem>
-          <ContactItem>
-            <ContactItemIcon src={IcoLinkedin} alt="" />
-            <Link
-              to={selectedPerson.linkedinLink.url}
-              target="_blank"
-              rel="noopener"
-            >
-              {selectedPerson.linkedinTitle}
-            </Link>
-          </ContactItem>
+          {selectedPerson.email && (
+            <ContactItem>
+              <ContactItemIcon src={IcoEmail} alt="" />
+              <Link to={`mailto:${selectedPerson.email}`}>
+                {selectedPerson.email}
+              </Link>
+            </ContactItem>
+          )}
+          {selectedPerson.phone && (
+            <ContactItem>
+              <ContactItemIcon src={IcoPhone} alt="" />
+              <Link to={`tel:${selectedPerson.phone}`}>
+                {selectedPerson.phone}
+              </Link>
+            </ContactItem>
+          )}
+          {selectedPerson.linkedinLink && (
+            <ContactItem>
+              <ContactItemIcon src={IcoLinkedin} alt="" />
+              <Link
+                to={selectedPerson.linkedinLink.url}
+                target="_blank"
+                rel="noopener"
+              >
+                {selectedPerson.linkedinTitle}
+              </Link>
+            </ContactItem>
+          )}
         </ul>
       </ContentWrap>
     </PersonWrap>
