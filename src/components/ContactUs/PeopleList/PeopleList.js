@@ -76,7 +76,7 @@ class PeopleList extends PureComponent {
               </Link>
             </ContactItem>
           )}
-          {selectedPerson.linkedinLink && (
+          {selectedPerson.linkedinLink.url && (
             <ContactItem>
               <ContactItemIcon src={IcoLinkedin} alt="" />
               <Link
