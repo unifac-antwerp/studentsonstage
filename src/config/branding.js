@@ -99,6 +99,10 @@ const shadows = {
 };
 
 export const globalStyles = css`
+  html {
+    -webkit-text-size-adjust: 100%;
+  }
+
   body {
     color: ${palette.neutral01};
     background-color: ${palette.background};
