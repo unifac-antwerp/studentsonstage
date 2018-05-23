@@ -61,7 +61,7 @@ const StyledAddress = styled.address`
   margin-top: 2.4em;
 
   p {
-    font-size: 1.8em;
+    font-size: 18px;
     font-weight: ${props => props.theme.fontWeights.medium};
 
     :not(:last-child) {

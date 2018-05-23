@@ -44,7 +44,7 @@ const Text = styled.div`
 
   p:first-child {
     font-weight: ${props => props.theme.fontWeights.medium};
-    font-size: 1.8em;
+    font-size: 18px;
   }
 `;
 

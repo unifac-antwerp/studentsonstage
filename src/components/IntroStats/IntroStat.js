@@ -31,16 +31,16 @@ const ContentWrap = styled.div`
 
 const StyledCountUp = styled(CountUp)`
   font-family: ${props => props.theme.fonts.montserrat};
-  font-size: 2em;
+  font-size: 20px;
   font-weight: ${props => props.theme.fontWeights.bold};
 
   @media (min-width: ${props => props.theme.breakpoints.sm}) {
-    font-size: 2.2em;
+    font-size: 22px;
   }
 `;
 
 const Title = styled.span`
-  font-size: 2.2em;
+  font-size: 22px;
   display: block;
   margin-top: 4px;
 `;

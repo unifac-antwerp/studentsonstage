@@ -41,37 +41,37 @@ const fontWeights = {
 const textStyles = {
   heading01: css`
     font-family: ${fonts.montserrat};
-    font-size: 2.8em;
+    font-size: 28px;
     font-weight: ${fontWeights.bold};
     color: ${palette.global01};
     line-height: 32px;
 
     @media (min-width: ${breakpoints.sm}) {
-      font-size: 3.2em;
+      font-size: 32px;
     }
   `,
   heading02: css`
     font-family: ${fonts.montserrat};
-    font-size: 2.4em;
+    font-size: 24px;
     font-weight: ${fontWeights.bold};
     color: ${palette.neutral01};
     line-height: 28px;
 
     @media (min-width: ${breakpoints.sm}) {
-      font-size: 2.6em;
+      font-size: 26px;
     }
   `,
   heading03: css`
     font-family: ${fonts.montserrat};
-    font-size: 2em;
+    font-size: 20px;
     font-weight: ${fontWeights.bold};
 
     @media (min-width: ${breakpoints.sm}) {
-      font-size: 2.2em;
+      font-size: 22px;
     }
   `,
   paragraph: css`
-    font-size: 1.6em;
+    font-size: 16px;
     font-family: ${fonts.roboto};
     font-weight: ${fontWeights.light};
     color: ${palette.neutral01};
@@ -85,7 +85,7 @@ const textStyles = {
   button: css`
     font-family: ${fonts.montserrat};
     font-weight: ${fontWeights.medium};
-    font-size: 1.6em;
+    font-size: 16px;
   `
 };
 
