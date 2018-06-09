@@ -19,7 +19,7 @@ class Home extends Component {
         <Helmet>
           <title>Home - Students on Stage</title>
         </Helmet>
-        <Navbar {...navbar} />
+        <Navbar {...navbar} page="home" />
         <main>
           <Header
             logo={homepage.headerLogo}

@@ -16,7 +16,7 @@ class Contact extends Component {
         <Helmet>
           <title>Contact - Students on Stage</title>
         </Helmet>
-        <Navbar {...navbar} hideContactButton="true" />
+        <Navbar {...navbar} page="contact" />
         <main>
           <ContactUs
             title={contactpage.contactTitle}

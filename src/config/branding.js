@@ -141,16 +141,6 @@ export const globalStyles = css`
     }
   }
 
-  ::selection {
-    color: ${palette.white};
-    background: ${palette.global02};
-  }
-
-  ::-moz-selection {
-    color: ${palette.white};
-    background: ${palette.global02};
-  }
-
   b,
   strong {
     font-weight: ${fontWeights.medium};
@@ -162,6 +152,16 @@ export const globalStyles = css`
 
   a {
     text-decoration: none;
+  }
+
+  ::selection {
+    color: ${palette.white};
+    background: ${palette.global02};
+  }
+
+  ::-moz-selection {
+    color: ${palette.white};
+    background: ${palette.global02};
   }
 
   img {

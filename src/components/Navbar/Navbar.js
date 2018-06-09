@@ -3,6 +3,7 @@ import { Link } from "react-static";
 import styled from "styled-components";
 import Headroom from "react-headroom";
 import Button from "../Button";
+import ScrollProgressBar from "../ScrollProgressBar";
 
 const StyledHeadroom = styled(Headroom)`
   .headroom {
@@ -23,11 +24,11 @@ const StyledHeadroom = styled(Headroom)`
   }
   .headroom--unpinned {
     position: fixed;
-    transform: translateY(-120%);
+    transform: translateY(-64px);
   }
   .headroom--pinned {
     position: fixed;
-    transform: translateY(0%);
+    transform: translateY(0px);
   }
 `;
 
@@ -62,7 +63,7 @@ const Title = styled(Link)`
 `;
 
 const ButtonMobile = styled.div`
-  display: ${props => (props.hideContactButton ? "none" : "block")};
+  display: ${props => (props.page === "contact" ? "none" : "block")};
 
   @media (min-width: ${props => props.theme.breakpoints.sm}) {
     display: none;
@@ -73,23 +74,24 @@ const ButtonDesktop = styled.div`
   display: none;
 
   @media (min-width: ${props => props.theme.breakpoints.sm}) {
-    display: ${props => (props.hideContactButton ? "none" : "block")};
+    display: ${props => (props.page === "contact" ? "none" : "block")};
   }
 `;
 
-const Navbar = ({ title, contactButton, hideContactButton }) => (
+const Navbar = ({ title, contactButton, page }) => (
   <StyledHeadroom disableInlineStyles>
     <Wrap>
       <h1>
         <Title to="/">{title}</Title>
       </h1>
-      <ButtonDesktop hideContactButton={hideContactButton}>
+      <ButtonDesktop page={page}>
         <Button link="/contact" text={contactButton} outlined="true" />
       </ButtonDesktop>
-      <ButtonMobile hideContactButton={hideContactButton}>
+      <ButtonMobile page={page}>
         <Button link="/contact" text="Contact" outlined="true" />
       </ButtonMobile>
     </Wrap>
+    {page === "home" && <ScrollProgressBar />}
   </StyledHeadroom>
 );
 
