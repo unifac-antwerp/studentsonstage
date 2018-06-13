@@ -14,7 +14,6 @@
     "babel-polyfill": "^6.26.0",
     "date-fns": "^1.29.0",
     "humps": "^2.0.1",
-    "mapbox-gl": "^0.45.0",
     "prismic-javascript": "^1.5.0-beta.1",
     "prismic-reactjs": "^0.3.1",
     "react": "^16.0.0",
