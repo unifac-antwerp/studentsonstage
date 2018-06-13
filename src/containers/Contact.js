@@ -27,6 +27,7 @@ class Contact extends Component {
             title={contactpage.addressTitle}
             desc={contactpage.addressDescription}
             address={contactpage.address}
+            phone={contactpage.addressPhone}
           />
           <CTA
             title={contactpage.ctaTitle}

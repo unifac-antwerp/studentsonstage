@@ -71,6 +71,10 @@ const StyledAddress = styled.address`
   }
 `;
 
+const Phone = styled.p`
+  margin-top: 2px;
+`;
+
 const MapWrap = styled.div`
   background-color: ${props => props.theme.palette.loading};
   max-width: ${props => props.theme.grid.maxWidthSm};
@@ -81,7 +85,7 @@ const MapWrap = styled.div`
   top: 6.4em;
 `;
 
-const Address = ({ title, desc, address }) => (
+const Address = ({ title, desc, address, phone }) => (
   <Wrap>
     <LazyLoad once offset={250} height={"auto"}>
       <Ornament src={OrnamentImg} alt="" width="141" height="283" />
@@ -89,10 +93,13 @@ const Address = ({ title, desc, address }) => (
     <ContentWrap>
       <Title>{title}</Title>
       <Desc>{desc && RichText.render(desc)}</Desc>
-      <StyledAddress>{address && RichText.render(address)}</StyledAddress>
+      <StyledAddress>
+        {address && RichText.render(address)}
+        <Phone>{phone}</Phone>
+      </StyledAddress>
     </ContentWrap>
     <MapWrap>
-      <Map />
+      <Map address={address} />
     </MapWrap>
   </Wrap>
 );
