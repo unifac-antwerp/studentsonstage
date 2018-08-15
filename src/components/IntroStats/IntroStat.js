@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import "react-count-animation/dist/count.min.css";
 import AnimationCount from "react-count-animation";
 import { fadeIn } from "../../config/animations";
 
@@ -61,7 +60,7 @@ const IntroStat = ({ icon, number, title, index }) => (
         count={number}
         duration={1200 + 200 * index}
         decimals={0}
-        useGroup
+        // useGroup
         animation="roll"
       />
       <Title>{title}</Title>
