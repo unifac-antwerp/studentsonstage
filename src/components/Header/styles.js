@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { logoAnim, fadeIn } from "../../config/animations";
 
 export const Wrap = styled.div`
   background-color: ${props => props.theme.palette.white};
@@ -33,6 +34,8 @@ export const LogoWrap = styled.div`
   height: auto;
   width: 50vw;
 
+  animation: ${logoAnim} 400ms ease-in-out;
+
   @media (min-width: ${props => props.theme.breakpoints.sm}) {
     width: 320px;
   }
@@ -40,6 +43,11 @@ export const LogoWrap = styled.div`
 
 export const PoweredBy = styled.div`
   margin-top: 1.6em;
+  opacity: 0;
+
+  animation: ${fadeIn} 800ms;
+  animation-delay: 200ms;
+  animation-fill-mode: forwards;
 
   p {
     font-size: 14px;
@@ -79,6 +87,11 @@ export const Info = styled.span`
   font-family: ${props => props.theme.fonts.montserrat};
   margin: 40px auto 64px;
   text-align: center;
+  opacity: 0;
+
+  animation: ${fadeIn} 800ms;
+  animation-delay: 300ms;
+  animation-fill-mode: forwards;
 
   @media (min-width: 410px) {
     font-size: 20px;
@@ -93,6 +106,7 @@ export const Info = styled.span`
 
 export const ImageLeft = styled.img`
   display: none;
+  animation: ${fadeIn} 200ms;
 
   @media (min-width: 820px) {
     display: block;
@@ -112,6 +126,7 @@ export const ImageLeft = styled.img`
 
 export const ImageRight = styled.img`
   display: none;
+  animation: ${fadeIn} 200ms;
 
   @media (min-width: 820px) {
     display: block;
@@ -136,6 +151,7 @@ export const ImageLeftSm = styled.img`
   position: absolute;
   transform-origin: 0% 0%;
   transform: scale(0.5);
+  animation: ${fadeIn} 200ms;
 
   @media (min-width: 500px) {
     transform: scale(0.8);
@@ -157,6 +173,7 @@ export const ImageRightSm = styled.img`
   top: 26.4vw;
   transform-origin: 100% 50%;
   transform: scale(0.5);
+  animation: ${fadeIn} 200ms;
 
   @media (min-width: 500px) {
     transform: scale(0.8);

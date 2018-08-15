@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import "react-count-animation/dist/count.min.css";
 import AnimationCount from "react-count-animation";
+import { fadeIn } from "../../config/animations";
 
 const Wrap = styled.div`
   display: flex;
@@ -9,6 +10,11 @@ const Wrap = styled.div`
   flex-direction: column;
   justify-content: space-between;
   width: 33%;
+  opacity: 0;
+
+  animation: ${fadeIn} 400ms;
+  animation-delay: ${props => `${props.index * 200}ms`};
+  animation-fill-mode: forwards;
 
   @media (min-width: ${props => props.theme.breakpoints.sm}) {
     flex-direction: row;
@@ -47,7 +53,7 @@ const Title = styled.span`
 `;
 
 const IntroStat = ({ icon, number, title, index }) => (
-  <Wrap>
+  <Wrap index={index}>
     <img src={icon} alt="" />
     <ContentWrap>
       <AnimationCount
