@@ -26,12 +26,13 @@ const IntroStats = ({ stats }) => (
     {stats &&
       stats
         .slice(0, 3)
-        .map(s => (
+        .map((s, index) => (
           <IntroStat
             key={s.title}
             icon={s.icon.url}
             number={s.number}
             title={s.title}
+            index={index + 1}
           />
         ))}
   </Wrap>
