@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import AnimationCount from "react-count-animation";
+import CountUp from "react-countup";
 import { fadeIn } from "../../config/animations";
 
 const Wrap = styled.div`
@@ -33,15 +33,15 @@ const ContentWrap = styled.div`
     margin-left: 0.8em;
     margin-top: 0;
   }
+`;
 
-  .count-roll-ul li {
-    font-family: ${props => props.theme.fonts.montserrat};
-    font-size: 20px;
-    font-weight: ${props => props.theme.fontWeights.bold};
+const StyledCountUp = styled(CountUp)`
+  font-family: ${props => props.theme.fonts.montserrat};
+  font-size: 20px;
+  font-weight: ${props => props.theme.fontWeights.bold};
 
-    @media (min-width: ${props => props.theme.breakpoints.sm}) {
-      font-size: 22px;
-    }
+  @media (min-width: ${props => props.theme.breakpoints.sm}) {
+    font-size: 22px;
   }
 `;
 
@@ -51,17 +51,18 @@ const Title = styled.span`
   margin-top: 4px;
 `;
 
+const calculateStartValue = (number, x) => (x <= number ? number - x : 0);
+
 const IntroStat = ({ icon, number, title, index }) => (
   <Wrap index={index}>
     <img src={icon} alt="" />
     <ContentWrap>
-      <AnimationCount
-        start={0}
-        count={number}
-        duration={1200 + 200 * index}
-        decimals={0}
-        // useGroup
-        animation="roll"
+      <StyledCountUp
+        start={number && calculateStartValue(number, 30)}
+        end={number}
+        duration={1.5}
+        useEasing={false}
+        separator="."
       />
       <Title>{title}</Title>
     </ContentWrap>
