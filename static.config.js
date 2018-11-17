@@ -1,44 +1,46 @@
-import React from "react";
-import fetchData from "./src/prismic/fetch";
-import { getSingleType } from "./src/prismic/mapper";
-import { ServerStyleSheet } from "styled-components";
+import React from 'react'
+import { ServerStyleSheet } from 'styled-components'
+import fetchData from './src/prismic/fetch'
+import { getSingleType } from './src/prismic/mapper'
 
 export default {
-  siteRoot: "https://studentsonstage.unifac.be",
+  siteRoot: 'https://studentsonstage.unifac.be',
 
   getRoutes: async () => {
-    const data = await fetchData();
-    const navbar = getSingleType(data, "navbar");
-    const homepage = getSingleType(data, "homepage");
-    const contactpage = getSingleType(data, "contact_page");
-    const footer = getSingleType(data, "footer");
+    const data = await fetchData()
+    const navbar = getSingleType(data, 'navbar')
+    const homepage = getSingleType(data, 'homepage')
+    const contactpage = getSingleType(data, 'contact_page')
+    const footer = getSingleType(data, 'footer')
 
     return [
       {
-        path: "/",
-        component: "src/containers/Home",
-        getData: () => ({ homepage, navbar, footer })
+        path: '/',
+        component: 'src/containers/Home',
+        getData: () => ({ homepage, navbar, footer }),
       },
       {
-        path: "/contact",
-        component: "src/containers/Contact",
-        getData: () => ({ contactpage, navbar, footer })
+        path: '/contact',
+        component: 'src/containers/Contact',
+        getData: () => ({ contactpage, navbar, footer }),
       },
       {
         is404: true,
-        component: "src/containers/404"
-      }
-    ];
+        component: 'src/containers/404',
+      },
+    ]
   },
 
   renderToHtml: (render, Comp, meta) => {
-    const sheet = new ServerStyleSheet();
-    const html = render(sheet.collectStyles(<Comp />));
-    meta.styleTags = sheet.getStyleElement();
-    return html;
+    const sheet = new ServerStyleSheet()
+    const html = render(sheet.collectStyles(<Comp />))
+    meta.styleTags = sheet.getStyleElement()
+    return html
   },
 
-  Document: ({ Html, Head, Body, children, renderMeta }) => (
+  Document: ({
+    Html, Head, Body, children, renderMeta,
+  }) => (
     <Html lang="nl">
       <Head>
         <meta charSet="utf-8" />
@@ -175,9 +177,9 @@ export default {
         {renderMeta.styleTags}
       </Head>
       <Body>
-        <h1 style={{ display: "none" }}>Students On Stage</h1>
+        <h1 style={{ display: 'none' }}>Students On Stage</h1>
         {children}
       </Body>
     </Html>
-  )
-};
+  ),
+}
