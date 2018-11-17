@@ -1,18 +1,18 @@
-import React, { Component, Fragment } from "react";
-import { withRouteData } from "react-static";
-import Helmet from "react-helmet";
-import Navbar from "../components/Navbar";
-import Header from "../components/Header";
-import Intro from "../components/Intro";
-import ImageCarousel from "../components/ImageCarousel";
-import Opportunities from "../components/Opportunities";
-import Aftermovie from "../components/Aftermovie";
-import CTA from "../components/CTA";
-import Footer from "../components/Footer";
+import React, { Component, Fragment } from 'react'
+import { withRouteData } from 'react-static'
+import Helmet from 'react-helmet'
+import Navbar from '../components/Navbar'
+import Header from '../components/Header'
+import Intro from '../components/Intro'
+import ImageCarousel from '../components/ImageCarousel'
+import Opportunities from '../components/Opportunities'
+import Aftermovie from '../components/Aftermovie'
+import CTA from '../components/CTA'
+import Footer from '../components/Footer'
 
 class Home extends Component {
-  render() {
-    const { navbar, homepage, footer } = this.props;
+  render () {
+    const { navbar, homepage, footer } = this.props
 
     return (
       <Fragment>
@@ -50,8 +50,8 @@ class Home extends Component {
           <Footer {...footer} />
         </main>
       </Fragment>
-    );
+    )
   }
 }
 
-export default withRouteData(Home);
+export default withRouteData(Home)

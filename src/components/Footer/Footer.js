@@ -1,10 +1,10 @@
-import React from "react";
-import { Link } from "react-static";
-import { RichText } from "prismic-reactjs";
-import styled from "styled-components";
-import getYear from "date-fns/get_year";
-import Twemoji from "react-twemoji";
-import Social from "./Social";
+import React from 'react'
+import { Link } from 'react-static'
+import { RichText } from 'prismic-reactjs'
+import styled from 'styled-components'
+import getYear from 'date-fns/get_year'
+import Twemoji from 'react-twemoji'
+import Social from './Social'
 
 const Wrap = styled.footer`
   background-color: ${props => props.theme.palette.neutral02};
@@ -22,7 +22,7 @@ const Wrap = styled.footer`
     margin-top: 8em;
     padding: 3.2em 0 2.4em;
   }
-`;
+`
 
 const ContentWrap = styled.div`
   display: flex;
@@ -35,12 +35,12 @@ const ContentWrap = styled.div`
   @media (min-width: ${props => props.theme.breakpoints.xs}) {
     width: ${props => props.theme.grid.container};
   }
-`;
+`
 
 const GeneralWrap = styled.div`
   display: flex;
   flex-direction: column;
-`;
+`
 
 const FooterLink = styled(Link)`
   &:not(last-child) {
@@ -51,13 +51,13 @@ const FooterLink = styled(Link)`
   address div:hover > p {
     color: ${props => props.theme.palette.neutral03};
   }
-`;
+`
 
 const Address = styled.address`
   p:not(:last-child) {
     margin-bottom: 0;
   }
-`;
+`
 
 const Copyright = styled.div`
   margin-top: 1.6em;
@@ -66,7 +66,7 @@ const Copyright = styled.div`
   a {
     font-size: 12px;
   }
-`;
+`
 
 const CopyrightName = styled(Link)`
   position: relative;
@@ -90,7 +90,7 @@ const CopyrightName = styled(Link)`
     visibility: visible;
     transform: scaleX(1);
   }
-`;
+`
 
 const StyledTwemoji = styled(Twemoji)`
   display: inline;
@@ -101,7 +101,7 @@ const StyledTwemoji = styled(Twemoji)`
     height: 10px;
     margin: 0 2px;
   }
-`;
+`
 
 const Footer = ({
   email,
@@ -113,25 +113,25 @@ const Footer = ({
   facebookTitle,
   facebookLink,
   instagramTitle,
-  instagramLink
+  instagramLink,
 }) => {
   const socials = [
     {
-      key: "linkedin",
+      key: 'linkedin',
       title: linkedinTitle,
-      link: linkedinLink
+      link: linkedinLink,
     },
     {
-      key: "facebook",
+      key: 'facebook',
       title: facebookTitle,
-      link: facebookLink
+      link: facebookLink,
     },
     {
-      key: "instagram",
+      key: 'instagram',
       title: instagramTitle,
-      link: instagramLink
-    }
-  ];
+      link: instagramLink,
+    },
+  ]
 
   return (
     <Wrap>
@@ -161,8 +161,12 @@ const Footer = ({
       </ContentWrap>
       <Copyright>
         <span>© Unifac {getYear(new Date())} - </span>
-        <StyledTwemoji options={{ className: "twemoji" }}>
-          Made with 💙 by{" "}
+        <StyledTwemoji options={{ className: 'twemoji' }}>
+          Made with{' '}
+          <span role="img" aria-label="love">
+            💙
+          </span>{' '}
+          by{' '}
         </StyledTwemoji>
         <CopyrightName
           to="https://wouterlanduydt.be"
@@ -173,7 +177,7 @@ const Footer = ({
         </CopyrightName>
       </Copyright>
     </Wrap>
-  );
-};
+  )
+}
 
-export default Footer;
+export default Footer

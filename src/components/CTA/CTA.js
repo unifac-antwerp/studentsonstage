@@ -1,19 +1,19 @@
-import React from "react";
-import LazyLoad from "react-lazyload";
-import { RichText } from "prismic-reactjs";
-import styled from "styled-components";
-import Button from "../Button";
-import OrnamentImg from "../../assets/img/ornament_4.png";
+import React from 'react'
+import LazyLoad from 'react-lazyload'
+import { RichText } from 'prismic-reactjs'
+import styled from 'styled-components'
+import Button from '../Button'
+import OrnamentImg from '../../assets/img/ornament_4.png'
 
 const Wrap = styled.section`
-  margin-top: ${props => (props.page === "contact" ? "12.8em" : "16em")};
+  margin-top: ${props => (props.page === 'contact' ? '12.8em' : '16em')};
   background-color: ${props => props.theme.palette.white};
   position: relative;
 
   @media (min-width: ${props => props.theme.breakpoints.sm}) {
-    margin-top: ${props => (props.page === "contact" ? "20em" : "24em")};
+    margin-top: ${props => (props.page === 'contact' ? '20em' : '24em')};
   }
-`;
+`
 
 const ContentWrapper = styled.div`
   display: flex;
@@ -28,7 +28,7 @@ const ContentWrapper = styled.div`
   @media (min-width: ${props => props.theme.breakpoints.xs}) {
     width: ${props => props.theme.grid.container};
   }
-`;
+`
 
 const Ornament = styled.img`
   display: none;
@@ -45,16 +45,16 @@ const Ornament = styled.img`
   @media (min-width: ${props => props.theme.breakpoints.xxl}) {
     transform: scale(1);
   }
-`;
+`
 
 const Title = styled.h1`
   color: ${props => props.theme.palette.neutral01};
-`;
+`
 
 const Desc = styled.div`
   max-width: ${props => props.theme.grid.maxWidthSm};
   margin: 2.4em 0 3.2em;
-`;
+`
 
 const ButtonWrapper = styled.div`
   display: flex;
@@ -74,7 +74,7 @@ const ButtonWrapper = styled.div`
       margin-bottom: 0;
     }
   }
-`;
+`
 
 const CTA = ({
   title,
@@ -83,10 +83,10 @@ const CTA = ({
   buttonLink,
   secondaryButton,
   secondaryButtonLink,
-  page
+  page,
 }) => (
   <Wrap page={page}>
-    <LazyLoad once offset={250} height={"auto"}>
+    <LazyLoad once offset={250} height="auto">
       <Ornament src={OrnamentImg} alt="" width="141" height="283" />
     </LazyLoad>
     <ContentWrapper>
@@ -94,7 +94,7 @@ const CTA = ({
       <Desc>{desc && RichText.render(desc)}</Desc>
       <ButtonWrapper>
         <Button
-          link={buttonLink ? buttonLink : "/contact"}
+          link={buttonLink || '/contact'}
           text={button}
           big="true"
         />
@@ -110,6 +110,6 @@ const CTA = ({
       </ButtonWrapper>
     </ContentWrapper>
   </Wrap>
-);
+)
 
-export default CTA;
+export default CTA

@@ -1,11 +1,10 @@
-import React from "react";
-import styled from "styled-components";
-import Twemoji from "react-twemoji";
-import { Helmet } from "react-helmet";
-import Navbar from "../components/Navbar";
-import Button from "../components/Button";
+import React from 'react'
+import styled from 'styled-components'
+import Twemoji from 'react-twemoji'
+import { Helmet } from 'react-helmet'
+import Button from '../components/Button'
 
-const Wrap = styled.div``;
+const Wrap = styled.div``
 
 const ContentWrap = styled.section`
   display: flex;
@@ -19,14 +18,14 @@ const ContentWrap = styled.section`
   @media (min-width: ${props => props.theme.breakpoints.xs}) {
     width: ${props => props.theme.grid.container};
   }
-`;
+`
 
 const Title = styled.h1`
   text-align: center;
   color: ${props => props.theme.palette.neutral01};
   font-weight: ${props => props.theme.fontWeights.medium};
   margin: 32px 0 40px;
-`;
+`
 
 const FourOFour = () => (
   <Wrap>
@@ -35,12 +34,16 @@ const FourOFour = () => (
     </Helmet>
     <main>
       <ContentWrap>
-        <Twemoji>🔍</Twemoji>
+        <Twemoji>
+          <span have role="img" aria-label="search">
+            🔍
+          </span>
+        </Twemoji>
         <Title>Pagina niet gevonden</Title>
         <Button link="/" text="Naar Students on Stage" />
       </ContentWrap>
     </main>
   </Wrap>
-);
+)
 
-export default FourOFour;
+export default FourOFour

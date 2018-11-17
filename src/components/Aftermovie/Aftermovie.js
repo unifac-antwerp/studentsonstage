@@ -1,8 +1,7 @@
-import React from "react";
-import LazyLoad from "react-lazyload";
-import { RichText } from "prismic-reactjs";
-import styled from "styled-components";
-import OrnamentImg from "../../assets/img/ornament_3.png";
+import React from 'react'
+import LazyLoad from 'react-lazyload'
+import styled from 'styled-components'
+import OrnamentImg from '../../assets/img/ornament_3.png'
 
 const Wrap = styled.section`
   background-color: ${props => props.theme.palette.white};
@@ -21,7 +20,7 @@ const Wrap = styled.section`
   @media (min-width: ${props => props.theme.breakpoints.xxl}) {
     height: 52em;
   }
-`;
+`
 
 const ContentWrap = styled.div`
   max-width: ${props => props.theme.grid.maxWidth};
@@ -31,7 +30,7 @@ const ContentWrap = styled.div`
   @media (min-width: ${props => props.theme.breakpoints.xs}) {
     width: ${props => props.theme.grid.container};
   }
-`;
+`
 
 const Ornament = styled.img`
   display: none;
@@ -47,7 +46,7 @@ const Ornament = styled.img`
   @media (min-width: ${props => props.theme.breakpoints.xxl}) {
     transform: scale(1);
   }
-`;
+`
 
 const Title = styled.h1`
   padding: 32px 0 24px;
@@ -55,7 +54,7 @@ const Title = styled.h1`
   @media (min-width: ${props => props.theme.breakpoints.sm}) {
     padding: 72px 0 24px;
   }
-`;
+`
 
 const Movie = styled.div`
   width: 100%;
@@ -74,11 +73,11 @@ const Movie = styled.div`
     width: 100%;
     height: 100%;
   }
-`;
+`
 
 const Aftermovie = ({ title, aftermovie }) => (
   <Wrap>
-    <LazyLoad once offset={250} height={"auto"}>
+    <LazyLoad once offset={250} height="auto">
       <Ornament src={OrnamentImg} alt="" width="141" height="283" />
     </LazyLoad>
     <ContentWrap>
@@ -88,6 +87,6 @@ const Aftermovie = ({ title, aftermovie }) => (
       />
     </ContentWrap>
   </Wrap>
-);
+)
 
-export default Aftermovie;
+export default Aftermovie

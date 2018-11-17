@@ -1,9 +1,9 @@
-import React from "react";
-import LazyLoad from "react-lazyload";
-import { RichText } from "prismic-reactjs";
-import styled from "styled-components";
-import Opportunity from "./Opportunity";
-import OrnamentImg from "../../assets/img/ornament_2.png";
+import React from 'react'
+import LazyLoad from 'react-lazyload'
+import { RichText } from 'prismic-reactjs'
+import styled from 'styled-components'
+import Opportunity from './Opportunity'
+import OrnamentImg from '../../assets/img/ornament_2.png'
 
 const Wrap = styled.section`
   background-color: ${props => props.theme.palette.white};
@@ -13,7 +13,7 @@ const Wrap = styled.section`
   @media (min-width: ${props => props.theme.breakpoints.sm}) {
     margin-top: 28em;
   }
-`;
+`
 
 const Ornament = styled.img`
   display: none;
@@ -30,7 +30,7 @@ const Ornament = styled.img`
   @media (min-width: ${props => props.theme.breakpoints.xxl}) {
     transform: scale(1);
   }
-`;
+`
 
 const ContentWrap = styled.div`
   max-width: ${props => props.theme.grid.maxWidth};
@@ -40,7 +40,7 @@ const ContentWrap = styled.div`
   @media (min-width: ${props => props.theme.breakpoints.xs}) {
     width: ${props => props.theme.grid.container};
   }
-`;
+`
 
 const Title = styled.h1`
   padding: 32px 0 24px;
@@ -48,7 +48,7 @@ const Title = styled.h1`
   @media (min-width: ${props => props.theme.breakpoints.sm}) {
     padding: 72px 0 24px;
   }
-`;
+`
 
 const Desc = styled.div`
   max-width: ${props => props.theme.grid.maxWidthSm};
@@ -57,7 +57,7 @@ const Desc = styled.div`
   @media (min-width: ${props => props.theme.breakpoints.xs}) {
     width: ${props => props.theme.grid.container};
   }
-`;
+`
 
 const OpportunitiesWrap = styled.ul`
   display: flex;
@@ -79,11 +79,11 @@ const OpportunitiesWrap = styled.ul`
     align-items: stretch;
     flex-direction: row;
   }
-`;
+`
 
 const Opportunities = ({ title, desc, opportunities }) => (
   <Wrap>
-    <LazyLoad once offset={250} height={"auto"}>
+    <LazyLoad once offset={250} height="auto">
       <Ornament src={OrnamentImg} alt="" width="141" height="283" />
     </LazyLoad>
     <ContentWrap>
@@ -106,6 +106,6 @@ const Opportunities = ({ title, desc, opportunities }) => (
           ))}
     </OpportunitiesWrap>
   </Wrap>
-);
+)
 
-export default Opportunities;
+export default Opportunities

@@ -1,9 +1,9 @@
-import React from "react";
-import { Link } from "react-static";
-import styled from "styled-components";
-import Headroom from "react-headroom";
-import Button from "../Button";
-import ScrollProgressBar from "../ScrollProgressBar";
+import React from 'react'
+import { Link } from 'react-static'
+import styled from 'styled-components'
+import Headroom from 'react-headroom'
+import Button from '../Button'
+import ScrollProgressBar from '../ScrollProgressBar'
 
 const StyledHeadroom = styled(Headroom)`
   .headroom {
@@ -30,7 +30,7 @@ const StyledHeadroom = styled(Headroom)`
     position: fixed;
     transform: translateY(0px);
   }
-`;
+`
 
 const Wrap = styled.nav`
   display: flex;
@@ -44,7 +44,7 @@ const Wrap = styled.nav`
   @media (min-width: ${props => props.theme.breakpoints.xs}) {
     width: ${props => props.theme.grid.container};
   }
-`;
+`
 
 const Title = styled(Link)`
   font-family: ${props => props.theme.fonts.montserrat};
@@ -60,23 +60,23 @@ const Title = styled(Link)`
   @media (min-width: ${props => props.theme.breakpoints.sm}) {
     font-size: 20px;
   }
-`;
+`
 
 const ButtonMobile = styled.div`
-  display: ${props => (props.page === "contact" ? "none" : "block")};
+  display: ${props => (props.page === 'contact' ? 'none' : 'block')};
 
   @media (min-width: ${props => props.theme.breakpoints.sm}) {
     display: none;
   }
-`;
+`
 
 const ButtonDesktop = styled.div`
   display: none;
 
   @media (min-width: ${props => props.theme.breakpoints.sm}) {
-    display: ${props => (props.page === "contact" ? "none" : "block")};
+    display: ${props => (props.page === 'contact' ? 'none' : 'block')};
   }
-`;
+`
 
 const Navbar = ({ title, contactButton, page }) => (
   <StyledHeadroom disableInlineStyles>
@@ -91,8 +91,8 @@ const Navbar = ({ title, contactButton, page }) => (
         <Button link="/contact" text="Contact" outlined="true" />
       </ButtonMobile>
     </Wrap>
-    {page === "home" && <ScrollProgressBar />}
+    {page === 'home' && <ScrollProgressBar />}
   </StyledHeadroom>
-);
+)
 
-export default Navbar;
+export default Navbar

@@ -1,7 +1,7 @@
-import React from "react";
-import { RichText } from "prismic-reactjs";
-import styled from "styled-components";
-import ImageWithAspectRatio from "../ImageWithAspectRatio";
+import React from 'react'
+import { RichText } from 'prismic-reactjs'
+import styled from 'styled-components'
+import ImageWithAspectRatio from '../ImageWithAspectRatio'
 
 const Wrap = styled.section`
   display: flex;
@@ -26,7 +26,7 @@ const Wrap = styled.section`
     padding: 3.2em;
     border: 6px solid ${props => props.theme.palette.global02};
   }
-`;
+`
 
 const LogoWrap = styled.div`
   position: relative;
@@ -37,7 +37,7 @@ const LogoWrap = styled.div`
   @media (min-width: ${props => props.theme.breakpoints.xs}) {
     width: 212px;
   }
-`;
+`
 
 const Text = styled.div`
   width: 100%;
@@ -46,11 +46,11 @@ const Text = styled.div`
     font-weight: ${props => props.theme.fontWeights.medium};
     font-size: 18px;
   }
-`;
+`
 
 const Intro = ({ intro, logo }) => (
   <Wrap>
-    <h1 style={{ display: "none" }}>Intro</h1>
+    <h1 style={{ display: 'none' }}>Intro</h1>
     <LogoWrap>
       <ImageWithAspectRatio
         src={logo && logo.url}
@@ -61,6 +61,6 @@ const Intro = ({ intro, logo }) => (
     </LogoWrap>
     <Text>{intro && RichText.render(intro)}</Text>
   </Wrap>
-);
+)
 
-export default Intro;
+export default Intro

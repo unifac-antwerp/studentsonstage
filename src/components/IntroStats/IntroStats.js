@@ -1,6 +1,6 @@
-import React from "react";
-import styled from "styled-components";
-import IntroStat from "./IntroStat";
+import React from 'react'
+import styled from 'styled-components'
+import IntroStat from './IntroStat'
 
 const Wrap = styled.div`
   display: flex;
@@ -18,7 +18,7 @@ const Wrap = styled.div`
   @media (min-width: ${props => props.theme.breakpoints.sm}) {
     width: 100%;
   }
-`;
+`
 
 const IntroStats = ({ stats }) => (
   <Wrap>
@@ -35,6 +35,6 @@ const IntroStats = ({ stats }) => (
           />
         ))}
   </Wrap>
-);
+)
 
-export default IntroStats;
+export default IntroStats

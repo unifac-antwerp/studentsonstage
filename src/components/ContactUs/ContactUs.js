@@ -1,14 +1,14 @@
-import React from "react";
-import { RichText } from "prismic-reactjs";
-import styled from "styled-components";
-import PeopleList from "./PeopleList/PeopleList";
-import OrnamentImg from "../../assets/img/ornament_6.jpg";
-import OrnamentImgSm from "../../assets/img/ornament_6_sm.jpg";
+import React from 'react'
+import { RichText } from 'prismic-reactjs'
+import styled from 'styled-components'
+import PeopleList from './PeopleList/PeopleList'
+import OrnamentImg from '../../assets/img/ornament_6.jpg'
+import OrnamentImgSm from '../../assets/img/ornament_6_sm.jpg'
 
 const Wrap = styled.section`
   background-color: ${props => props.theme.palette.white};
   position: relative;
-`;
+`
 
 const Ornament = styled.img`
   display: none;
@@ -29,7 +29,7 @@ const Ornament = styled.img`
   @media (min-width: ${props => props.theme.breakpoints.xxl}) {
     transform: scale(1);
   }
-`;
+`
 
 const OrnamentSm = styled.img`
   display: block;
@@ -48,7 +48,7 @@ const OrnamentSm = styled.img`
     transform: scale(1);
     display: none;
   }
-`;
+`
 
 const Title = styled.h1`
   padding: 32px 0 24px;
@@ -56,7 +56,7 @@ const Title = styled.h1`
   @media (min-width: ${props => props.theme.breakpoints.sm}) {
     padding: 72px 0 24px;
   }
-`;
+`
 
 const ContentWrap = styled.div`
   max-width: ${props => props.theme.grid.maxWidth};
@@ -66,7 +66,7 @@ const ContentWrap = styled.div`
   @media (min-width: ${props => props.theme.breakpoints.xs}) {
     width: ${props => props.theme.grid.container};
   }
-`;
+`
 
 const Desc = styled.div`
   max-width: ${props => props.theme.grid.maxWidthSm};
@@ -75,7 +75,7 @@ const Desc = styled.div`
   @media (min-width: ${props => props.theme.breakpoints.xl}) {
     width: ${props => props.theme.grid.containerSm};
   }
-`;
+`
 
 const PeopleListWrap = styled.div`
   max-width: ${props => props.theme.grid.maxWidth};
@@ -87,7 +87,7 @@ const PeopleListWrap = styled.div`
   @media (min-width: ${props => props.theme.breakpoints.xs}) {
     width: ${props => props.theme.grid.container};
   }
-`;
+`
 
 const ContactUs = ({ title, desc, people }) => (
   <Wrap>
@@ -101,6 +101,6 @@ const ContactUs = ({ title, desc, people }) => (
       <PeopleList people={people} />
     </PeopleListWrap>
   </Wrap>
-);
+)
 
-export default ContactUs;
+export default ContactUs

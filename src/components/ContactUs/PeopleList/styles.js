@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 export const Wrap = styled.div`
   display: flex;
@@ -8,7 +8,7 @@ export const Wrap = styled.div`
   @media (min-width: ${props => props.theme.breakpoints.md}) {
     flex-direction: row;
   }
-`;
+`
 
 export const ThumbnailList = styled.ul`
   display: flex;
@@ -18,7 +18,7 @@ export const ThumbnailList = styled.ul`
     display: block;
     margin: 0.8em 1.6em 0 0;
   }
-`;
+`
 
 export const Thumbnail = styled.li`
   padding: 0.4em;
@@ -26,7 +26,7 @@ export const Thumbnail = styled.li`
   ${props => props.theme.shadows.shadow02};
   border-radius: 0.2em;
   transition: transform 150ms ease-out;
-  transform: ${props => (props.active ? "scale(1.05)" : "scale(0.95)")};
+  transform: ${props => (props.active ? 'scale(1.05)' : 'scale(0.95)')};
 
   &:hover {
     cursor: pointer;
@@ -49,7 +49,7 @@ export const Thumbnail = styled.li`
     width: 56px;
     background-color: ${props => props.theme.palette.loading};
   }
-`;
+`
 
 export const PersonWrap = styled.div`
   display: flex;
@@ -59,7 +59,7 @@ export const PersonWrap = styled.div`
   position: relative;
   z-index: 1;
   width: 100%;
-`;
+`
 
 export const MainImageWrap = styled.div`
   display: none;
@@ -78,7 +78,7 @@ export const MainImageWrap = styled.div`
     height: auto;
     width: 200px;
   }
-`;
+`
 
 export const ContentWrap = styled.div`
   display: flex;
@@ -93,13 +93,13 @@ export const ContentWrap = styled.div`
   @media (min-width: ${props => props.theme.breakpoints.sm}) {
     margin: 1.6em 0.8em;
   }
-`;
+`
 
 export const Position = styled.span`
   font-family: ${props => props.theme.fonts.montserrat};
   font-size: 18px;
   font-weight: ${props => props.theme.fontWeights.medium};
-`;
+`
 
 export const ContactItem = styled.li`
   ${props => props.theme.textStyles.paragraph};
@@ -138,10 +138,10 @@ export const ContactItem = styled.li`
       transform: scaleX(1);
     }
   }
-`;
+`
 
 export const ContactItemIcon = styled.img`
   margin-right: 8px;
   height: 16px;
   width: 16px;
-`;
+`

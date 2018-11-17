@@ -1,9 +1,9 @@
-import React from "react";
-import LazyLoad from "react-lazyload";
-import { RichText } from "prismic-reactjs";
-import styled from "styled-components";
-import Map from "./Map";
-import OrnamentImg from "../../assets/img/ornament_5.png";
+import React from 'react'
+import LazyLoad from 'react-lazyload'
+import { RichText } from 'prismic-reactjs'
+import styled from 'styled-components'
+import Map from './Map'
+import OrnamentImg from '../../assets/img/ornament_5.png'
 
 const Wrap = styled.section`
   background-color: ${props => props.theme.palette.white};
@@ -13,7 +13,7 @@ const Wrap = styled.section`
   @media (min-width: ${props => props.theme.breakpoints.sm}) {
     margin-top: 16em;
   }
-`;
+`
 
 const Ornament = styled.img`
   display: none;
@@ -29,7 +29,7 @@ const Ornament = styled.img`
   @media (min-width: ${props => props.theme.breakpoints.xxl}) {
     transform: scale(1);
   }
-`;
+`
 
 const Title = styled.h1`
   padding: 32px 0 24px;
@@ -37,7 +37,7 @@ const Title = styled.h1`
   @media (min-width: ${props => props.theme.breakpoints.sm}) {
     padding: 72px 0 24px;
   }
-`;
+`
 
 const ContentWrap = styled.div`
   max-width: ${props => props.theme.grid.maxWidth};
@@ -47,7 +47,7 @@ const ContentWrap = styled.div`
   @media (min-width: ${props => props.theme.breakpoints.xs}) {
     width: ${props => props.theme.grid.container};
   }
-`;
+`
 
 const Desc = styled.div`
   max-width: ${props => props.theme.grid.maxWidthSm};
@@ -56,7 +56,7 @@ const Desc = styled.div`
   @media (min-width: ${props => props.theme.breakpoints.xs}) {
     width: ${props => props.theme.grid.container};
   }
-`;
+`
 
 const StyledAddress = styled.address`
   margin-top: 2.4em;
@@ -69,11 +69,11 @@ const StyledAddress = styled.address`
       margin-bottom: 2px;
     }
   }
-`;
+`
 
 const Phone = styled.p`
   margin-top: 2px;
-`;
+`
 
 const MapWrap = styled.div`
   background-color: ${props => props.theme.palette.loading};
@@ -83,11 +83,13 @@ const MapWrap = styled.div`
   margin: 0 auto;
   position: relative;
   top: 6.4em;
-`;
+`
 
-const Address = ({ title, desc, address, phone }) => (
+const Address = ({
+  title, desc, address, phone,
+}) => (
   <Wrap>
-    <LazyLoad once offset={250} height={"auto"}>
+    <LazyLoad once offset={250} height="auto">
       <Ornament src={OrnamentImg} alt="" width="141" height="283" />
     </LazyLoad>
     <ContentWrap>
@@ -102,6 +104,6 @@ const Address = ({ title, desc, address, phone }) => (
       <Map address={address} />
     </MapWrap>
   </Wrap>
-);
+)
 
-export default Address;
+export default Address

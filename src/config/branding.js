@@ -1,42 +1,42 @@
-import { css } from "styled-components";
+import { css } from 'styled-components'
 
 const palette = {
-  neutral01: "#3C3C3C",
-  neutral02: "#191919",
-  neutral03: "#d8d8d8",
-  white: "#ffffff",
-  global01: "#005C99",
-  global02: "#2e78c1",
-  background: "#f3f7f9",
-  loading: "rgb(229,227,223)"
-};
+  neutral01: '#3C3C3C',
+  neutral02: '#191919',
+  neutral03: '#d8d8d8',
+  white: '#ffffff',
+  global01: '#005C99',
+  global02: '#2e78c1',
+  background: '#f3f7f9',
+  loading: 'rgb(229,227,223)',
+}
 
 const grid = {
-  maxWidth: "1120px",
-  maxWidthSm: "880px",
-  container: "90%",
-  containerSm: "94%"
-};
+  maxWidth: '1120px',
+  maxWidthSm: '880px',
+  container: '90%',
+  containerSm: '94%',
+}
 
 const breakpoints = {
-  xxl: "1290px",
-  xl: "1100px",
-  md: "960px",
-  sm: "680px",
-  xs: "520px"
-};
+  xxl: '1290px',
+  xl: '1100px',
+  md: '960px',
+  sm: '680px',
+  xs: '520px',
+}
 
 const fonts = {
   roboto: "'Roboto', sans-serif",
-  montserrat: "'Montserrat', sans-serif"
-};
+  montserrat: "'Montserrat', sans-serif",
+}
 
 const fontWeights = {
   light: 300,
   regular: 400,
   medium: 500,
-  bold: 700
-};
+  bold: 700,
+}
 
 const textStyles = {
   heading01: css`
@@ -86,8 +86,8 @@ const textStyles = {
     font-family: ${fonts.montserrat};
     font-weight: ${fontWeights.medium};
     font-size: 16px;
-  `
-};
+  `,
+}
 
 const shadows = {
   shadow01: css`
@@ -95,8 +95,8 @@ const shadows = {
   `,
   shadow02: css`
     box-shadow: 0 4px 8px 4px rgba(0, 0, 0, 0.05);
-  `
-};
+  `,
+}
 
 export const globalStyles = css`
   html {
@@ -172,7 +172,7 @@ export const globalStyles = css`
     -webkit-user-select: none;
     -ms-user-select: none;
   }
-`;
+`
 
 export default {
   palette,
@@ -181,5 +181,5 @@ export default {
   textStyles,
   fontWeights,
   fonts,
-  shadows
-};
+  shadows,
+}

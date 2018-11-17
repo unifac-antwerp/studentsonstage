@@ -1,28 +1,28 @@
-import "babel-polyfill";
-import "whatwg-fetch";
-import React from "react";
-import ReactDOM from "react-dom";
-import App from "./App";
+import 'babel-polyfill'
+import 'whatwg-fetch'
+import React from 'react'
+import ReactDOM from 'react-dom'
+import App from './App'
 
-export default App;
+export default App
 
-if (typeof document !== "undefined") {
+if (typeof document !== 'undefined') {
   const renderMethod = module.hot
     ? ReactDOM.render
-    : ReactDOM.hydrate || ReactDOM.render;
+    : ReactDOM.hydrate || ReactDOM.render
   const render = Comp => {
-    renderMethod(<Comp />, document.getElementById("root"));
-  };
+    renderMethod(<Comp />, document.getElementById('root'))
+  }
 
-  render(App);
+  render(App)
 }
 
-if (typeof window !== "undefined") {
-  var WebFont = require("webfontloader");
+if (typeof window !== 'undefined') {
+  const WebFont = require('webfontloader')
 
   WebFont.load({
     google: {
-      families: ["Montserrat:400,500,700", "Roboto:300,400,500"]
-    }
-  });
+      families: ['Montserrat:400,500,700', 'Roboto:300,400,500'],
+    },
+  })
 }

@@ -1,5 +1,5 @@
-import React, { PureComponent } from "react";
-import { Link } from "react-static";
+import React, { PureComponent } from 'react'
+import { Link } from 'react-static'
 import {
   Wrap,
   ThumbnailList,
@@ -9,23 +9,23 @@ import {
   ContentWrap,
   Position,
   ContactItem,
-  ContactItemIcon
-} from "./styles";
-import ImageWithAspectRatio from "../../ImageWithAspectRatio";
-import IcoEmail from "../../../assets/svg/ico_email.svg";
-import IcoPhone from "../../../assets/svg/ico_phone.svg";
-import IcoLinkedin from "../../../assets/svg/ico_linkedin.svg";
+  ContactItemIcon,
+} from './styles'
+import ImageWithAspectRatio from '../../ImageWithAspectRatio'
+import IcoEmail from '../../../assets/svg/ico_email.svg'
+import IcoPhone from '../../../assets/svg/ico_phone.svg'
+import IcoLinkedin from '../../../assets/svg/ico_linkedin.svg'
 
 class PeopleList extends PureComponent {
-  constructor(props) {
-    super(props);
+  constructor (props) {
+    super(props)
     this.state = {
-      selectedPerson: this.props.people[0] || {}
-    };
+      selectedPerson: this.props.people[0] || {},
+    }
   }
 
   handleThumbnailClick = person => {
-    this.setState({ selectedPerson: person });
+    this.setState({ selectedPerson: person })
   };
 
   renderThumbnails = (people, selectedPerson) => (
@@ -93,17 +93,17 @@ class PeopleList extends PureComponent {
     </PersonWrap>
   );
 
-  render() {
-    const { people } = this.props;
-    const { selectedPerson } = this.state;
+  render () {
+    const { people } = this.props
+    const { selectedPerson } = this.state
 
     return (
       <Wrap>
         {people && this.renderThumbnails(people, selectedPerson)}
         {selectedPerson && this.renderPersonDetails(selectedPerson)}
       </Wrap>
-    );
+    )
   }
 }
 
-export default PeopleList;
+export default PeopleList

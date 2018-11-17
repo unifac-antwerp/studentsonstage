@@ -1,12 +1,11 @@
-import React, { Component } from "react";
-import { Link } from "react-static";
-import styled from "styled-components";
-import ImageGallery from "react-image-gallery";
-import LazyLoad from "react-lazyload";
-import "react-image-gallery/styles/css/image-gallery.css";
-import StyledArrow from "./controls/Arrow";
-import Arrow from "../../assets/svg/arrow.svg";
-import OrnamentImg from "../../assets/img/ornament_1.png";
+import React, { Component } from 'react'
+import styled from 'styled-components'
+import ImageGallery from 'react-image-gallery'
+import LazyLoad from 'react-lazyload'
+import 'react-image-gallery/styles/css/image-gallery.css'
+import StyledArrow from './controls/Arrow'
+import Arrow from '../../assets/svg/arrow.svg'
+import OrnamentImg from '../../assets/img/ornament_1.png'
 
 const Wrap = styled.section`
   background-color: ${props => props.theme.palette.white};
@@ -30,7 +29,7 @@ const Wrap = styled.section`
   @media (min-width: ${props => props.theme.breakpoints.xxl}) {
     height: 72em;
   }
-`;
+`
 
 const ContentWrap = styled.div`
   max-width: ${props => props.theme.grid.maxWidth};
@@ -40,7 +39,7 @@ const ContentWrap = styled.div`
   @media (min-width: ${props => props.theme.breakpoints.sm}) {
     width: ${props => props.theme.grid.container} !important;
   }
-`;
+`
 
 const Ornament = styled.img`
   display: none;
@@ -56,7 +55,7 @@ const Ornament = styled.img`
   @media (min-width: ${props => props.theme.breakpoints.xxl}) {
     transform: scale(1);
   }
-`;
+`
 
 const Title = styled.h1`
   padding: 32px 0 24px;
@@ -64,24 +63,24 @@ const Title = styled.h1`
   @media (min-width: ${props => props.theme.breakpoints.sm}) {
     padding: 72px 0 24px;
   }
-`;
+`
 
 class ImageCarousel extends Component {
-  navRenderer = (direction, onClick) => {
-    return <StyledArrow direction={direction} src={Arrow} onClick={onClick} />;
-  };
+  navRenderer = (direction, onClick) => (
+    <StyledArrow direction={direction} src={Arrow} onClick={onClick} />
+  );
 
-  render() {
-    const { title, images } = this.props;
+  render () {
+    const { title, images } = this.props
 
     return (
       <Wrap>
-        <LazyLoad once offset={250} height={"auto"}>
+        <LazyLoad once offset={250} height="auto">
           <Ornament src={OrnamentImg} alt="" width="141" height="283" />
         </LazyLoad>
         <ContentWrap>
           <Title>{title}</Title>
-          <LazyLoad once offset={150} height={"auto"}>
+          <LazyLoad once offset={150} height="auto">
             <ImageGallery
               items={
                 images &&
@@ -89,21 +88,21 @@ class ImageCarousel extends Component {
                   original: i.image.url,
                   originalAlt: `Carousel image ${index}`,
                   thumbnail: i.image.url,
-                  thumbnailAlt: ""
+                  thumbnailAlt: '',
                 }))
               }
-              lazyLoad={true}
+              lazyLoad
               showFullscreenButton={false}
               showPlayButton={false}
-              autoPlay={true}
-              renderLeftNav={onClick => this.navRenderer("prev", onClick)}
-              renderRightNav={onClick => this.navRenderer("next", onClick)}
+              autoPlay
+              renderLeftNav={onClick => this.navRenderer('prev', onClick)}
+              renderRightNav={onClick => this.navRenderer('next', onClick)}
             />
           </LazyLoad>
         </ContentWrap>
       </Wrap>
-    );
+    )
   }
 }
 
-export default ImageCarousel;
+export default ImageCarousel

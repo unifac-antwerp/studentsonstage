@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import { logoAnim, fadeIn } from "../../config/animations";
+import styled from 'styled-components'
+import { logoAnim, fadeIn } from '../../config/animations'
 
 export const Wrap = styled.div`
   background-color: ${props => props.theme.palette.white};
@@ -13,7 +13,7 @@ export const Wrap = styled.div`
   @media (min-width: ${props => props.theme.breakpoints.xs}) {
     height: 80em;
   }
-`;
+`
 
 export const ContentWrapper = styled.div`
   display: flex;
@@ -26,7 +26,7 @@ export const ContentWrapper = styled.div`
   @media (min-width: ${props => props.theme.breakpoints.xs}) {
     width: ${props => props.theme.grid.container};
   }
-`;
+`
 
 export const LogoWrap = styled.div`
   position: relative;
@@ -39,7 +39,7 @@ export const LogoWrap = styled.div`
   @media (min-width: ${props => props.theme.breakpoints.sm}) {
     width: 320px;
   }
-`;
+`
 
 export const PoweredBy = styled.div`
   margin-top: 1.6em;
@@ -78,7 +78,7 @@ export const PoweredBy = styled.div`
       transform: scaleX(1);
     }
   }
-`;
+`
 
 export const Info = styled.span`
   font-size: 16px;
@@ -102,7 +102,7 @@ export const Info = styled.span`
     font-weight: ${props => props.theme.fontWeights.medium};
     font-size: 24px;
   }
-`;
+`
 
 export const ImageLeft = styled.img`
   display: none;
@@ -122,7 +122,7 @@ export const ImageLeft = styled.img`
   @media (min-width: ${props => props.theme.breakpoints.xl}) {
     transform: scale(1);
   }
-`;
+`
 
 export const ImageRight = styled.img`
   display: none;
@@ -144,7 +144,7 @@ export const ImageRight = styled.img`
   @media (min-width: ${props => props.theme.breakpoints.xl}) {
     transform: scale(1);
   }
-`;
+`
 
 export const ImageLeftSm = styled.img`
   display: block;
@@ -164,7 +164,7 @@ export const ImageLeftSm = styled.img`
   @media (min-width: 820px) {
     display: none;
   }
-`;
+`
 
 export const ImageRightSm = styled.img`
   display: block;
@@ -187,4 +187,4 @@ export const ImageRightSm = styled.img`
   @media (min-width: 820px) {
     display: none;
   }
-`;
+`

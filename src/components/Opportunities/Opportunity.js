@@ -1,7 +1,7 @@
-import React from "react";
-import { RichText } from "prismic-reactjs";
-import styled from "styled-components";
-import Button from "../Button";
+import React from 'react'
+import { RichText } from 'prismic-reactjs'
+import styled from 'styled-components'
+import Button from '../Button'
 
 const Wrap = styled.li`
   display: flex;
@@ -18,14 +18,14 @@ const Wrap = styled.li`
     width: 32.5%;
     margin-bottom: 0;
   }
-`;
+`
 
 const IconWrap = styled.div`
   display: flex;
   align-items: flex-end;
   height: 4em;
   margin-bottom: 1.6em;
-`;
+`
 
 const Title = styled.h2`
   display: flex;
@@ -40,19 +40,21 @@ const Title = styled.h2`
     background-color: ${props => props.theme.palette.neutral01};
     margin: 16px 0 16px;
   }
-`;
+`
 
 const Desc = styled.div`
   width: 100%;
   text-align: center;
   margin: 1.6em 0 3.2em 0;
-`;
+`
 
 const ButtonWrap = styled.div`
   margin-top: auto;
-`;
+`
 
-const Opportunity = ({ title, icon, desc, button, ctaAction }) => (
+const Opportunity = ({
+  title, icon, desc, button, ctaAction,
+}) => (
   <Wrap>
     <IconWrap>
       <img src={icon} alt={`${title} icon`} />
@@ -63,6 +65,6 @@ const Opportunity = ({ title, icon, desc, button, ctaAction }) => (
       <Button link={ctaAction} text={button} />
     </ButtonWrap>
   </Wrap>
-);
+)
 
-export default Opportunity;
+export default Opportunity

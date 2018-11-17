@@ -1,7 +1,7 @@
-import React from "react";
-import styled from "styled-components";
-import CountUp from "react-countup";
-import { fadeIn } from "../../config/animations";
+import React from 'react'
+import styled from 'styled-components'
+import CountUp from 'react-countup'
+import { fadeIn } from '../../config/animations'
 
 const Wrap = styled.div`
   display: flex;
@@ -19,7 +19,7 @@ const Wrap = styled.div`
     flex-direction: row;
     width: auto;
   }
-`;
+`
 
 const ContentWrap = styled.div`
   margin-left: 0;
@@ -33,7 +33,7 @@ const ContentWrap = styled.div`
     margin-left: 0.8em;
     margin-top: 0;
   }
-`;
+`
 
 const StyledCountUp = styled(CountUp)`
   font-family: ${props => props.theme.fonts.montserrat};
@@ -43,17 +43,19 @@ const StyledCountUp = styled(CountUp)`
   @media (min-width: ${props => props.theme.breakpoints.sm}) {
     font-size: 22px;
   }
-`;
+`
 
 const Title = styled.span`
   font-size: 22px;
   display: block;
   margin-top: 4px;
-`;
+`
 
-const calculateStartValue = (number, x) => (x <= number ? number - x : 0);
+const calculateStartValue = (number, x) => (x <= number ? number - x : 0)
 
-const IntroStat = ({ icon, number, title, index }) => (
+const IntroStat = ({
+  icon, number, title, index,
+}) => (
   <Wrap index={index}>
     <img src={icon} alt="" />
     <ContentWrap>
@@ -67,6 +69,6 @@ const IntroStat = ({ icon, number, title, index }) => (
       <Title>{title}</Title>
     </ContentWrap>
   </Wrap>
-);
+)
 
-export default IntroStat;
+export default IntroStat
