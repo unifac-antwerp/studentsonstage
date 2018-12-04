@@ -91,7 +91,7 @@ class Map extends PureComponent {
 const enhance = compose(
   withProps({
     googleMapURL:
-      'https://maps.googleapis.com/maps/api/js?key=AIzaSyA_1_q-OqWsqBwZGMEYW378g-uvg23JvTo&v=3.exp&libraries=geometry,drawing,places',
+      'https://maps.googleapis.com/maps/api/js?key=AIzaSyDtfQBX__ATqeM_ee5-iL47M3fipZd26Eo&v=3.exp&libraries=geometry,drawing,places',
     loadingElement: <div style={{ height: '100%' }} />,
     containerElement: <div style={{ height: '100%' }} />,
     mapElement: <div style={{ height: '100%' }} />,
