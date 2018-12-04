@@ -61,7 +61,7 @@ const Movie = styled.div`
   background-color: ${props => props.theme.palette.loading};
 
   position: relative;
-  padding-bottom: 44.82%;
+  padding-bottom: 56.25%;
   overflow: hidden;
 
   iframe,

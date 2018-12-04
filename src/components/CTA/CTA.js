@@ -6,12 +6,12 @@ import Button from '../Button'
 import OrnamentImg from '../../assets/img/ornament_4.png'
 
 const Wrap = styled.section`
-  margin-top: ${props => (props.page === 'contact' ? '12.8em' : '16em')};
+  margin-top: ${props => (props.page === 'contact' ? '12.8em' : '24em')};
   background-color: ${props => props.theme.palette.white};
   position: relative;
 
   @media (min-width: ${props => props.theme.breakpoints.sm}) {
-    margin-top: ${props => (props.page === 'contact' ? '20em' : '24em')};
+    margin-top: ${props => (props.page === 'contact' ? '20em' : '32em')};
   }
 `
 
